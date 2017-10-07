@@ -87,15 +87,14 @@ console.log(pizza); //returns "Uncaught ReferenceError: pizza is not defined"
 ```
 You can't access the variable (`let` / `const`) before it's defined
 
-* What should I use?
-How [Mathias Bynens](https://mathiasbynens.be/notes/es6-const) & Web Bos use it: 
+* How [Mathias Bynens](https://mathiasbynens.be/notes/es6-const) & Web Bos use  `let` / `const` / `var`
   * use `const` by default
   * only use `let` if rebinding is needed
   * (`var` shouldn’t be used in ES6)
 
-How [Kyle Simpson](https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond) use it:
-* use `var` for top-level variables that are shared across many (especially larger) scopes
-* use `let` for localized variables in smaller scopes
-* refactor `let` to `const` only after some code has been written and you're reasonably sure you've got a case where there shouldn't be variable reassignment
+* How [Kyle Simpson](https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond) use `let` / `const` / `var`
+  * use `var` for top-level variables that are shared across many (especially larger) scopes
+  * use `let` for localized variables in smaller scopes
+  * refactor `let` to `const` only after some code has been written and you're reasonably sure you've got a case where there shouldn't be variable reassignment
 
 
