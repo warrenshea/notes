@@ -6,14 +6,16 @@ https://courses.wesbos.com/
 
 ###  Module 1: var Scoping refresh
 
-* ${*var*}
+* `${*var*}`
 ```javascript
 var dogYears = age * 7;
 console.log(“You are “ + dogYears + “ dog years old!”);
 /*is the same as */ console.log(`You are ${dogYears} dog years old!`);
 ```
+
 * var variables are function scoped, but if there’s no function, it will be block scoped (between { and }) 
-* let variables are block scoped
+
+* `let` variables are block scoped
 ```javascript
 let x = 1;
 if (x === 1) {
@@ -21,9 +23,12 @@ if (x === 1) {
   console.log(x); //2...because the "x" variables are different, the "x" variables are scoped differently
 }
 ```
-* let variables are made to be updated
-* const variables are never to be updated
-* Object.freeze (not ES6): used to freeze the variable from being changed
+
+* `let` variables are made to be updated
+
+* `const` variables are never to be updated
+
+* `Object.freeze` (not ES6): used to freeze the variable from being changed
 ```javascript
 const person = {
   name: 'warren',
@@ -33,3 +38,54 @@ const warren = Object.freeze(person);
 warren.age = 30;
 console.log(warren.age); //35
 ```
+
+* Immediately-invoked function expression - [iife](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+```javascript
+(function () { /* ... */ })();
+(function () { /* ... */ }());
+(() => { /* ... */ })(); // With ES6 arrow functions (though parentheses only allowed on outside)
+```
+What it does: a function that runs itself immediately and creates a scope where nothing is going to leak into the parent scope (e.g. global scope of the window)
+
+* with `let` and `const`, you don't need to do this because they're block scoped.
+```javascript
+{
+  const name = 'warren';
+  console.log(name); //warren
+}
+```
+
+* also with `let` and `const`, you have an issue with `for` loops
+```javascript
+for (var i = 0; i < 10; i++) {
+  console.log(i); //returns 0, then 1, then 2, ... to 10 each loop
+  setTimeOut(function() {
+    console.log("The number is " + i); //returns 10x 10 at the very end *
+  },1000);
+}
+//* this executes after 1 second, after the loop has finished
+/**************************************************************************/
+for (let i = 0; i < 10; i++) {
+  console.log(i); //returns 0, then 1, then 2, ... to 10 each loop
+  setTimeOut(function() {
+    console.log("The number is " + i); //returns "The number is 1", "The nubmer is 2", etc. **
+  },1000);
+}
+//** this i variable is now scoped to the loop
+```
+
+* Temporal Dead zone
+```javascript
+var pizza = "deep dish";
+console.log(pizza); //returns undefined
+```
+The var variables can be access before it's defined
+You can't access the value, but you can access the variable
+```javascript
+let/const pizza = "deep dish";
+console.log(pizza); //returns "Uncaught ReferenceError: pizza is not defined"
+```
+You can't access the variable (`let` / `const`) before it's defined
+
+*
+
