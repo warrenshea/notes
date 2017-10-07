@@ -1,62 +1,17 @@
-# ES6 for Everyone!
-last updated - Oct 7, 2017
+# Warren's Notes for ES6 for Everyone! (Online Course)
+v.20171007
 https://courses.wesbos.com/
 
-## Module 5: Destructuring
+---
+  @FYI = For reference
+  @TODO = Need to revisit / clarify
+  @FILTER = Reference for useful filters
+---
 
-###  Module 5.18: Destructuring Objects
+## Module 6: Iterables & Looping
 
-* Destructuring: A JavaScript expression that allows us to extra data from arrays, objects, and @TODO(something sets)
-* Old way VS ES6 Way
-```javascript
-  const person = {
-    first: 'Clark',
-    last: 'Kent'
-  };
+###  Module 6.22: The for loop
 
-//OLD WAY
-  const first = person.first;
-  const last = person.last;
-  
-//ES6 Way
-  const { first , last } = person;
-  //{ } is destructing syntax
-  //make a variable called first and take it from person
-```
-
-```javascript
-  const superhero = {
-    first: 'James',
-    last: 'Howlett',
-    links: {
-      social: {
-        twitter: 'https://twitter.com/wolverine',
-        facebook: 'https://facebook.com/wolverine',
-      }
-    }
-  };
-
-//OLD WAY
-  const twitter = superhero.links.social.twitter;
-  const facebook = superhero.links.social.facebook;
-
-//ES6 Way
-  const { twitter , facebook } = wes.links.social;
-  //Renaming variables
-  const { twitter: tweet, facebook: fb } = wes.links.social;
-
-//Set Defaults
-  const settings = { width: 300, color: 'black' }  // height, fontSize
-  const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
-  //^ is: sets defaults = overrides
-  //settings = { width: 300, color: 'black'};
-  //width = 300
-  //height = 100
-  //color = 'black'
-  //fontSize = 25
-```
-
-###  Module 5.19: Destructing Arrays
 
 
 ## Module 1: New Variables - Creation, Updating and Scoping
@@ -245,6 +200,7 @@ If you had no parameter to return, you can take out the `name` parameter
   let first = "first";
   let second = "second";
   [first,second] = [second,first];
+  //use let because they will change
 ```
 
 ###  Module 2.9: Default Function Arguments
@@ -395,7 +351,6 @@ If you had no parameter to return, you can take out the `name` parameter
 ```
 
 ###  Module 3.14: Tagged Template Literals/Strings
-*
 ```javascript
   //BASE EXAMPLE/UNDERSTANDING
   function highlight(strings, ...values) { //...values takes the rest of the arguments
@@ -410,11 +365,14 @@ If you had no parameter to return, you can take out the `name` parameter
   function highlight(strings, ...values) { //...values takes the rest of the arguments
     let str = '';
     strings.forEach((string,i) => {
-      str += string + values[i]; // returns "My dog's name is Loki and he is 3 years oldundefined", because strings is always 1 longer than values
+      str += string + values[i];
+      // returns "My dog's name is Loki and he is 3 years oldundefined", because strings is always 1 longer than values
 
-      str += string + (values[i] || ''); // returns "My dog's name is Loki and he is 3 years old", this is better than above
+      str += string + (values[i] || '');
+      // returns "My dog's name is Loki and he is 3 years old", this is better than above
 
-      str += `${string} <strong>${values[i] || ''}</strong>`; // returns "My dog's name is <strong>Loki</strong> and he is <strong>3</strong> years old"
+      str += `${string} <strong>${values[i] || ''}</strong>`;
+      // returns "My dog's name is <strong>Loki</strong> and he is <strong>3</strong> years old"
       //this is if you want to add formatting to the string
     });
     return str; 
@@ -478,11 +436,13 @@ If you had no parameter to return, you can take out the `name` parameter
 ###  Module 4.17: New String Methods
 * 4 new methods that help reduce the need for Regex
 ```
-  //string.startsWith('subStringCheck'); //returns true/false, not case sensitive
-  //string.startsWith('subStringCheck',3); //returns true/false, starts after 3 characters
+  //string.startsWith();
+  string.startsWith('subStringCheck'); //returns true/false, not case sensitive
+  string.startsWith('subStringCheck',3); //returns true/false, starts after 3 characters
 
-  //string.endsWith('subStringCheck');
-  //string.endsWith('subStringCheck',3); //starts the first 3 charcters and checks if it wents with subStringCheck
+  //string.endsWith();
+  string.endsWith('subStringCheck');
+  string.endsWith('subStringCheck',3); //starts the first 3 charcters and checks if it wents with subStringCheck
 
   //string.includes() //used to be string.contains()
 
@@ -492,3 +452,122 @@ If you had no parameter to return, you can take out the `name` parameter
   }
 ```
 * @FYI Batman joke :D
+
+## Module 5: Destructuring
+
+###  Module 5.18: Destructuring Objects
+
+* Destructuring: A JavaScript expression that allows us to extra data from arrays, objects, and @TODO(something sets)
+* Old way VS ES6 Way
+```javascript
+  const person = {
+    first: 'Clark',
+    last: 'Kent'
+  };
+
+//OLD WAY
+  const first = person.first;
+  const last = person.last;
+  
+//ES6 Way
+  const { first , last } = person;
+  //{ } is destructing syntax
+  //make a variable called first and take it from person
+```
+
+```javascript
+  const superhero = {
+    first: 'James',
+    last: 'Howlett',
+    links: {
+      social: {
+        twitter: 'https://twitter.com/wolverine',
+        facebook: 'https://facebook.com/wolverine',
+      }
+    }
+  };
+
+//OLD WAY
+  const twitter = superhero.links.social.twitter;
+  const facebook = superhero.links.social.facebook;
+
+//ES6 Way
+  const { twitter , facebook } = wes.links.social;
+  //Renaming variables
+  const { twitter: tweet, facebook: fb } = wes.links.social;
+
+//Set Defaults
+  const settings = { width: 300, color: 'black' }  // height, fontSize
+  const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
+  //^ is: sets defaults = overrides
+  //settings = { width: 300, color: 'black'};
+  //width = 300
+  //height = 100
+  //color = 'black'
+  //fontSize = 25
+```
+
+###  Module 5.19: Destructing Arrays
+```javascript
+  const details = ['Wes Bos', 123, 'wesbos.com'];
+
+//OLD WAY
+  const name = details[0];
+  const id = details[1];
+  const url = details[2];
+
+//ES6 Way
+  const [name, id, website] = details;
+
+//{ } is destructuring for objects
+//[] is destructuring for arrays
+
+  const data = 'Basketball,Sports,90210,23,wes,bos,cool';
+  const [itemName, category, sku, inventory] = data.split(',');
+  //returns array and then deconstruct array
+  //if there's extra values in data, it will not be destructured because there are no variables to kepe them
+
+  const team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
+  const [captain, assistant, ...players] = team;
+  //captain = "Wes"
+  //assistant = "Harry"
+  //players = ["Sarah,"Keegan","Riker"]
+  //...variable is "the rest" operator. We have the captain, assistant and the rest
+```
+
+###  Module 5.20: Swapping Variables with Destructuring
+* Switching variables (see [2.8](#module-28-arrow-functions-and-this))
+
+###  Module 5.21: Destructuring Functions - Multiple returns and named defaults
+```javascript
+  function convertCurrency(amount) {
+    const converted = {
+      USD: amount * 0.76,
+      GPB: amount * 0.53,
+      AUD: amount * 1.01,
+      MEX: amount * 13.30
+    };
+    return converted;
+  }
+
+  const hundo = convertCurrency(100);
+  //OLD WAY
+  console.log(hundo.AUD);
+  console.log(hundo.MEX);
+  //ES6
+  const {USD, GPB, AUD, MEX} = convertCurrency(100);
+  console.log(USD); //returns 76
+  //can pick and choose the items you want
+
+//function tipCalc( total = 100, tip = 0.15, tax = 0.13 ) {
+  //^ the variables in specific order
+  function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
+    //^ the variables are destructured, so that the order doesn't matter
+
+    return total + (tip * total) + (tax * total);
+  }
+  
+  const bill = tipCalc({ tip: 0.20, total: 200 });
+  //the order can be placed in any way we want
+  console.log(bill);
+```
