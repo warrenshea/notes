@@ -3,9 +3,10 @@ v.20171007
 https://courses.wesbos.com/
 
 ---
-  @FYI = For reference
-  @TODO = Need to revisit / clarify
-  @FILTER = Reference for useful filters
+@FYI = For reference
+@TODO = Need to revisit / clarify
+@FILTER = Reference for useful filters
+
 ---
 
 ## Module 6: Iterables & Looping
