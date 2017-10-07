@@ -15,13 +15,15 @@ console.log(“You are “ + dogYears + “ dog years old!”);
 
 * `var` variables are function scoped, but if there’s no function, it will be block scoped (between { and } )
 
+###  Module 2: `let` VS `const`
+
 * `let` variables are block scoped
 ```javascript
 let x = 1;
 if (x === 1) {
   let x = 2;
-  console.log(x); //2...because the "x" variables are different, the "x" variables are scoped differently
 }
+console.log(x); //1...because the "x" variables are different, the "x" variables are scoped differently
 ```
 
 * `let` variables are made to be updated
@@ -38,6 +40,8 @@ const warren = Object.freeze(person);
 warren.age = 30;
 console.log(warren.age); //35
 ```
+
+###  Module 3: `let` and `const` in Real World
 
 * Immediately-invoked function expression - [iife](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 ```javascript
@@ -74,12 +78,14 @@ for (let i = 0; i < 10; i++) {
 //** this i variable is now scoped to the loop
 ```
 
+###  Module 4: Temporal Dead Zone
+
 * Temporal Dead zone
 ```javascript
 var pizza = "deep dish";
 console.log(pizza); //returns undefined
 ```
-The var variables can be access before it's defined
+The `var` variables can be access before it's defined
 You can't access the value, but you can access the variable
 ```javascript
 let/const pizza = "deep dish";
@@ -87,12 +93,14 @@ console.log(pizza); //returns "Uncaught ReferenceError: pizza is not defined"
 ```
 You can't access the variable (`let` / `const`) before it's defined
 
-* How [Mathias Bynens](https://mathiasbynens.be/notes/es6-const) & Web Bos use  `let` / `const` / `var`
+###  Module 5: Is `var` Dead? What should I use?
+
+* Using `let` / `const` / `var` : the [Mathias Bynens](https://mathiasbynens.be/notes/es6-const) & Web Bos approach
   * use `const` by default
   * only use `let` if rebinding is needed
   * (`var` shouldn’t be used in ES6)
 
-* How [Kyle Simpson](https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond) use `let` / `const` / `var`
+* Using `let` / `const` / `var` : the [Kyle Simpson](https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond) approach
   * use `var` for top-level variables that are shared across many (especially larger) scopes
   * use `let` for localized variables in smaller scopes
   * refactor `let` to `const` only after some code has been written and you're reasonably sure you've got a case where there shouldn't be variable reassignment
