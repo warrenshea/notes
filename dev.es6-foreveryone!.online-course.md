@@ -4,7 +4,7 @@ https://courses.wesbos.com/
 
 ## Module 2: Function Improvements: Arrows and Default Arguments
 
-###  Module 2.1: Arrow Functions Introduction
+###  Module 2.6: Arrow Functions Introduction
 
 * 3 benefits:
   * More concise
@@ -14,22 +14,8 @@ https://courses.wesbos.com/
 ```javascript
 const name = ['warren', 'will', 'wally'];
 const fullNames = names.map(function(name) {
-    return `${name} shea`;
-});
-console.log(fullNames); //returns ["warren shea", "will shea", "wally shea"]
-```
-EQUALS
-```javascript
-const name = ['warren', 'will', 'wally'];
-const fullNames = names.map((name) => {
-    return `${name} shea`;
-});
-console.log(fullNames); //returns ["warren shea", "will shea", "wally shea"]
-```
-EQUALS (stylistcally different but the same)
-```javascript
-const name = ['warren', 'will', 'wally'];
-const fullNames = names.map(name => {
+// EQUALS   ... = names.map((name) => {
+// EQUALS   ... = names.map(name => {
     return `${name} shea`;
 });
 console.log(fullNames); //returns ["warren shea", "will shea", "wally shea"]
@@ -50,7 +36,7 @@ const fullNames5 = names.map(() => `two shea`); //*
 console.log(fullNames); //returns ["two shea", "two shea", "two shea"]
 ```
 
-* Named Function
+* Named Function (FYI only)
 ```javascript
 function thisIsANamedFunction(x) {
   console.log(x);
@@ -65,7 +51,50 @@ sayMyName('warren'); //returns 'warren'
 //Not good for stack traces but good if you're not concerned
 ```
 
-###  Module 2.2: More Arrow Function Examples
+###  Module 2.7: More Arrow Function Examples
+```javascript
+const race = '100m Dash';
+const winners = ['Wally West','Barry Allen','Bart Allen'];
+const win = winners.map((winner,i) => ({name: winner, race: race, place: i +}))
+//extra ( ) around {} means it's an object literal
+//@FYI: console.table(win) gives you sweet looking table !
+
+//another way to write it:
+const win2 = winners.map((winner,i) => ({name: winner, race, place: i +}))
+//just say "race", and it will automatically mean "race: race"
+```
+
+```javascript
+const ages = [3,34,62,31,25,15,46,76]
+//const old = ages.filter(age => (age >= 60)); //returns [62,76]
+const old = ages.filter(age => age >= 60); //returns [62,76]
+```
+
+###  Module 2.8: Arrow Functions and `this`
+
+```javascript
+var box = document.querySelector('.box'); //equals $('.box');
+box.addEventListener('click', () => {
+    console.log(this) // this is the window!
+}); //this is bad!
+
+box.addEventListener('click', function() => {
+    this.classList.toggle('add-class');
+    setTimeout(() => {
+      this.classList.toggle('add-second-class');
+      //where this is inherited from above (where add-class is logged), as opposed to doing self = this;
+    }, 500);
+});
+```
+
+```javascript
+//@FYI Switch values in ES6
+let first = "first";
+let second = "second";
+[first,second] = [second,first];
+```
+
+###  Module 2.9: Default Function Arguments
 
 
 
