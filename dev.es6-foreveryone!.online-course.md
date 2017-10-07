@@ -6,14 +6,14 @@ https://courses.wesbos.com/
 
 ###  Module 1: var Scoping refresh
 
-* `${*var*}`
+* `${var}`
 ```javascript
 var dogYears = age * 7;
 console.log(“You are “ + dogYears + “ dog years old!”);
 /*is the same as */ console.log(`You are ${dogYears} dog years old!`);
 ```
 
-* var variables are function scoped, but if there’s no function, it will be block scoped (between { and }) 
+* `var` variables are function scoped, but if there’s no function, it will be block scoped (between { and } )
 
 * `let` variables are block scoped
 ```javascript
@@ -87,5 +87,15 @@ console.log(pizza); //returns "Uncaught ReferenceError: pizza is not defined"
 ```
 You can't access the variable (`let` / `const`) before it's defined
 
-*
+* What should I use?
+How [Mathias Bynens](https://mathiasbynens.be/notes/es6-const) & Web Bos use it: 
+  * use `const` by default
+  * only use `let` if rebinding is needed
+  * (`var` shouldn’t be used in ES6)
+
+How [Kyle Simpson](https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond) use it:
+* use `var` for top-level variables that are shared across many (especially larger) scopes
+* use `let` for localized variables in smaller scopes
+* refactor `let` to `const` only after some code has been written and you're reasonably sure you've got a case where there shouldn't be variable reassignment
+
 
