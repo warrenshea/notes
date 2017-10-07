@@ -44,7 +44,7 @@ function thisIsANamedFunction(x) {
 //Useful for debugging, to see the function that might cause an error
 ```
 
-* Arrow Functions are not named functions (it is an anonymouse function) but you can put it in a variable
+* Arrow Functions are not named functions (it is an anonymous function) but you can put it in a variable
 ```javascript
 const sayMyName = (name) => {console.log(name)};
 sayMyName('warren'); //returns 'warren'
@@ -95,8 +95,86 @@ let second = "second";
 ```
 
 ###  Module 2.9: Default Function Arguments
+```javascript
+//what if tax and tip are undefined?
+function calculateBill(total, tax, tip)
+  if (tax === undefined) { tax = 0.13; } //or tax = tax || 0.13;
+  if (tip === undefined) { tax = 0.15; } //or tip = tip || 0.15;
+  return total + (total * tax) + (total * tip);
+}
+calculateBill(100);
+//OR
+function calculateBill(total, tax = 0.13, tip = 0.15){
+  return total + (total * tax) + (total * tip);
+}
+calculateBill(100);
+//OR
+function calculateBill(total, tax = 0.13, tip = 0.15){
+  return total + (total * tax) + (total * tip);
+}
+calculateBill(100,undefined,0.25);
+//assume tax=0.13, but the tip is 0.25
+```
 
+### Module 2.10: When NOT to use the Arrow Function
+```javascript
+// When you really need `this`
+const button = document.querySelector('#pushy');
+//.....addEventListener('click', () =>  { // because `this` will be the window
+button.addEventListener('click', function() { //good
+  console.log(this);
+  this.classList.toggle('on');
+});
 
+// When you need a method to bind to an object
+const person = {
+  points: 23,
+//score() => { //bad because `this` will be the window
+//score(): function { //good
+  score() { //even better!
+    console.log(this);
+    this.points++;
+  }
+}
+
+// When you need to add a prototype method
+class Car {
+  constructor(make, colour) {
+    this.make = make;
+    this.colour = colour;
+  }
+}
+const beemer = new Car('bmw', 'blue');
+const subie = new Car('Subaru', 'white');
+
+//..prototype.summarize = () => { //bad, because `this` is window
+Car.prototype.summarize = function() { //good
+   return `This car is a ${this.make} in the colour ${this.colour}`;
+};
+
+// When you need arguments object
+//... orderChildren = () => { //bad, arguments will not be passed in properly
+const orderChildren = function() { //good
+  const children = Array.from(arguments); 
+  return children.map((child, i) => {
+    return `${child} was child #${i + 1}`;
+  })
+  console.log(arguments);
+}
+orderChilden('alan','hal','guy','john','kyle');
+```
+
+### Module 2.11: Arrow Functions Exercises
+```javascript
+//@FYI Convert Node List to Array
+Array.from(nodeList); //converts nodeList to Array
+//@FYI @FILTER Check if an array item includes a string
+items.filter(item => item.textContent.includes(str));
+//@FYI @FILTER map down things
+items.map(item => item.dataset.time); //gives you data-time attribute
+//@FYI @TODO @FILTER reduce
+items.reduce((value1,value2) => value1+value2,0); //I don't know how this works
+```
 
 ## Module 1: New Variables - Creation, Updating and Scoping
 
