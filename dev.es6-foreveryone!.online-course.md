@@ -2,9 +2,76 @@
 last updated - Sept 28, 2017
 https://courses.wesbos.com/
 
-## New Variables - Creation, Updating and Scoping
+## Module 2: Function Improvements: Arrows and Default Arguments
 
-###  Module 1: var Scoping refresh
+###  Module 2.1: Arrow Functions Introduction
+
+* 3 benefits:
+  * More concise
+  * Implicit returns (nifty one-liners)
+  * Doesn't rebind value of `this` when you use arrow function inside another function
+
+```javascript
+const name = ['warren', 'will', 'wally'];
+const fullNames = names.map(function(name) {
+    return `${name} shea`;
+});
+console.log(fullNames); //returns ["warren shea", "will shea", "wally shea"]
+```
+EQUALS
+```javascript
+const name = ['warren', 'will', 'wally'];
+const fullNames = names.map((name) => {
+    return `${name} shea`;
+});
+console.log(fullNames); //returns ["warren shea", "will shea", "wally shea"]
+```
+EQUALS (stylistcally different but the same)
+```javascript
+const name = ['warren', 'will', 'wally'];
+const fullNames = names.map(name => {
+    return `${name} shea`;
+});
+console.log(fullNames); //returns ["warren shea", "will shea", "wally shea"]
+```
+EQUALS
+```javascript
+const name = ['warren', 'will', 'wally'];
+const fullNames4 = names.map(name => `${name} shea`); //*
+console.log(fullNames); //returns ["warren shea", "will shea", "wally shea"]
+//* where { and } are removed to implicitly return
+//and where `return` being used above is an explicit return
+```
+
+If you had no parameter to return, you can take out the `name` parameter
+```javascript
+const name = ['warren', 'will', 'wally'];
+const fullNames5 = names.map(() => `two shea`); //*
+console.log(fullNames); //returns ["two shea", "two shea", "two shea"]
+```
+
+* Named Function
+```javascript
+function thisIsANamedFunction(x) {
+  console.log(x);
+}
+//Useful for debugging, to see the function that might cause an error
+```
+
+* Arrow Functions are not named functions (it is an anonymouse function) but you can put it in a variable
+```javascript
+const sayMyName = (name) => {console.log(name)};
+sayMyName('warren'); //returns 'warren'
+//Not good for stack traces but good if you're not concerned
+```
+
+###  Module 2.2: More Arrow Function Examples
+
+
+
+## Module 1: New Variables - Creation, Updating and Scoping
+
+###  Module 1.1: var Scoping refresh
 
 * `${var}`
 ```javascript
@@ -15,7 +82,7 @@ console.log(“You are “ + dogYears + “ dog years old!”);
 
 * `var` variables are function scoped, but if there’s no function, it will be block scoped (between { and } )
 
-###  Module 2: `let` VS `const`
+###  Module 1.2: `let` VS `const`
 
 * `let` variables are block scoped
 ```javascript
@@ -41,7 +108,7 @@ warren.age = 30;
 console.log(warren.age); //35
 ```
 
-###  Module 3: `let` and `const` in Real World
+###  Module 1.3: `let` and `const` in Real World
 
 * Immediately-invoked function expression - [iife](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 ```javascript
@@ -78,7 +145,7 @@ for (let i = 0; i < 10; i++) {
 //** this i variable is now scoped to the loop
 ```
 
-###  Module 4: Temporal Dead Zone
+###  Module 1.4: Temporal Dead Zone
 
 * Temporal Dead zone
 ```javascript
@@ -93,7 +160,7 @@ console.log(pizza); //returns "Uncaught ReferenceError: pizza is not defined"
 ```
 You can't access the variable (`let` / `const`) before it's defined
 
-###  Module 5: Is `var` Dead? What should I use?
+###  Module 1.5: Is `var` Dead? What should I use?
 
 * Using `let` / `const` / `var` : the [Mathias Bynens](https://mathiasbynens.be/notes/es6-const) & Web Bos approach
   * use `const` by default
