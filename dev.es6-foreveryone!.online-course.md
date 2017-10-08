@@ -9,9 +9,10 @@ https://courses.wesbos.com/
 
 ---
 
-## Module 6: Iterables & Looping
+## Module 8: Say Hello to ...Spread and ...Rest
 
-###  Module 6.22: The for loop
+###  Module 8.28: Spread Operatior Introduction
+
 
 
 
@@ -571,4 +572,156 @@ If you had no parameter to return, you can take out the `name` parameter
   const bill = tipCalc({ tip: 0.20, total: 200 });
   //the order can be placed in any way we want
   console.log(bill);
+```
+
+## Module 6: Iterables & Looping
+
+###  Module 6.22: The for of loop
+* The for of loop loops over iterables (anything that can be looped over like a dom collection, arguments, array, string, map, set)
+```javascript
+const cuts ['chuck','brisket','shank','short rib'];
+
+for (let i = 0;i < cuts.length; i++) { //ugly and confusing
+  console.log(cuts[i]);
+}
+  
+cuts.forEach((cut) => { //can't use break; or continue;
+  console.log(cuts[i]);
+});
+
+for (const index in cuts) { //'for in', iterates of item + anything added (which is bad)
+  console.log(cuts[index]); 
+}
+
+//for of - the best of all 3 worlds and can use it for everything except object
+for (const cut of cuts) {
+  console.log(cut);
+  //can you break/continue
+}
+```
+
+### Module 6.23: The for of Loop in Action
+```javascript
+const cuts ['chuck','brisket','shank','short rib'];
+
+//cuts.entries(); // Array Iterator
+const meat = cuts.entries();
+meat.next(); //provides index and value
+
+for (const cut of cuts.entries()) {
+  console.log(cut); //cut is an array 
+}
+
+for (const [i,cut] of cuts.entries()) { //destructure
+  console.log(`${cut} is the ${i} item`);
+  //Chuck is the 1 item
+  //Brisket is the 2 item
+  //etc.
+  //etc.
+}
+
+//trying to iterate over
+function addUpNumbers() {
+  console.log(arguments); //returns [10,23,52,43,34,87,64] list with length
+
+  let total = 0;
+  for (num of arguments) {
+    total += num;
+  }
+  return total; //returns total
+}
+addUpNumbers(10,23,52,43,34,87,64)
+
+const name = 'Warren Shea';
+for (char of name) {
+  console.log(char); //returns W, then a, then r, etc. etc.
+}
+```
+
+### Module 6.24: Using for of with Objects
+* object.entries() will be available later (in ES2017 and can be polyfilled)
+* Alternatives to `for of` with Objects:
+```javascript
+const cuts ['chuck','brisket','shank','short rib'];
+
+for const cut of Object.keys(cuts)) {
+  const value = cuts[cut];
+  console.log(value, cut);
+}
+
+for (const index in cuts) {
+  console.log(cuts[index]); 
+}
+```
+
+## Module 7: An Array of Array Improvements
+
+###  Module 7.25: Array.from() and Array.of()
+* New array method
+* Array.from() -> turns something Array-ish (e.g. NodeList) and turn it into an Array
+```javascript
+  const peopleArray = Array.from(arrayIsh);
+
+  const peopleArray = Array.from(arrayIsh, domNode => {
+    return domNode.textContent;
+  });
+
+  function sumAll() {
+    //arguments is array-ish
+    return arguments.reduce((prev,next) => prev + next, 0); //fails
+  }
+  sumAll(3,3,56353,34343,3,32,34,323,3)
+
+  function sumAll() {
+    const nums = Array.from(arguments);
+    return nums.reduce((prev,next) => prev + next, 0); //success
+  }
+  sumAll(3,3,56353,34343,3,32,34,323,3)
+```
+* Array.of(arguments) -> pass it as many arguments that you want, creates array for every argument that you pass it
+
+###  Module 7.25: Array.find() and Array.findIndex()
+* nice utility - might not need to add lodash because of this
+* Array.find()
+```javascript
+  const apiObjectItem = apiObject.find(apiObjectItem => {
+    if(apiObjectItem === 'some value') {
+      return true;
+    }
+    return false;
+  });
+//OR
+  const value = 'someValue';
+  const apiObjectItem = apiObject.find(apiObjectItem => apiObjectItem.key === value);
+```
+* Array.findIndex()
+```javascript
+  const value = 'someValue';
+  const apiObjectItemIndex = apiObject.findIndex((apiObjectItem) => {
+    if (apiObjectItem.key === value) {
+      return true;
+    }
+    return false;
+  });
+//OR
+  const apiObjectItemIndex = apiObject.findIndex(apiObjectItem => apiObjectItem.key === value);
+```
+
+###  Module 7.26: Array.some() and Array.every()
+* Array.some(): check items in array to see if some of the items meet the criteria you're looking for
+```javascript
+  const ages = [32,15,19,12]
+
+  //are there arny adults?
+  const adultPresent = ages.some(ages => age >= 18);
+  //returns true as soon as it succeed (it will return at 32)
+
+```
+* Array.every(): check items in array to see if all of the items meet the criteria you're looking for
+```javascript
+  const ages = [32,15,19,12]
+
+  //is everyone old enough to drink?
+  const allOldEnough = ages.some(ages => age >= 19);
+  //returns false
 ```
