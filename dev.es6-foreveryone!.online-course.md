@@ -3,16 +3,107 @@ v.20171007
 https://courses.wesbos.com/
 
 ---
+## Legend
 @FYI = For reference
 @TODO = Need to revisit / clarify
 @FILTER = Reference for useful filters
 
+## Table of Contents
+Modules 1 - 11: New things with ES6
+Modules 12 - : Working with linters, nodeJS,
+
 ---
 
-## Module 8: Say Hello to ...Spread and ...Rest
+## Module 12: Code Quality with ESLint
 
-###  Module 8.28: Spread Operatior Introduction
+###  Module 12.39: Getting Started with ESLint
+* ESLint is one of the best linters and has support for all of the new ES6 features
+```bash
+  npm install npm@latest -g #install latest npm, -g for global
+  npm install eslint -g     #install eslint, -g for global
+  eslint file.js            #to eslint a file through command line (file.js) 
+```
+* different eslint settings for project
+* `.eslintrc` is your settings
+  * written in `json`
+  * must use double quotes
+```json
+  {
+    "env": {
+      "es6": true,
+      "browser": true
+    },
+    //"extends": "eslint:recommended", 
+    "extends": "airbnb", //need to install module first (see Module 12.40)
+    //https://eslint.org/docs/rules/
+    "rules": {
+      "no-console": 0, 
+      "no-unused-vars": 1
+    },
+    "plugins": ["html", "markdown"]
+  }
+```
+* rules can be Off ("off"/0), Warning ("warn"/1), or Error ("error"/2)
+* can have 0/1/2,{} where the ,{} is for options
 
+###  Module 12.40: Airbnb ESLint Settings
+* [Airbnb ESLint JavaScript Styleguide](https://github.com/airbnb/javascript)
+* [Airbnb ESLint ESLint Config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
+* [Airbnb ESLint npm](https://www.npmjs.com/package/eslint-config-airbnb)
+* To install, use something like this (up to date one on github)
+```bash
+  npm install -g eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react
+```
+* to automagically fix spacing and other minor items
+```bash
+esline file.js --fix
+```
+* your global .eslint file is in your home directory (e.g. ~ or the foldername with your user, e.g. c:\users\username)
+* should have trailing comma for the last key in objects
+
+###  Module 12.41: Line and File Specific Settings
+* set globals in file so your eslint won't fire on them (e.g. `ga.track()` or `twttr.trackConversion()`)
+* At the top of the file, write this to ignore
+```javascript
+  /* globals twttr ga */
+```
+* To turn off the linting for something in the file
+```javascript
+  /* eslint-disable no-extend-native */
+```
+OR
+* Turn off the linting just for the line
+```javascript
+  /* eslint-disable no-extend-native */
+  //offending line
+  /* eslint-enable no-extend-native */
+```
+OR
+* Turn off the linting for a chunk of code
+```javascript
+  /* eslint-disable */
+  //offending chunk of code
+  /* eslint-enable  */
+```
+
+###  Module 12.42: ESLint Plugins
+* [dustinspecker](https://github.com/dustinspecker/awesome-eslint)
+* Install html and markdown
+```json
+  {
+    "plugins" : [
+      "html",
+      "markdown"
+    ]
+  }
+```
+* `--fix` only works for pure JS files, not HTML or Markdown
+
+###  Module 12.43: ESLint inside Ataom and Sublime Text
+* SublimeLinter 3 is a Sublime plugin/framework
+* Use Sublime Package Manager to `SublimeLinter`
+* Use Sublime Package Manager to `SublimeLinter-contrib-eslint`
+* Have to have `eslint` globally installed (see [12.39]())
 
 
 
@@ -577,7 +668,7 @@ If you had no parameter to return, you can take out the `name` parameter
 ## Module 6: Iterables & Looping
 
 ###  Module 6.22: The for of loop
-* The for of loop loops over iterables (anything that can be looped over like a dom collection, arguments, array, string, map, set)
+* The for of loop loops over iterables (anything that can be looped over like a DOM collection, arguments, array, string, map, set)
 ```javascript
 const cuts ['chuck','brisket','shank','short rib'];
 
@@ -712,7 +803,7 @@ for (const index in cuts) {
 ```javascript
   const ages = [32,15,19,12]
 
-  //are there arny adults?
+  //are there any adults?
   const adultPresent = ages.some(ages => age >= 18);
   //returns true as soon as it succeed (it will return at 32)
 
@@ -722,6 +813,323 @@ for (const index in cuts) {
   const ages = [32,15,19,12]
 
   //is everyone old enough to drink?
-  const allOldEnough = ages.some(ages => age >= 19);
+  const allOldEnough = ages.every(ages => age >= 19);
   //returns false
 ```
+
+## Module 8: Say Hello to ...Spread and ...Rest
+
+###  Module 8.28: Spread Operator Introduction
+
+* ...The Spread Operator: Takes every single item from an iterable (anything that can be looped over like a DOM collection, arguments, array, string, map, set) and apply it to the containing Array
+```javascript
+  ['warren'] //an array with the string "warren"
+  //what if I want each character to be an iterable?
+  [...'warren'] //=> ["w","a","r","r","e","n"]
+/**************************************************************************/
+  const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
+  const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
+  
+  //ES6 way of making an array of featured, 'veg', specialty
+  const pizzas = [...featured, 'veg', ...specialty];
+/**************************************************************************/
+  //if we wanted to make a duplicate of pizzas,
+  const fridayPizzas = pizzas;
+  //if you changed fridayPizzas, pizzas would also be changed too! Uh oh!
+  //const fridayPizzas = pizzas; is not a COPY, but a reference
+  
+  //OLD way to duplicate and array
+  cost fridayPizzas = [].concat(pizzas);
+  //ES6 way
+  const fridayPizzas = [...pizzas];
+```
+
+###  Module 8.29: Spread Exercise
+* Exercise to make each character in a string do something on hover
+
+###  Module 8.30: More Spread Examples
+* Spread is an alternative to `Array.from(arrayIsh);`
+*
+```javascript
+  const people = document.querySelectorAll('p'); //return nodeList
+
+  //if you want it to be an array
+  const people = Array.from(document.querySelectorAll('p')); //return Array
+//OR
+  const people = [...document.querySelectorAll('p')]; //return Array
+```
+* If you wanted to remove an item from an array, but all you have is one reference...then you can do a findIndex and get everything until the index and add it to everything after the index
+```javascript
+  const comments = [
+    { id: 209384, text: 'I love your dog!' },
+    { id: 523423, text: 'Cuuute! 🐐' },
+    { id: 632429, text: 'You are so dumb' },
+    { id: 192834, text: 'Nice work on this wes!' },
+  ];
+  const id = 632429;
+  const commentIndex = comments.findIndex(comment => comment.id === id);
+  const newComments = [...comments.slice(0,commentIndex), ...comments.slice(commentIndex + 1)];
+```
+
+###  Module 8.31: Spreading into a function
+* Combining arrays
+```javascript
+  const inventors = ['Einstein', 'Newton', 'Galileo'];
+  const newInventors = ['Musk', 'Jobs'];
+
+  //if you wanted to merge arrays
+
+  //this will not work
+  investors.push(newInvestors); //returns ['Einstein', 'Newton', 'Galileo', ['Musk', 'Jobs']] which is not what you want
+
+  //Old way - weird/hard to understand
+  inventors.push.apply(investors, newInvestors);
+
+  //ES6 way
+  inventors.push(...newInventors);
+/**************************************************************************/
+  const name = ['Wes', 'Bos'];
+
+  function sayHi(first, last) {
+    alert(`Hey there ${first} ${last}`);
+  }
+
+  sayHi(...name);
+```
+
+###  Module 8.32: The ...Rest param in Functions and destructuring
+* ... for a Spread takes one array and unpacks it into items
+* ... for a Rest takes multiple things and packs it into a single array
+```javascript
+  function convertCurrency(rate, tax, tip, ...amounts) {
+    return amounts.map(amount => amount * rate);
+  }
+  const amounts = convertCurrency(1.54, 10, 23, 52, 1, 56);
+/**************************************************************************/
+  const runner = ['Wes Bos', 123, 5.5, 5, 3, 6, 35];
+  const [name, id, ...runs] = runner; //runs is [5,3,6,35]
+```
+
+## Module 9: Object Literal Upgrades
+
+###  Module 9.33: Object Literal Upgrades
+```javascript
+  //OLD WAY
+  const dog = {
+    first: first,
+    last: last,
+    age: age,
+    breed: breed,
+  }
+//EQUALS
+  const dog = {
+    first,
+    last,
+    age,
+    breed,
+  };
+/**************************************************************************/
+  const modal = {
+    create: function() {},
+    open: function() {},
+    close: function() {},
+  }
+//EQUALS
+  //Note: Don't use => function because of `this` issues
+  const modal = {
+    create() {},
+    open() {},
+    close() {},
+  }
+/**************************************************************************/
+  function invertColor(color) {
+      return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
+  }
+
+  const key = 'pocketColor';
+  const value = '#ffc600';
+
+  const tShirt = {
+    [key]: value,
+    [`${key}Opposite`]: invertColor(value) //create pocketColorOpposite
+  };
+/**************************************************************************/
+  const keys = ['size', 'color', 'weight'];
+  const values = ['medium', 'red', 100];
+
+  //Old Way
+  const shirt = {
+    [keys[0]] = [values[0]];
+    [keys[1]] = [values[1]];
+    [keys[2]] = [values[2]];
+  }
+  //ES6 Way
+  const shirt = {
+    [keys.shift()]: values.shift(),
+    [keys.shift()]: values.shift(),
+    [keys.shift()]: values.shift(),
+  }
+```
+
+## Module 10: Promises
+
+###  Module 10.34: Promises
+* Promises are often used when you're fetching a JSON or have an API
+* Promises is something that will happen in the future but probably not immediately
+```javascript
+//equal $.getJSON or $.ajax
+const posts = fetch(url);
+//^queues up the search immediately but doesn't store it in variable, stoes a promise 
+
+posts
+  .then(data => data.json())
+  .then(data => { console.log(data.)})
+  .catch((err) = > { console.error(err)})
+//^ chaining format
+```
+
+###  Module 10.35: Building your own Promises
+```
+  const p = new Promise((resolve,reject) => {
+    //call resolve() when you finish the promise
+    resolve("data"); //don't stop JavaScript from running - start it and when it comes back, deal with it
+
+    //call reject() when there's an error
+    reject(Error("Error")); //throw Error object, not just string
+  });
+
+  p
+    .then(data => {
+      console.log(data);
+    })
+    .catch(err => {
+      console.error(err);
+    })
+```
+
+###  Module 10.36: Chaining Promises + Flow Control
+* Simulate a posts and authors database and chain them together
+```javascript
+  const posts = [
+    { title: 'I love JavaScript', author: 'Wes Bos', id: 1 },
+    { title: 'CSS!', author: 'Chris Coyier', id: 2 },
+    { title: 'Dev tools tricks', author: 'Addy Osmani', id: 3 },
+  ];
+
+  const authors = [
+    { name: 'Wes Bos', twitter: '@wesbos', bio: 'Canadian Developer' },
+    { name: 'Chris Coyier', twitter: '@chriscoyier', bio: 'CSS Tricks and CodePen' },
+    { name: 'Addy Osmani', twitter: '@addyosmani', bio: 'Googler' },
+  ];
+
+  function getPostById(id) {
+    // create a new promise
+    return new Promise((resolve, reject) => {
+      // using a settimeout to mimick a databse
+      setTimeout(() => {
+        // find the post we want
+        const post = posts.find(post => post.id === id);
+        if(post) {
+          resolve(post); // send the post back
+        } else {
+          reject(Error('No Post Was Found!'));
+        }
+      }, 200);
+    });
+  }
+
+  function hydrateAuthor(post) {
+    // create a new promise
+    return new Promise((resolve, reject) => {
+      // find the author
+      const authorDetails = authors.find(person => person.name === post.author);
+      if(authorDetails) {
+        // "hydrate" the post object with the author object
+        post.author = authorDetails;
+        resolve(post);
+      } else {
+        reject(Error('Can not find the author'));
+      }
+    });
+  }
+
+  getPostById(3)
+    .then(post => { //first promise from getPostById
+      return hydrateAuthor(post); //second promise from hydrateAuthor
+    })
+    .then(post => { //when both promises are complete, output post
+      console.log(post);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+```
+
+###  Module 10.37: Working with Multiple Promises
+```javascript
+   const weather = new Promise((resolve) => {
+     setTimeout(() => {
+       resolve({ temp: 29, conditions: 'Sunny with Clouds'});
+     }, 2000);
+   });
+
+   const tweets = new Promise((resolve) => {
+     setTimeout(() => {
+       resolve(['I like cake', 'BBQ is good too!']);
+     }, 500);
+   });
+
+   Promise
+     .all([weather, tweets]) //waiting for all promises to be resolved before running then
+     .then(responses => {
+       const [weatherInfo, tweetInfo] = responses;
+       console.log(weatherInfo, tweetInfo)
+     });
+/**************************************************************************/
+  //^ Same as above but with real APIs
+  //fetch API needs a server
+  const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
+  const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+
+  Promise
+    .all([postsPromise, streetCarsPromise])
+    .then(responses => {
+      return Promise.all(responses.map(res => res.json())) //data could be an arrayBuffer, blobl, json, text, formData. so .json() tells it to return json
+    })
+    .then(responses => {
+      console.log(responses);
+    });
+```
+
+## Module 11: Symbols
+
+###  Module 11.38: All About Symbols
+* 7th Primitive type added to JavaScript
+* 6 primitive types: number, string, object, boolean, null, undefined
+* Symbol is a unique identifier to avoid naming collision
+```javascript
+  const wes = Symbol('Wes'); //where 'Wes' is the discriptor
+  const person = Symbol('Wes'); 
+  wes === person //false
+  wes == person //false
+```
+* Symbols are innumerable so sometimes you store private data in a symbol
+```javascript
+  const wes = Symbol('Wes');
+  const person = Symbol('Wes');
+
+  const classRoom = {
+    [Symbol('Mark')] : { grade: 50, gender: 'male' },
+    [Symbol('olivia')]: { grade: 80, gender: 'female' },
+    [Symbol('olivia')]: { grade: 80, gender: 'female' },
+  };
+
+  for (const person in classRoom) {
+    console.log(person);
+  }
+
+  const syms = Object.getOwnPropertySymbols(classRoom);
+  const data = syms.map(sym => classRoom[sym]);
+  console.log(data);
+```
+* @TODO I didn't really understand this but I don't think it matters/I don't think it's that important
