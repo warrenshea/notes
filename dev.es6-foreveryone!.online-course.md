@@ -74,7 +74,7 @@ https://courses.wesbos.com/
     (function () { /* ... */ }());
     (() => { /* ... */ })(); // With ES6 arrow functions (though parentheses only allowed on outside)
     ```
-What it does: a function that runs itself immediately and creates a scope where nothing is going to leak into the parent scope (e.g. global scope of the window)
+    What it does: a function that runs itself immediately and creates a scope where nothing is going to leak into the parent scope (e.g. global scope of the window)
 
 * with `let` and `const`, you don't need to do this because they're block scoped.
     ```javascript
