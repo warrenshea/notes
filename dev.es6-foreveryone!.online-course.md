@@ -10,27 +10,27 @@ https://courses.wesbos.com/
 
 ## Table of Contents
 
-[Module 1: New Variables - Creation, Updating and Scoping](#module-1-new-variables---creation-updating-and-scoping)  
-[Module 2: Function Improvements: Arrows and Default Arguments](#module-2-function-improvements-arrows-and-default-arguments)  
-[Module 3: Template Strings](#module-3-template-strings)  
-[Module 4: Additional String Improvements](#module-4-additional-string-improvements)  
-[Module 5: Destructuring](#module-5-destructuring)  
-[Module 6: Iterables & Looping](#module-6-iterables--looping)  
-[Module 7: An Array of Array Improvements](#module-7-an-array-of-array-improvements)  
-[Module 8: Say Hello to ...Spread and ...Rest](#module-8-say-hello-to-spread-and-rest)  
-[Module 9: Object Literal Upgrades](#module-9-object-literal-upgrades)  
-[Module 10: Promises](#module-10-promises)  
-[Module 11: Symbols](#module-11-symbols)  
-[Module 12: Code Quality with ESLint](#module-12-code-quality-with-eslint)  
-[Module 13: JavaScript Modules and Using npm](#module-13-javascript-modules-and-using-npm)  
-[Module 14: ES6 Tooling](#module-14-es6-tooling)  
-[Module 15: Classes](#module-15-classes)  
-[Module 16: Generators](#module-16-generators)  
-[Module 17: Proxies](#module-17-proxies)  
-[Module 18: Sets and WeakSets](#module-18-sets-and-weaksets)  
-[Module 19: Map and Weak Map](#module-19-map-and-weak-map)  
-[Module 20: Async + Await Flow Control](#module-20-async--await-flow-control)  
-[Module 21: ES7, ES8 + Beyond](#module-21-es7-es8--beyond)  
+* [Module 1: New Variables - Creation, Updating and Scoping](#module-1-new-variables---creation-updating-and-scoping)  
+* [Module 2: Function Improvements: Arrows and Default Arguments](#module-2-function-improvements-arrows-and-default-arguments)  
+* [Module 3: Template Strings](#module-3-template-strings)  
+* [Module 4: Additional String Improvements](#module-4-additional-string-improvements)  
+* [Module 5: Destructuring](#module-5-destructuring)  
+* [Module 6: Iterables & Looping](#module-6-iterables--looping)  
+* [Module 7: An Array of Array Improvements](#module-7-an-array-of-array-improvements)  
+* [Module 8: Say Hello to ...Spread and ...Rest](#module-8-say-hello-to-spread-and-rest)  
+* [Module 9: Object Literal Upgrades](#module-9-object-literal-upgrades)  
+* [Module 10: Promises](#module-10-promises)  
+* [Module 11: Symbols](#module-11-symbols)  
+* [Module 12: Code Quality with ESLint](#module-12-code-quality-with-eslint)  
+* [Module 13: JavaScript Modules and Using npm](#module-13-javascript-modules-and-using-npm)  
+* [Module 14: ES6 Tooling](#module-14-es6-tooling)  
+* [Module 15: Classes](#module-15-classes)  
+* [Module 16: Generators](#module-16-generators)  
+* [Module 17: Proxies](#module-17-proxies)  
+* [Module 18: Sets and WeakSets](#module-18-sets-and-weaksets)  
+* [Module 19: Map and Weak Map](#module-19-map-and-weak-map)  
+* [Module 20: Async + Await Flow Control](#module-20-async--await-flow-control)  
+* [Module 21: ES7, ES8 + Beyond](#module-21-es7-es8--beyond)  
 ---
   
   
@@ -108,17 +108,17 @@ https://courses.wesbos.com/
 ###  Module 1.4: Temporal Dead Zone
 
 * Temporal Dead zone
-```javascript
-  var pizza = "deep dish";
-  console.log(pizza); //returns undefined
-```
-The `var` variables can be access before it's defined
-You can't access the value, but you can access the variable
-```javascript
-  let/const pizza = "deep dish";
-  console.log(pizza); //returns "Uncaught ReferenceError: pizza is not defined"
-```
-You can't access the variable (`let` / `const`) before it's defined
+    ```javascript
+    var pizza = "deep dish";
+    console.log(pizza); //returns undefined
+    ```
+    The `var` variables can be access before it's defined  
+    You can't access the value, but you can access the variable
+    ```javascript
+    let/const pizza = "deep dish";
+    console.log(pizza); //returns "Uncaught ReferenceError: pizza is not defined"
+    ```
+    You can't access the variable (`let` / `const`) before it's defined
 
 ###  Module 1.5: Is `var` Dead? What should I use?
 
@@ -141,64 +141,63 @@ You can't access the variable (`let` / `const`) before it's defined
   * Implicit returns (nifty one-liners)
   * Doesn't rebind value of `this` when you use arrow function inside another function
 
-```javascript
-  const name = ['warren', 'will', 'wally'];
-  const fullNames = names.map(function(name) {
-  // EQUALS   ... = names.map((name) => {
-  // EQUALS   ... = names.map(name => {
-      return `${name} shea`;
-  });
-  console.log(fullNames); //returns ["warren shea", "will shea", "wally shea"]
-```
-EQUALS
-```javascript
-  const name = ['warren', 'will', 'wally'];
-  const fullNames4 = names.map(name => `${name} shea`); //*
-  console.log(fullNames); //returns ["warren shea", "will shea", "wally shea"]
-  //* where { and } are removed to implicitly return
-  //and where `return` being used above is an explicit return
-```
+    ```javascript
+    const name = ['warren', 'will', 'wally'];
+    const fullNames = names.map(function(name) {
+    // EQUALS   ... = names.map((name) => {
+    // EQUALS   ... = names.map(name => {
+        return `${name} shea`;
+    });
+    console.log(fullNames); //returns ["warren shea", "will shea", "wally shea"]
+    ```
+    EQUALS
+    ```javascript
+    const name = ['warren', 'will', 'wally'];
+    const fullNames4 = names.map(name => `${name} shea`); //*
+    console.log(fullNames); //returns ["warren shea", "will shea", "wally shea"]
+    //* where { and } are removed to implicitly return
+    //and where `return` being used above is an explicit return
+    ```
 
-If you had no parameter to return, you can take out the `name` parameter
-```javascript
-  const name = ['warren', 'will', 'wally'];
-  const fullNames5 = names.map(() => `two shea`); //*
-  console.log(fullNames); //returns ["two shea", "two shea", "two shea"]
-```
+    If you had no parameter to return, you can take out the `name` parameter
+    ```javascript
+    const name = ['warren', 'will', 'wally'];
+    const fullNames5 = names.map(() => `two shea`); //*
+    console.log(fullNames); //returns ["two shea", "two shea", "two shea"]
+    ```
 
 * Named Function (FYI only)
-```javascript
-  function thisIsANamedFunction(x) {
-    console.log(x);
-  }
-  //Useful for debugging, to see the function that might cause an error
-```
+    ```javascript
+    function thisIsANamedFunction(x) {
+      console.log(x);
+    }
+    //Useful for debugging, to see the function that might cause an error
+    ```
 
 * Arrow Functions are not named functions (it is an anonymous function) but you can put it in a variable
-```javascript
-  const sayMyName = (name) => {console.log(name)};
-  sayMyName('warren'); //returns 'warren'
-  //Not good for stack traces but good if you're not concerned
-```
+    ```javascript
+    const sayMyName = (name) => {console.log(name)};
+    sayMyName('warren'); //returns 'warren'
+    ```
 
 ###  Module 2.7: More Arrow Function Examples
-```javascript
-  const race = '100m Dash';
-  const winners = ['Wally West','Barry Allen','Bart Allen'];
-  const win = winners.map((winner,i) => ({name: winner, race: race, place: i + 1}))
-  //extra ( ) around {} means it's an object literal
-  //@FYI: console.table(win) gives you sweet looking table !
 
-  //another way to write it:
-  const win2 = winners.map((winner,i) => ({name: winner, race, place: i + 1}))
-  //just say "race", and it will automatically mean "race: race"
-```
+    ```javascript
+    const race = '100m Dash';
+    const winners = ['Wally West','Barry Allen','Bart Allen'];
+    const win = winners.map((winner,i) => ({name: winner, race: race, place: i + 1}))
+    ```
 
-```javascript
-  const ages = [3,34,62,31,25,15,46,76]
-//const old = ages.filter(age => (age >= 60)); //returns [62,76]
-  const old = ages.filter(age => age >= 60); //returns [62,76]
-```
+    ```javascript
+    const win2 = winners.map((winner,i) => ({name: winner, race, place: i + 1}))
+    //just say "race", and it will automatically mean "race: race"
+    ```
+
+    ```javascript
+    const ages = [3,34,62,31,25,15,46,76]
+    //const old = ages.filter(age => (age >= 60)); //returns [62,76]
+    const old = ages.filter(age => age >= 60); //returns [62,76]
+    ```
 
 ###  Module 2.8: Arrow Functions and `this`
 
