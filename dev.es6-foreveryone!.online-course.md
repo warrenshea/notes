@@ -5,13 +5,33 @@ https://courses.wesbos.com/
 ---
 ## Legend
 @FYI = For reference
+
 @TODO = Need to revisit / clarify
+
 @FILTER = Reference for useful filters
 
 ## Table of Contents
-Modules 1 - 11: New things with ES6
-Modules 12 - 14: Working with linters, nodeJS, Babel + Polyfills
-Moduels 15 - 
+[Module 1: New Variables - Creation, Updating and Scoping](#module-1-new-variables---creation-updating-and-scoping)
+[Module 2: Function Improvements: Arrows and Default Arguments](#module-2-function-improvements-arrows-and-default-arguments)
+[Module 3: Template Strings](#module-3-template-strings)
+[Module 4: Additional String Improvements](#module-4-additional-string-improvements)
+[Module 5: Destructuring](#module-5-destructuring)
+[Module 6: Iterables & Looping](#module-6-iterables--looping)
+[Module 7: An Array of Array Improvements](#module-7-an-array-of-array-improvements)
+[Module 8: Say Hello to ...Spread and ...Rest](#module-8-say-hello-to-spread-and-rest)
+[Module 9: Object Literal Upgrades](#module-9-object-literal-upgrades)
+[Module 10: Promises](#module-10-promises)
+[Module 11: Symbols](#module-11-symbols)
+[Module 12: Code Quality with ESLint](#module-12-code-quality-with-eslint)
+[Module 13: JavaScript Modules and Using npm](#module-13-javascript-modules-and-using-npm)
+[Module 14: ES6 Tooling](#module-14-es6-tooling)
+[Module 15: Classes](#module-15-classes)
+[Module 16: Generators](#module-16-generators)
+[Module 17: Proxies](#module-17-proxies)
+[Module 18: Sets and WeakSets](#module-18-sets-and-weaksets)
+[Module 19: Map and Weak Map](#module-19-map-and-weak-map)
+[Module 20: Async + Await Flow Control](#module-20-async--await-flow-control)
+[Module 21: ES7, ES8 + Beyond](#module-21-es7-es8--beyond)
 
 ---
 
