@@ -43,37 +43,37 @@ https://courses.wesbos.com/
 ###  Module 1.2: `let` VS `const`
 
 * `let` variables are block scoped
-```javascript
-  let x = 1;
-  if (x === 1) {
-    let x = 2;
-  }
-  console.log(x); //1...because the "x" variables are different, the "x" variables are scoped differently
-```
+    ```javascript
+    let x = 1;
+    if (x === 1) {
+      let x = 2;
+    }
+    console.log(x); //1...because the "x" variables are different, the "x" variables are scoped differently
+    ```
 
 * `let` variables are made to be updated
 
 * `const` variables are never to be updated
 
 * `Object.freeze` (not ES6): used to freeze the variable from being changed
-```javascript
-  const person = {
-    name: 'warren',
-    age: 35
-  }
-  const warren = Object.freeze(person);
-  warren.age = 30;
-  console.log(warren.age); //35
-```
+    ```javascript
+    const person = {
+      name: 'warren',
+      age: 35
+    }
+    const warren = Object.freeze(person);
+    warren.age = 30;
+    console.log(warren.age); //35
+    ```
 
 ###  Module 1.3: `let` and `const` in Real World
 
 * Immediately-invoked function expression - [iife](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
-```javascript
-  (function () { /* ... */ })();
-  (function () { /* ... */ }());
-  (() => { /* ... */ })(); // With ES6 arrow functions (though parentheses only allowed on outside)
-```
+    ```javascript
+    (function () { /* ... */ })();
+    (function () { /* ... */ }());
+    (() => { /* ... */ })(); // With ES6 arrow functions (though parentheses only allowed on outside)
+    ```
 What it does: a function that runs itself immediately and creates a scope where nothing is going to leak into the parent scope (e.g. global scope of the window)
 
 * with `let` and `const`, you don't need to do this because they're block scoped.
