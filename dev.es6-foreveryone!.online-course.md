@@ -4,8 +4,8 @@ https://courses.wesbos.com/
 
 ---
 ## Legend
-@FYI = For reference
-@TODO = Need to revisit / clarify
+@FYI = For reference 
+@TODO = Need to revisit / clarify 
 @FILTER = Reference for useful filters
 
 ## Table of Contents
