@@ -76,7 +76,7 @@ https://courses.wesbos.com/
     ```
     What it does: a function that runs itself immediately and creates a scope where nothing is going to leak into the parent scope (e.g. global scope of the window)
 
-* with `let` and `const`, you don't need to do this because they're block scoped.
+* with `let` and `const`, you don't need to do this because they're block scoped
     ```javascript
     {
       const name = 'warren';
@@ -99,7 +99,7 @@ https://courses.wesbos.com/
     for (let i = 0; i < 10; i++) {
       console.log(i); //returns 0, then 1, then 2, ... to 10 each loop
       setTimeOut(function() {
-        console.log("The number is " + i); //returns "The number is 1", "The nubmer is 2", etc. **
+        console.log("The number is " + i); //returns "The number is 1", "The number is 2", etc. **
       },1000);
     }
     //** this i variable is now scoped to the loop
@@ -251,7 +251,7 @@ https://courses.wesbos.com/
     ```
 
     ```javascript
-    //OR this, where tax and tip have defaults, but can be overrided by the function
+    //OR this, where tax and tip have defaults, but can be overridden by the function
     function calculateBill(total, tax = 0.13, tip = 0.15){
       return total + (total * tax) + (total * tip);
     }
@@ -337,7 +337,7 @@ https://courses.wesbos.com/
 ###  Module 3.12: Template String Introduction
 * Dropping variables in a string via Template Strings or Template Literals
     ```javascript
-    let sentance = `backtick ${variable} backtick`;
+    let sentence = `backtick ${variable} backtick`;
     ```
 
 ###  Module 3.13: Creating HTML fragments with Template Literals
@@ -382,8 +382,6 @@ https://courses.wesbos.com/
     ];
     let markup = `${cats.name ? `${cats.name}` : ''}`;
     console.log(markup); //(blank)
-
-    //if song.featuring exists, show the value of the variable, otherwise show nothing
     ```
 
     ```javascript
@@ -398,7 +396,6 @@ https://courses.wesbos.com/
       `;
     }
     ${renderFunction(beer.keywords)}
-    //if song.featuring exists, show the value of the variable, otherwise show nothing
     ```
 
 ###  Module 3.14: Tagged Template Literals/Strings
@@ -587,7 +584,7 @@ https://courses.wesbos.com/
     const data = 'Basketball,Sports,90210,23,wes,bos,cool';
     const [itemName, category, sku, inventory] = data.split(',');
     //returns array and then deconstruct array
-    //if there's extra values in data, it will not be destructured because there are no variables to kepe them
+    //if there's extra values in data, it will not be destructured because there are no variables to keep them
 
     const team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
     const [captain, assistant, ...players] = team;
@@ -992,7 +989,7 @@ https://courses.wesbos.com/
     ```javascript
     //equal $.getJSON or $.ajax
     const posts = fetch(url);
-    //^queues up the search immediately but doesn't store it in variable, stoes a promise 
+    //^queues up the search immediately but doesn't store it in variable, stores a promise 
 
     posts
       .then(data => data.json())
@@ -1039,7 +1036,7 @@ https://courses.wesbos.com/
       function getPostById(id) {
         // create a new promise
         return new Promise((resolve, reject) => {
-          // using a settimeout to mimick a databse
+          // using a setTimeout to mimick a database
           setTimeout(() => {
             // find the post we want
             const post = posts.find(post => post.id === id);
@@ -1447,7 +1444,7 @@ but this only imports, we need to export
       bark() {}
       cuddle() {}
       static info() {} //static method - can only call it on Dog directly - useful as factor methods, conversion methods, and general class helper methods
-      get description() { //not a method, a proprerty
+      get description() { //not a method, a property
         return `${name} is a ${breed}`;
       }
       set nickname(value) {
@@ -1639,7 +1636,7 @@ but this only imports, we need to export
         target[name] = value.match(/[0-9]/g).join(''); //combines all digits (as string)
       },
       get(target, name) {
-        return target[name].replace(/(\d{3})(\d{3})(\d{4})/, '($1)-$2-$3'); //when you get the #, it willl be (123)-123-1234 format
+        return target[name].replace(/(\d{3})(\d{3})(\d{4})/, '($1)-$2-$3'); //when you get the #, it will be (123)-123-1234 format
       }
     }
 
@@ -1652,7 +1649,7 @@ but this only imports, we need to export
 ## Module 18: Sets and WeakSets
 
 ###  Module 18.61: Sets
-* Set is a unqiue array (can only add the same item once) with a nice API for managing the items inside
+* Set is a unique array (can only add the same item once) with a nice API for managing the items inside
 * Different from array because you can't access items individually and not index-based. It's a list of items you can add to/remove from.
     ```javascript
     const people = new Set();
@@ -1751,7 +1748,7 @@ but this only imports, we need to export
 
     ```javascript
     fetch('API URL').then(response => {
-      return response.json(); //this returns a promise, hench the next line
+      return response.json(); //this returns a promise, hence the next line
     }).then(response => {
       console.log(response);
     }).catch(err => {
@@ -1799,9 +1796,9 @@ but this only imports, we need to export
     ```
 
 ###  Module 20.69: All About Async + Await
-* Synchronus - wait for task to be done before you continue on
-* Asynchronus - start the task, move on to the next value
-* `alert`, `prompt`, `confirm` are some of the few synchronus things
+* Synchronous - wait for task to be done before you continue on
+* Asynchronous - start the task, move on to the next value
+* `alert`, `prompt`, `confirm` are some of the few synchronous things
 * Make an Async and then Await values
 * Async + Await is built on top of Promises, it doesn't replace it
     ```javascript
@@ -1966,7 +1963,7 @@ but this only imports, we need to export
 ###  Module 21.73: Class Properties
 
 * Not yet out
-* Adding a properties to the class, for example, a bark property for class Dog, rather than creating this.barks into the constuctor
+* Adding a properties to the class, for example, a bark property for class Dog, rather than creating this.barks into the constructor
 
 ###  Module 21.74: padStart and padEnd
 * 
@@ -1976,7 +1973,7 @@ but this only imports, we need to export
     '1'.padStart(3,"0") //returns "001"
     '1'.padEnd(3,"0") //returns "100"
 
-    const strings = ['short', 'medium size', 'this is really really long', 'this is really reall really really really really long'];
+    const strings = ['short', 'medium size', 'this is really really long', 'this is really really really really really really long'];
     const longestString = strings.sort(str => str.length).map(str => str.length)[0];
 
     strings.forEach(str => console.log(str.padStart(longestString)));  
