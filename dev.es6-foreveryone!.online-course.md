@@ -1,5 +1,5 @@
 # Warren's Notes for ES6 for Everyone! (Online Course)
-v.20171007
+v.20171015
 https://courses.wesbos.com/
 
 ---
@@ -14,70 +14,6 @@ Modules 12 - 14: Working with linters, nodeJS, Babel + Polyfills
 Moduels 15 - 
 
 ---
-
-## Module 18: Sets and WeakSets
-
-###  Module 18.61: Sets
-* Set is a unqiue array (can only add the same item once) with a nice API for managing the items inside
-* Different from array because you can't access items individually and not index-based. It's a list of items you can add to/remove from.
-```javascript
-  const people = new Set();
-  people.add('Wes');
-  people.add('Snickers');
-  people.add('Kait');
-  console.log(people.size); //returns 3
-  console.log(people); //returns Set {"Wes","Snickers","Kait"}
-  console.log(people.delete('Wes')); //deletes 'Wes'
-  console.log(people.size); //returns 2
-  console.log(people.clear()); //gives us empty set
-  console.log(people.values()); //SetIterator {"Wes, "Snickers", "Kait"} (a Generator)
-  const it = people.values()
-  it.next() //returns Object {values: "Snickers", done:false}
-  it.next() //returns Object {values: "Kait", done:false}
-  it.next() //returns Object {values: undefined, done:true}
-  //can put it in a for of loop
-  for (const person of people) {
-    console.log(person);
-  }
-  people.keys(); // = people.values()
-  people.entries(); //returns {["Snickers","Snickers"],["Kait","Kait"],}
-  
-  const students = new Set(['Wes', 'Kara', 'Tony']);
-  students.has('Tony'); //returns true
-  students.has('Wess'); //returns false
-
-  const dogs = ['Snickers', 'Sunny'];
-  const dogSet = new Set(dogs);
-```
-
-###  Module 18.62: Understanding Sets with Brunch
-```javascript  
-  const brunch = new Set();
-  // as people start coming in
-  brunch.add('wes');
-  brunch.add('Sarah');
-  brunch.add('Simone');
-  // ready to open!
-  const line = brunch.values(); //SetIterator {"Wes, "Sarah", "Simone"} (a Generator)
-  console.log(line.next().value); //Wes
-  console.log(line.next().value); //Sarah
-  //.next will remove it from the iterator
-  brunch.add('Heather');
-  brunch.add('Snickers');
-  console.log(line.next().value); //Simone
-  console.log(line.next().value); //Heather
-  console.log(line.next().value); //Snicker
-```
-
-###  Module 18.63: WeakSets
-* Like a set but there are some limitations
-* WeakSet can only contain objects
-* Cannot innumerate/loop over it - no iterator
-* There's no .clear() method because WeakSets clean themselves up (which is great for garbage collection and memory)
-* 
-```javascript  
-  
-```
 
 ## Module 1: New Variables - Creation, Updating and Scoping
 
@@ -1592,3 +1528,381 @@ but this only imports, we need to export
 
 ###  Module 17.60: Using Proxies to combat silly errors
 * example to fix issues with incorrect variable names (e.g. normalize them all the lowercase)
+
+## Module 18: Sets and WeakSets
+
+###  Module 18.61: Sets
+* Set is a unqiue array (can only add the same item once) with a nice API for managing the items inside
+* Different from array because you can't access items individually and not index-based. It's a list of items you can add to/remove from.
+```javascript
+  const people = new Set();
+  people.add('Wes');
+  people.add('Snickers');
+  people.add('Kait');
+  console.log(people.size); //returns 3
+  console.log(people); //returns Set {"Wes","Snickers","Kait"}
+  console.log(people.delete('Wes')); //deletes 'Wes'
+  console.log(people.size); //returns 2
+  console.log(people.clear()); //gives us empty set
+  console.log(people.values()); //SetIterator {"Wes, "Snickers", "Kait"} (a Generator)
+  const it = people.values()
+  it.next() //returns Object {values: "Snickers", done:false}
+  it.next() //returns Object {values: "Kait", done:false}
+  it.next() //returns Object {values: undefined, done:true}
+  //can put it in a for of loop
+  for (const person of people) {
+    console.log(person);
+  }
+  people.keys(); // = people.values()
+  people.entries(); //returns {["Snickers","Snickers"],["Kait","Kait"],}
+  
+  const students = new Set(['Wes', 'Kara', 'Tony']);
+  students.has('Tony'); //returns true
+  students.has('Wess'); //returns false
+
+  const dogs = ['Snickers', 'Sunny'];
+  const dogSet = new Set(dogs);
+```
+
+###  Module 18.62: Understanding Sets with Brunch
+```javascript  
+  const brunch = new Set();
+  // as people start coming in
+  brunch.add('wes');
+  brunch.add('Sarah');
+  brunch.add('Simone');
+  // ready to open!
+  const line = brunch.values(); //SetIterator {"Wes, "Sarah", "Simone"} (a Generator)
+  console.log(line.next().value); //Wes
+  console.log(line.next().value); //Sarah
+  //.next will remove it from the iterator
+  brunch.add('Heather');
+  brunch.add('Snickers');
+  console.log(line.next().value); //Simone
+  console.log(line.next().value); //Heather
+  console.log(line.next().value); //Snicker
+```
+
+###  Module 18.63: WeakSets
+* Like a set but there are some limitations
+* WeakSet can only contain objects
+* Cannot innumerate/loop over it - no iterator
+* There's no .clear() method because WeakSets clean themselves up (which is great for garbage collection and memory)
+* Great if you're storing a DOM node
+
+## Module 19: Map and Weak Map
+
+###  Module 19.64: Maps
+* If Sets are to Arrays, Maps are to Objects
+* Maps are like sets but it has a key and value
+```javascript
+  const dogs = new Map();
+
+  dogs.set('Snickers', 3);
+  dogs.set('Sunny', 2);
+  dogs.set('Hugo', 10);
+  console.log(dogs.has("Snickers")); //returns true
+  console.log(dogs.get("Snickers")); //returns 3
+  console.log(dogs.delete("Hugo")); //returns true
+  console.log(dogs); //Map {"Snickers" => 3, "Sunny" => 2}
+
+  dogs.forEach((val, key) => console.log(val, key)); //to loop over a map, use forEach
+//OR
+  for (const [key, val] of dogs) { //to loop over a map, use for of
+    console.log(key, val);
+  }
+```
+
+###  Module 19.65: Map Metadata with DOM Node Keys
+* Store Meta Data about an object
+
+###  Module 19.66: WeakMap and Garbage Collection
+* WeakMap like WeakSet - can't tell size, not innumerable (can't loop over it), and items will get garbage collector
+* Better for garbage collection where you don't have to monitor it
+
+## Module 20: Async + Await Flow Control
+
+###  Module 20.67: Async Await - Native Promises Review
+* A lot of APIs nowadays use Promises, not callbacks.
+```html
+  <video controls class="handsome"></video>
+```
+
+```javascript
+  fetch('API URL').then(response => {
+    return response.json(); //this returns a promise, hench the next line
+  }).then(response => {
+    console.log(response);
+  }).catch(err => {
+    console.error(err);
+  })
+/**************************************************************************/
+  //Asks for access to the webcam, displays it in the video tag
+  const video = document.querySelector('.handsome');
+
+  navigator.mediaDevices.getUserMedia({ video: true }).then(mediaStream => {
+    video.srcObject = mediaStream;
+    video.load();
+    video.play();
+  }).catch(err => {
+    console.error(err);
+  })
+```
+
+###  Module 20.68: Async Await - Custom Promises Review
+* Any function that returns a Promise has a Promise-based API
+```javascript
+    function breathe(amount) { //amount we should breath
+      return new Promise((resolve, reject) => {
+        if (amount < 500) {
+          reject('That is too small of a value');
+        }
+        setTimeout(() => resolve(`Done for ${amount} ms`), amount);
+      });
+    }
+    breathe(1000).then(res => {
+      console.log(res);
+      return breathe(500);
+    }).then(res => {
+      console.log(res);
+      return breathe(300);
+    }).then(res => {
+      console.log(res);
+      return breathe(600);
+    }).catch(err => {
+      console.error(err);
+      console.error('YOU SCREWED UP');
+    })
+```
+
+###  Module 20.69: All About Async + Await
+* Synchronus - wait for task to be done before you continue on
+* Asynchronus - start the task, move on to the next value
+* `alert`, `prompt`, `confirm` are some of the few synchronus things
+* Make an Async and then Await values
+* Async + Await is built on top of Promises, it doesn't replace it
+```javascript
+  function breathe(amount) {
+    return new Promise((resolve, reject) => {
+      if (amount < 500) {
+        reject('That is too small of a value');
+      }
+      setTimeout(() => resolve(`Done for ${amount} ms`), amount);
+    });
+  }
+
+  //await needs to be in an async function
+  async function go(name, last) {
+    console.log(`Starting for ${name} ${last}!`);
+  //const res = breathe(1000); //breath would return promise
+    const res = await breathe(1000); //with "await", breath will return promise but await will say "everyone, hold on until this function resolves or rejects!"
+    console.log(res);
+    const res2 = await breathe(300);
+    console.log(res2);
+    const res3 = await breathe(750);
+    console.log(res3);
+    const res4 = await breathe(900);
+    console.log(res4);
+    console.log('end');
+  }
+//OR
+  //another way of writing it
+  /*const go = async () => {
+  }*/
+```
+
+###  Module 20.70: Async + Await Error Handling
+* There's no "then"
+```javascript
+  function breathe(amount) {
+    return new Promise((resolve, reject) => {
+      if (amount < 500) {
+        reject('That is too small of a value');
+      }
+      setTimeout(() => resolve(`Done for ${amount} ms`), amount);
+    });
+  }
+/**************************************************************************/
+  async function go(name, last) {
+    try {
+      console.log(`Starting for ${name} ${last}!`);
+      const res = await breathe(1000);
+      console.log(res);
+      const res2 = await breathe(300);
+      console.log(res2);
+      const res3 = await breathe(750);
+      console.log(res3);
+      const res4 = await breathe(900);
+      console.log(res4);
+      console.log('end');
+    } catch (err) {
+      console.error(err);
+    }
+  }
+//OR
+  //HIGH ORDER FUNCTION WAY
+  async function go() {
+    console.log(`Starting for ${name} ${last}!`);
+    const res = await breathe(1000);
+    console.log(res);
+    const res2 = await breathe(300);
+    console.log(res2);
+    const res3 = await breathe(750);
+    console.log(res3);
+    const res4 = await breathe(900);
+    console.log(res4);
+    console.log('end');
+  }
+
+  //high order function
+  function catchErrors(fn) { //fn = function
+    return function () {
+      return fn(...args).catch((err) => {
+        console.error('Ohhhh nooo!!!!!');
+        console.error(err);
+      });
+    }
+  }
+  const wrappedFunction = catchErrors(go);
+  wrappedFunction();
+//OR
+  //HIGH ORDER FUNCTION WAY, with parameters
+  async function go(name, last) {
+    console.log(`Starting for ${name} ${last}!`);
+    const res = await breathe(1000);
+    console.log(res);
+    const res2 = await breathe(300);
+    console.log(res2);
+    const res3 = await breathe(750);
+    console.log(res3);
+    const res4 = await breathe(900);
+    console.log(res4);
+    console.log('end');
+  }
+
+  //high order function
+  function catchErrors(fn) { //fn = function
+    return function (...args) {
+      return fn(...args).catch((err) => {
+        console.error('Ohhhh nooo!!!!!');
+        console.error(err);
+      });
+    }
+  }
+  const wrappedFunction = catchErrors(go);
+  wrappedFunction("FirstName","LastName");
+```
+
+###  Module 20.71: Waiting on Multiple Promises
+* fire multiple things at the same time, but wait for them to all come back
+```javascript
+  async function go() {
+    const p1 = fetch('https://api.github.com/users/wesbos');
+    const p2 = fetch('https://api.github.com/users/stolinski');
+    // Wait for both of them to come back
+    const res = await Promise.all([p1, p2]);
+    const dataPromises = res.map(r => r.json());
+    const [wes, scott] = await Promise.all(dataPromises);
+    console.log(wes, scott);
+  }
+  go();
+```
+* in this case, get various jsons from github array, just by passing userid
+```javascript
+  async function getData(names) {
+    const promises = names.map(name => fetch(`https://api.github.com/users/${name}`).then(r => r.json()));
+    const people = await Promise.all(promises);
+    console.log(people);
+  }
+
+  getData(['wesbos', 'stolinski', 'darcyclarke']);  
+```
+
+###  Module 20.72: Promisifying Callback Based Functions
+* Promises are great but still lots of existing JS/APIs/libraries that are still callback based
+* Promisifying without a library example
+```javascript
+  function getCurrentPosition(...args) {
+    return new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(...args, resolve, reject);
+    });
+  }
+
+  async function go() {
+    console.log('starting');
+    const pos = await getCurrentPosition();
+    console.log(pos);
+    console.log('finished');
+  }
+```
+
+## Module 21: ES7, ES8, + Beyond
+
+###  Module 21.73: Class Properties
+
+* Not yet out
+* Adding a properties to the class, for example, a bark property for class Dog, rather than creating this.barks into the constuctor
+
+###  Module 21.74: padStart and padEnd
+
+```javascript
+  'string'.padStart(3) //returns "   string"
+  'string'.padEnd(3) //returns "string   "
+  '1'.padStart(3,"0") //returns "001"
+  '1'.padEnd(3,"0") //returns "100"
+
+  const strings = ['short', 'medium size', 'this is really really long', 'this is really reall really really really really long'];
+  const longestString = strings.sort(str => str.length).map(str => str.length)[0];
+
+  strings.forEach(str => console.log(str.padStart(longestString)));  
+```
+
+###  Module 21.75: ES7 Exponential Operator
+
+```javascript
+  //OLD WAY
+  Math.pow(3,3)
+  //ES7 Way
+  3 ** 3 //returns 27;
+
+  //OLD WAY
+  Math.pow(Math.pow(2,2),2)
+  //ES7 WAY
+  2 ** 2 ** 2 //returns 16;
+```
+
+###  Module 21.76: Function Arguments Trailing Comma
+
+* Comma dangle is okay! Use extra comma for next person adding something
+```javascript
+  function family(mom,dad,) {
+  }
+```
+
+###  Module 21.77: Object.entries() and Object.values()
+```javascript
+  const inventory = {
+    backpacks: 10,
+    jeans: 23,
+    hoodies: 4,
+    shoes: 11
+  };
+
+  // Make a nav for the inventory
+  const nav = Object.keys(inventory).map(item => `<li>${item}</li>`).join('');
+  console.log(nav);
+
+  // tell us how many values we have
+  const totalInventory = Object.values(inventory).reduce((a, b) => a + b);
+  console.log(totalInventory);
+
+  // Print an inventory list with numbers
+  Object.entries(inventory).forEach(([key, val]) => {
+    console.log(key, val);
+  });
+
+  for (const [key, val] of Object.entries(inventory)) {
+    console.log(key);
+    if (key === 'jeans') break;
+  }
+```
