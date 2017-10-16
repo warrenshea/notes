@@ -9,6 +9,7 @@ https://courses.wesbos.com/
 @FILTER = Reference for useful filters
 
 ## Table of Contents
+
 [Module 1: New Variables - Creation, Updating and Scoping](#module-1-new-variables---creation-updating-and-scoping)  
 [Module 2: Function Improvements: Arrows and Default Arguments](#module-2-function-improvements-arrows-and-default-arguments)  
 [Module 3: Template Strings](#module-3-template-strings)  
@@ -76,33 +77,33 @@ https://courses.wesbos.com/
 What it does: a function that runs itself immediately and creates a scope where nothing is going to leak into the parent scope (e.g. global scope of the window)
 
 * with `let` and `const`, you don't need to do this because they're block scoped.
-```javascript
-  {
-    const name = 'warren';
-    console.log(name); //warren
-  }
-```
+    ```javascript
+    {
+      const name = 'warren';
+      console.log(name); //warren
+    }
+    ```
 
 * also with `let` and `const`, you have an issue with `for` loops
-```javascript
-  for (var i = 0; i < 10; i++) {
-    console.log(i); //returns 0, then 1, then 2, ... to 10 each loop
-    setTimeOut(function() {
-      console.log("The number is " + i); //returns 10x 10 at the very end *
-    },1000);
-  }
-//* this executes after 1 second, after the loop has finished
-```
-  
-```javascript
-  for (let i = 0; i < 10; i++) {
-    console.log(i); //returns 0, then 1, then 2, ... to 10 each loop
-    setTimeOut(function() {
-      console.log("The number is " + i); //returns "The number is 1", "The nubmer is 2", etc. **
-    },1000);
-  }
-//** this i variable is now scoped to the loop
-```
+    ```javascript
+    for (var i = 0; i < 10; i++) {
+      console.log(i); //returns 0, then 1, then 2, ... to 10 each loop
+      setTimeOut(function() {
+        console.log("The number is " + i); //returns 10x 10 at the very end *
+      },1000);
+    }
+    //* this executes after 1 second, after the loop has finished
+    ```
+
+    ```javascript
+    for (let i = 0; i < 10; i++) {
+      console.log(i); //returns 0, then 1, then 2, ... to 10 each loop
+      setTimeOut(function() {
+        console.log("The number is " + i); //returns "The number is 1", "The nubmer is 2", etc. **
+      },1000);
+    }
+    //** this i variable is now scoped to the loop
+    ```
 
 ###  Module 1.4: Temporal Dead Zone
 
