@@ -123,7 +123,7 @@ https://courses.wesbos.com/
 
 ###  Module 1.5: Is `var` Dead? What should I use?
 
-* Using `let` / `const` / `var` : the [Mathias Bynens](https://mathiasbynens.be/notes/es6-const) & Web Bos approach &#35;BESTPRACTICE
+* Using `let` / `const` / `var` : the [Mathias Bynens](https://mathiasbynens.be/notes/es6-const) & Wes Bos approach &#35;BESTPRACTICE
   * use `const` by default
   * only use `let` if rebinding is needed
   * (`var` shouldn’t be used in ES6)
