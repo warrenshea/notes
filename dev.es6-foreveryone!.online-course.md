@@ -234,7 +234,7 @@ https://courses.wesbos.com/
 * 
     ```javascript
     //what if tax and tip are undefined?
-    function calculateBill(total, tax, tip)
+    function calculateBill(total, tax, tip) {
       if (tax === undefined) { tax = 0.13; } //or tax = tax || 0.13;
       if (tip === undefined) { tax = 0.15; } //or tip = tip || 0.15;
       return total + (total * tax) + (total * tip);
@@ -1234,7 +1234,7 @@ OR
     ```
 * `--fix` only works for pure JS files, not HTML or Markdown
 
-###  Module 12.43: ESLint inside Ataom and Sublime Text
+###  Module 12.43: ESLint inside Atom and Sublime Text
 * SublimeLinter 3 is a Sublime plugin/framework
 * Use Sublime Package Manager to `SublimeLinter`
 * Use Sublime Package Manager to `SublimeLinter-contrib-eslint`
