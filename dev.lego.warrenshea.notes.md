@@ -22,7 +22,9 @@ v.20171113
   * Requires Design and Development to be created
   * Theme based
   * All components have a component id
-  * 
+  * Each components has
+    - 1 node (in the first position) called "component-properties", containing properties of that component such as "id", "component-id", "classes", the other component properties
+    - 0+ (in the second+ positions) nodes, for the hotspots of that component
 * Sites
 * Content Management System
 * Product API
@@ -53,24 +55,28 @@ https://lego.warrenshea.com/api/bmoharris/* ?
 https://lego.warrenshea.com/bmo.com/main/personal/mortgages
 ```json
 "page-details" = {
-  "id": 1,
-  "lang": "en"
-  "site": "bmo.com",
-  "url": "/main/personal/mortgages/",
+  "component-properties" : {
+    "component-id": 1,
+    "lang": "en",
+    "site": "bmo.com",
+    "url": "/main/personal/mortgages/",
+  }
   "layout": {
     "page-architecture": {
-      "id": 1,
-      "keywords": "keywords",
-      "canonical": "canonical",
-      "title"
-      }
-      "meta-data" : {
+      "component-properties": {
         "id": 1,
-        "component-id": 1
+        "keywords": "keywords",
+        "canonical": "canonical",
+        "title": "Mortgages",
+      },
+      "meta-data" : {  
+        "component-properties": {
+          "id": 1,
+          "component-id": 1,
+        }
       },
       "body" : {
         "header": {
-
         },
         "main": {
         },
