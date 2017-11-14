@@ -3,7 +3,7 @@ v.20171113
 
 ---
 
-#Keys aspects to this solution
+# Keys aspects to this solution
 
 1. Website Data and Content (APIs) separated from Presentation (HTML/CSS) and Logic (JavaScript)
 2. Website Data and Content (APIs) agnostic to code bases*
@@ -15,7 +15,7 @@ v.20171113
 
 ---
 
-#Sections
+# Sections
 * Styleguide
   * Colors
 * Component Library
@@ -32,26 +32,26 @@ v.20171113
 
 ---
 
-#PRODUCT API EXAMPLE
-https://lego.warrenshea.com/api/bmo/bank-accounts/
-https://lego.warrenshea.com/api/bmo/credit-cards/cashback
-https://lego.warrenshea.com/api/bmo/credit-cards/spc-cashback
-https://lego.warrenshea.com/api/bmo/credit-cards/cashback-world
-https://lego.warrenshea.com/api/bmo/credit-cards/cashback-world-elite
-https://lego.warrenshea.com/api/bmo/credit-cards/air-miles
-https://lego.warrenshea.com/api/bmo/credit-cards/spc-airmiles
-https://lego.warrenshea.com/api/bmo/credit-cards/air-miles-world-elite
-https://lego.warrenshea.com/api/bmo/credit-cards/air-miles-world
-https://lego.warrenshea.com/api/bmo/credit-cards/world-elite
-https://lego.warrenshea.com/api/bmo/credit-cards/preferred-rate
-https://lego.warrenshea.com/api/bmo/credit-cards/rewards
-https://lego.warrenshea.com/api/bmo/credit-cards/usd
-https://lego.warrenshea.com/api/bmo/credit-cards/prepaid
-https://lego.warrenshea.com/api/bmo/mortgages/rates/
-https://lego.warrenshea.com/api/bmo/investments/progressive-gics/
+# PRODUCT API EXAMPLE
+https://lego.warrenshea.com/api/bmo/bank-accounts/<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/cashback<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/spc-cashback<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/cashback-world<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/cashback-world-elite<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/air-miles<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/spc-airmiles<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/air-miles-world-elite<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/air-miles-world<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/world-elite<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/preferred-rate<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/rewards<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/usd<br>
+https://lego.warrenshea.com/api/bmo/credit-cards/prepaid<br>
+https://lego.warrenshea.com/api/bmo/mortgages/rates<br>
+https://lego.warrenshea.com/api/bmo/investments/progressive-gics<br>
 https://lego.warrenshea.com/api/bmoharris/* ?
 
-#PAGE API EXAMPLE
+# PAGE API EXAMPLE
 https://lego.warrenshea.com/bmo.com/main/personal/mortgages
 ```json
 "page-details" = {
@@ -60,7 +60,7 @@ https://lego.warrenshea.com/bmo.com/main/personal/mortgages
     "lang": "en",
     "site": "bmo.com",
     "url": "/main/personal/mortgages/",
-  }
+  },
   "layout": {
     "page-architecture": {
       "component-properties": {
