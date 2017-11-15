@@ -24,6 +24,7 @@ v.20171113
   * All components have a component id
   * Each components has
     - 1 node (in the first position) called "component-properties", containing properties of that component such as "id", "component-id", "classes", the other component properties
+    "component-id": 1,
     - 0+ (in the second+ positions) nodes, for the hotspots of that component
 * Sites
 * Content Management System
@@ -32,7 +33,7 @@ v.20171113
 
 ---
 
-# PRODUCT API EXAMPLE
+# Product API Example
 https://lego.warrenshea.com/api/bmo/bank-accounts/<br>
 https://lego.warrenshea.com/api/bmo/credit-cards/cashback<br>
 https://lego.warrenshea.com/api/bmo/credit-cards/spc-cashback<br>
@@ -51,42 +52,79 @@ https://lego.warrenshea.com/api/bmo/mortgages/rates<br>
 https://lego.warrenshea.com/api/bmo/investments/progressive-gics<br>
 https://lego.warrenshea.com/api/bmoharris/* ?
 
-# PAGE API EXAMPLE
-https://lego.warrenshea.com/bmo.com/main/personal/mortgages
+# Page API Example
+https://lego.warrenshea.com/api/bmo.com/main/personal/mortgages
 ```json
 "page-details" = {
-  "component-properties" : {
+  "properties" : {
+    "id": 163723,
     "component-id": 1,
     "lang": "en",
     "site": "bmo.com",
     "url": "/main/personal/mortgages/",
   },
-  "layout": {
-    "page-architecture": {
-      "component-properties": {
-        "id": 1,
-        "keywords": "keywords",
-        "canonical": "canonical",
-        "title": "Mortgages",
-      },
-      "meta-data" : {  
-        "component-properties": {
-          "id": 1,
-          "component-id": 1,
+  "page-architecture": {
+    "properties": {
+      "id": 1763458435,
+      "component-id": 2,
+      "title": "Mortgages | BMO",
+      "keywords": "Mortages, Rates, First Time Home Buyer",
+      "description": "Discover competitive mortgage rates, tools and articles to help you become a successful homeowner whether you’re a first time buyer or a seasoned owner."
+      "canonical": "canonical",
+    },
+    "hotspot-1" : {
+      "meta-charset" : {
+        "properties" : {
+          "id": 1274535,
+          "component-id": 3,
+          "charset": "utf-8"
         }
       },
+      "meta-data-alternate-lang" : {  
+        "properties": {
+          "id": 12445,
+          "component-id": 4,
+        }
+      },
+    },
+    "hotspot-2" : {
       "body" : {
-        "header": {
+        "properties": {
         },
-        "main": {
-        },
-        "footer": {
+        "hotspot-1"" {
+          "header": {
+          },
+          "main": {
+          },
+          "footer": {
+          }
         }
       }
     }
   }  
 }
-
 ```
 
+# Component Library
+
+All Components follow this format:
+
+```json
+"component-name": {
+  "properties": {
+  },
+  "hotspot-#": {
+  },
+}
+```
+Where # can be as many hotspots for that component as you want
+OR
+```json
+"component-name": {
+  "properties": {
+  },
+}
+```
+Which is a "Leaf Node" component - no component can go inside this.
+A link/A button/An image are good examples of this type of component.
 
