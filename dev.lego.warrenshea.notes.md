@@ -162,11 +162,11 @@ A link/A button/An image are good examples of this type of component.
   "properties": {
     "id": 0,
     "component-id": 1,
-    "lang": "en"
+    "lang": "en",
     "title": "",
     "keywords": "",
     "description": "",
-    "robots": "index,follow,noodp"
+    "robots": "index,follow,noodp",
     "canonical": "",
     "alternate-en": "",
     "alternate-fr": "",
