@@ -55,57 +55,52 @@ https://lego.warrenshea.com/api/bmoharris/* ?
 # Page API Example
 https://lego.warrenshea.com/api/bmo.com/main/personal/mortgages
 ```json
-"page-details" = {
-  "properties" : {
-    "id": 163723,
+"page-architecture": {
+  "properties": {
+    "id": 1763458435,
     "component-id": 1,
     "lang": "en",
-    "site": "bmo.com",
-    "url": "/main/personal/mortgages/",
+    "title": "Mortgages | BMO",
+    "description": "Discover competitive mortgage rates, tools and articles to help you become a successful homeowner whether you’re a first time buyer or a seasoned owner.",
+    "keywords": "Mortages, Rates, First Time Home Buyer",
+    "canonical": "https://www.bmo.com/main/personal/mortgages/",
+    "alternate-en": "https://www.bmo.com/main/personal/mortgages/",
+    "alternate-fr": "https://www.bmo.com/principal/particuliers/prets-hypothecaires/",
+    "alternate-x-default": "https://www.bmo.com/main/personal/mortgages/",
+    "robots": "index,follow,noodp",
   },
-  "page-architecture": {
-    "properties": {
-      "id": 1763458435,
-      "component-id": 2,
-      "title": "Mortgages | BMO",
-      "keywords": "Mortages, Rates, First Time Home Buyer",
-      "description": "Discover competitive mortgage rates, tools and articles to help you become a successful homeowner whether you’re a first time buyer or a seasoned owner."
-      "canonical": "canonical",
+  "hotspot-1" : {
+    "meta-charset" : {
+      "properties" : {
+        "id": 1274535,
+        "component-id": 3,
+        "charset": "utf-8"
+      }
     },
-    "hotspot-1" : {
-      "meta-charset" : {
-        "properties" : {
-          "id": 1274535,
-          "component-id": 3,
-          "charset": "utf-8"
-        }
-      },
-      "meta-data-alternate-lang" : {  
-        "properties": {
-          "id": 12445,
-          "component-id": 4,
-        }
-      },
+    "meta-data-alternate-lang" : {  
+      "properties": {
+        "id": 12445,
+        "component-id": 4,
+      }
     },
-    "hotspot-2" : {
-      "body" : {
-        "properties": {
+  },
+  "hotspot-2" : {
+    "body" : {
+      "properties": {
+      },
+      "hotspot-1"" {
+        "header": {
         },
-        "hotspot-1"" {
-          "header": {
-          },
-          "main": {
-          },
-          "footer": {
-          }
+        "main": {
+        },
+        "footer": {
         }
       }
     }
-  }  
-}
+  }
 ```
 
-# Component Library
+# Component Library Structure
 
 All Components follow this format:
 
@@ -128,3 +123,56 @@ OR
 Which is a "Leaf Node" component - no component can go inside this.
 A link/A button/An image are good examples of this type of component.
 
+# Component Library
+
+## Component 1: page-architecture
+
+```html
+<!DOCTYPE html>
+<html class="no-js" lang={{properties.lang}}>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta content="IE=EDGE" http-equiv="X-UA-Compatible">
+        <meta name="last-modified" content={{properties.last-modified}}>
+        <title>{{properties.title}}</title>
+        <meta name="description" content={{properties.description}}>
+        <meta name="keywords" content={{properties.keywords}}>
+        <meta name="theme-color" content="#0079c1">
+        <link rel="canonical" href={{properties.canonical}}>
+        <link rel="alternate" hreflang="en" href={{properties.alternate-en}}>        
+<?php
+  if (properties.alternate-fr) {
+?>
+        <link rel="alternate" hreflang="fr" href={{properties.alternate-fr}}>
+<?php
+  }
+?>
+        <link rel="alternate" hreflang="x-default" href={{properties.canonical}}>
+        <meta name="robots" content={{robots}}>
+        {{hotspot-1}}
+    </head>
+    {{hotspot-2}}
+</html>
+```
+
+```json
+"page-architecture": {
+  "properties": {
+    "id": int,
+    "component-id": 1,
+    "lang": "en"
+    "title": string,
+    "keywords": string,
+    "description": string,
+    "robots": "index,follow,noodp"
+    "canonical": string,
+    "alternate-en": string,
+    "alternate-fr": string,
+    "alternate-x-default": string,
+  },
+  "hotspot-1" : {
+  },
+  "hotspot-2" : {
+  }
+```
