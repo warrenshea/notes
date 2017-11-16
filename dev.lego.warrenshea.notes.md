@@ -82,13 +82,13 @@ https://lego.warrenshea.com/api/bmo.com/main/personal/mortgages
         "id": 12445,
         "component-id": 4,
       }
-    },
+    }
   },
   "hotspot-2" : {
     "body" : {
       "properties": {
       },
-      "hotspot-1"" {
+      "hotspot-1": {
         "header": {
         },
         "main": {
@@ -98,6 +98,7 @@ https://lego.warrenshea.com/api/bmo.com/main/personal/mortgages
       }
     }
   }
+}
 ```
 
 # Component Library Structure
