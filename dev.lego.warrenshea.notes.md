@@ -128,7 +128,7 @@ A link/A button/An image are good examples of this type of component.
 
 ## Component 1: page-architecture
 
-```html
+```php
 <!DOCTYPE html>
 <html class="no-js" lang={{properties.lang}}>
     <head>
@@ -160,20 +160,40 @@ A link/A button/An image are good examples of this type of component.
 ```json
 "page-architecture": {
   "properties": {
-    "id": int,
+    "id": 0,
     "component-id": 1,
     "lang": "en"
-    "title": string,
-    "keywords": string,
-    "description": string,
+    "title": "",
+    "keywords": "",
+    "description": "",
     "robots": "index,follow,noodp"
-    "canonical": string,
-    "alternate-en": string,
-    "alternate-fr": string,
-    "alternate-x-default": string,
+    "canonical": "",
+    "alternate-en": "",
+    "alternate-fr": "",
+    "alternate-x-default": "",
   },
   "hotspot-1" : {
   },
   "hotspot-2" : {
   }
+}
 ```
+
+## Component 2: body
+```php
+<body data-site="{{data-site}}" data-section="{{data-section}}">
+    {{hotspot-1}}
+</body>
+```
+
+```json
+"body": {
+  "properties": {
+    "data-site": "bmo/bmoharris",
+    "data-section": "bank-accounts/credit-cards/mortgages/investments/self-directed/nesbitt-burns/smartfolio",
+  },
+  "hotspot-1": {
+  }
+}
+```
+
