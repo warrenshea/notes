@@ -271,20 +271,23 @@ A link/A button/An image are good examples of this type of component.
 
 ```text
 sitemap
-  id  int
-  site  varchar(200)
-  pathname  varchar(200)
-  lang  varchar(5)
+  id                            int
+  site                          varchar(200)
+  pathname                      varchar(200)
+  lang                          varchar(5)
   componentsPageArchitectureId  int
 
 components
-  id  int
+  id            int
   componentName varchar(500)
-  componentId int
-  properties  text
-  hotspot0  int
-  hotspot1  int
-  hotspot2  int
+  componentId   int
+  properties    text
+  hotspot0      int
+  hotspot1      int
+  hotspot2      int
+  hotspot3      int
+  hotspot4      int
+  hotspot5      int
 ```
 
 ```txt
