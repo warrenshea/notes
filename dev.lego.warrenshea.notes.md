@@ -1,5 +1,5 @@
 # Warren's Lego CMS Notes
-v.20171113
+v.20171119
 
 ---
 
@@ -22,6 +22,11 @@ v.20171113
 * Codebase ([Lego Themes](https://en.wikipedia.org/wiki/List_of_Lego_themes))
   - Styleguide
     - Colors
+    - Font Sizes and Line Heights
+    - Margin
+    - Padding
+    - Border Radius
+    - Helper Classes
   - Component Library
     - Requires Design and Development to be created
     - Theme based
