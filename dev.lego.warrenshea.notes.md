@@ -267,8 +267,7 @@ A link/A button/An image are good examples of this type of component.
 }
 ```
 
-# Database
-
+# Databases
 ```text
 sitemap
   id                            int
@@ -288,22 +287,4 @@ components
   hotspot3      int
   hotspot4      int
   hotspot5      int
-```
-
-```txt
-sitemap
-  id  int
-  site  varchar(200)
-  pathname  varchar(200)
-  lang  varchar(5)
-  componentsPageArchitectureId  int
-
-components
-  id  int
-  componentName varchar(500)
-  componentId int
-  properties  text
-  hotspot0  int
-  hotspot1  int
-  hotspot2  int
 ```
