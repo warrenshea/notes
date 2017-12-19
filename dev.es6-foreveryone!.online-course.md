@@ -1,40 +1,40 @@
 # Warren's Notes for ES6 for Everyone! (Online Course)
-v.20171015  
+v.20171219
 https://courses.wesbos.com/
 
 ---
 ## Legend
-&#35;REFERENCE = For reference  
-&#35;TODO = Need to revisit / clarify  
-&#35;FILTER = Reference for useful filters  
+&#35;REFERENCE = For reference
+&#35;TODO = Need to revisit / clarify
+&#35;FILTER = Reference for useful filters
 &#35;BESTPRACTICE = Best Practice
 
 ## Table of Contents
 
-* [Module 1: New Variables - Creation, Updating and Scoping](#module-1-new-variables---creation-updating-and-scoping)  
-* [Module 2: Function Improvements: Arrows and Default Arguments](#module-2-function-improvements-arrows-and-default-arguments)  
-* [Module 3: Template Strings](#module-3-template-strings)  
-* [Module 4: Additional String Improvements](#module-4-additional-string-improvements)  
-* [Module 5: Destructuring](#module-5-destructuring)  
-* [Module 6: Iterables & Looping](#module-6-iterables--looping)  
-* [Module 7: An Array of Array Improvements](#module-7-an-array-of-array-improvements)  
-* [Module 8: Say Hello to ...Spread and ...Rest](#module-8-say-hello-to-spread-and-rest)  
-* [Module 9: Object Literal Upgrades](#module-9-object-literal-upgrades)  
-* [Module 10: Promises](#module-10-promises)  
-* [Module 11: Symbols](#module-11-symbols)  
-* [Module 12: Code Quality with ESLint](#module-12-code-quality-with-eslint)  
-* [Module 13: JavaScript Modules and Using npm](#module-13-javascript-modules-and-using-npm)  
-* [Module 14: ES6 Tooling](#module-14-es6-tooling)  
-* [Module 15: Classes](#module-15-classes)  
-* [Module 16: Generators](#module-16-generators)  
-* [Module 17: Proxies](#module-17-proxies)  
-* [Module 18: Sets and WeakSets](#module-18-sets-and-weaksets)  
-* [Module 19: Map and Weak Map](#module-19-map-and-weak-map)  
-* [Module 20: Async + Await Flow Control](#module-20-async--await-flow-control)  
-* [Module 21: ES7, ES8 + Beyond](#module-21-es7-es8--beyond)  
+* [Module 1: New Variables - Creation, Updating and Scoping](#module-1-new-variables---creation-updating-and-scoping)
+* [Module 2: Function Improvements: Arrows and Default Arguments](#module-2-function-improvements-arrows-and-default-arguments)
+* [Module 3: Template Strings](#module-3-template-strings)
+* [Module 4: Additional String Improvements](#module-4-additional-string-improvements)
+* [Module 5: Destructuring](#module-5-destructuring)
+* [Module 6: Iterables & Looping](#module-6-iterables--looping)
+* [Module 7: An Array of Array Improvements](#module-7-an-array-of-array-improvements)
+* [Module 8: Say Hello to ...Spread and ...Rest](#module-8-say-hello-to-spread-and-rest)
+* [Module 9: Object Literal Upgrades](#module-9-object-literal-upgrades)
+* [Module 10: Promises](#module-10-promises)
+* [Module 11: Symbols](#module-11-symbols)
+* [Module 12: Code Quality with ESLint](#module-12-code-quality-with-eslint)
+* [Module 13: JavaScript Modules and Using npm](#module-13-javascript-modules-and-using-npm)
+* [Module 14: ES6 Tooling](#module-14-es6-tooling)
+* [Module 15: Classes](#module-15-classes)
+* [Module 16: Generators](#module-16-generators)
+* [Module 17: Proxies](#module-17-proxies)
+* [Module 18: Sets and WeakSets](#module-18-sets-and-weaksets)
+* [Module 19: Map and Weak Map](#module-19-map-and-weak-map)
+* [Module 20: Async + Await Flow Control](#module-20-async--await-flow-control)
+* [Module 21: ES7, ES8 + Beyond](#module-21-es7-es8--beyond)
 ---
-  
-  
+
+
 ## Module 1: New Variables - Creation, Updating and Scoping
 
 ###  Module 1.1: var Scoping refresh
@@ -52,7 +52,7 @@ https://courses.wesbos.com/
     console.log(x); //1...because the "x" variables are different, the "x" variables are scoped differently
     ```
 
-* `let` variables are made to be updated  
+* `let` variables are made to be updated
   `const` variables are never to be updated
 
 * `Object.freeze` (not ES6): used to freeze the variable from being changed
@@ -112,8 +112,8 @@ https://courses.wesbos.com/
     var pizza = "deep dish";
     console.log(pizza); //returns undefined
     ```
-    The `var` variables can be access before it's defined  
-    You can't access the value, but you can access the variable  
+    The `var` variables can be access before it's defined
+    You can't access the value, but you can access the variable
 
     ```javascript
     let/const pizza = "deep dish";
@@ -164,7 +164,7 @@ https://courses.wesbos.com/
 * If you had no parameter to return, you can take out the `name` parameter
     ```javascript
     const name = ['warren', 'will', 'wally'];
-    const fullNames5 = names.map(() => `two shea`); //*
+    const fullNames5 = names.map(() => `two shea`);
     console.log(fullNames); //returns ["two shea", "two shea", "two shea"]
     ```
 
@@ -178,13 +178,19 @@ https://courses.wesbos.com/
 
 * Arrow Functions are not named functions (it is an anonymous function) but you can put it in a variable
     ```javascript
+    //ES6
     const sayMyName = (name) => {console.log(name)};
+    //EQUALS this for ES2015
+    var sayMyName = function sayMyName(name) {
+      console.log(name);
+    };
+
     sayMyName('warren'); //returns 'warren'
     ```
 
 ###  Module 2.7: More Arrow Function Examples
 
-* 
+*
     ```javascript
     const race = '100m Dash';
     const winners = ['Wally West','Barry Allen','Bart Allen'];
@@ -204,7 +210,7 @@ https://courses.wesbos.com/
 
 ###  Module 2.8: Arrow Functions and `this`
 
-* 
+*
     ```javascript
       var box = document.querySelector('.box'); //equals $('.box');
       box.addEventListener('click', () => {
@@ -221,17 +227,17 @@ https://courses.wesbos.com/
     ```
 
     ```javascript
-      //#REFERENCE #BESTPRACTICE 
+      //#REFERENCE #BESTPRACTICE
       //Switch values in ES6
       let first = "first";
       let second = "second";
       [first,second] = [second,first];
-      //use let because they will change   
+      //use let because they will change
     ```
 
 ###  Module 2.9: Default Function Arguments
 
-* 
+*
     ```javascript
     //what if tax and tip are undefined?
     function calculateBill(total, tax, tip) {
@@ -242,7 +248,7 @@ https://courses.wesbos.com/
     calculateBill(100);
     ```
 
-    ```javascript    
+    ```javascript
     //OR this, where tax and tip have defaults
     function calculateBill(total, tax = 0.13, tip = 0.15){
       return total + (total * tax) + (total * tip);
@@ -261,7 +267,7 @@ https://courses.wesbos.com/
 
 ### Module 2.10: When NOT to use the Arrow Function
 
-* 
+*
     ```javascript
     // When you really need `this`
     const button = document.querySelector('#pushy');
@@ -300,7 +306,7 @@ https://courses.wesbos.com/
     // When you need arguments object
     //const orderChildren = () => { //bad, arguments will not be passed in properly
     const orderChildren = function() { //good
-      const children = Array.from(arguments); 
+      const children = Array.from(arguments);
       return children.map((child, i) => {
         return `${child} was child #${i + 1}`;
       })
@@ -311,7 +317,7 @@ https://courses.wesbos.com/
 
 ### Module 2.11: Arrow Functions Exercises
 
-* 
+*
     ```javascript
     //#REFERENCE Convert Node List to Array
     Array.from(nodeList); //converts nodeList to Array
@@ -341,7 +347,7 @@ https://courses.wesbos.com/
     ```
 
 ###  Module 3.13: Creating HTML fragments with Template Literals
-* 
+*
     ```javascript
     //#REFERENCE Multiline HTML string with backticks
     let markup = `
@@ -426,16 +432,16 @@ https://courses.wesbos.com/
         // returns "My dog's name is <strong>Loki</strong> and he is <strong>3</strong> years old"
         //this is if you want to add formatting to the string
       });
-      return str; 
+      return str;
 
   //OR
-      
+
       //OPTION B
       let str = '';
       strings.map((string,i) => {
         str += `${string} <strong>${values[i] || ''}</strong>`;
       })
-      return str; 
+      return str;
 
     }
     ```
@@ -493,18 +499,18 @@ https://courses.wesbos.com/
     string.startsWith('subStringCheck',3); //returns true/false, starts after 3 characters
     ```
 
-    ```javascript    
+    ```javascript
     //string.endsWith();
     string.endsWith('subStringCheck');
     string.endsWith('subStringCheck',3); //starts the first 3 charcters and checks if it wents with subStringCheck
     ```
 
-    ```javascript    
+    ```javascript
     //string.includes() //used to be string.contains()
     ```
 
     ```javascript
-    //string.repeat() 
+    //string.repeat()
     function leftPad(string, length = 20) {
       return `${' '.repeat(length - str.length)}${str}`;
     }
@@ -525,7 +531,7 @@ https://courses.wesbos.com/
     //OLD WAY
     const first = person.first;
     const last = person.last;
-    
+
     //ES6 Way #BESTPRACTICE
     const { first , last } = person;
     //{ } is destructing syntax
@@ -565,7 +571,7 @@ https://courses.wesbos.com/
     ```
 
 ###  Module 5.19: Destructing Arrays
-* 
+*
     ```javascript
     const details = ['Wes Bos', 123, 'wesbos.com'];
 
@@ -578,7 +584,7 @@ https://courses.wesbos.com/
     const [name, id, website] = details;
 
     //#REFERENCE
-    //{ } is destructuring for objects 
+    //{ } is destructuring for objects
     //[] is destructuring for arrays
 
     const data = 'Basketball,Sports,90210,23,wes,bos,cool';
@@ -621,7 +627,7 @@ https://courses.wesbos.com/
     //can pick and choose the items you want
     ```
 
-    ```javascript    
+    ```javascript
     //function tipCalc( total = 100, tip = 0.15, tax = 0.13 ) {
     //^ the variables in specific order
     function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
@@ -629,7 +635,7 @@ https://courses.wesbos.com/
 
       return total + (tip * total) + (tax * total);
     }
-    
+
     const bill = tipCalc({ tip: 0.20, total: 200 });
     //the order can be placed in any way we want
     console.log(bill);
@@ -643,24 +649,24 @@ https://courses.wesbos.com/
     const cuts ['chuck','brisket','shank','short rib'];
     ```
 
-    ```javascript    
+    ```javascript
     //ugly and confusing
     for (let i = 0;i < cuts.length; i++) {
       console.log(cuts[i]);
     }
     ```
 
-    ```javascript    
+    ```javascript
     //can't use break; or continue;
-    cuts.forEach((cut) => { 
+    cuts.forEach((cut) => {
       console.log(cuts[i]);
     });
     ```
 
     ```javascript
     //'for in', iterates of item + anything added (which is bad)
-    for (const index in cuts) { 
-      console.log(cuts[index]); 
+    for (const index in cuts) {
+      console.log(cuts[index]);
     }
     ```
 
@@ -673,7 +679,7 @@ https://courses.wesbos.com/
     ```
 
 ### Module 6.23: The for of Loop in Action
-* 
+*
     ```javascript
     const cuts ['chuck','brisket','shank','short rib'];
 
@@ -682,7 +688,7 @@ https://courses.wesbos.com/
     meat.next(); //provides index and value
 
     for (const cut of cuts.entries()) {
-      console.log(cut); //cut is an array 
+      console.log(cut); //cut is an array
     }
 
     for (const [i,cut] of cuts.entries()) { //destructure
@@ -694,7 +700,7 @@ https://courses.wesbos.com/
     }
     ```
 
-    ```javascript    
+    ```javascript
     //trying to iterate over
     function addUpNumbers() {
       console.log(arguments); //returns [10,23,52,43,34,87,64] list with length
@@ -708,7 +714,7 @@ https://courses.wesbos.com/
     addUpNumbers(10,23,52,43,34,87,64)
     ```
 
-    ```javascript    
+    ```javascript
     const name = 'Warren Shea';
     for (char of name) {
       console.log(char); //returns W, then a, then r, etc. etc.
@@ -727,7 +733,7 @@ https://courses.wesbos.com/
     }
 
     for (const index in cuts) {
-      console.log(cuts[index]); 
+      console.log(cuts[index]);
     }
     ```
 
@@ -825,7 +831,7 @@ https://courses.wesbos.com/
     ```javascript
     const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
     const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
-    
+
     //ES6 way of making an array of featured, 'veg', specialty
     const pizzas = [...featured, 'veg', ...specialty];
     ```
@@ -835,7 +841,7 @@ https://courses.wesbos.com/
     const fridayPizzas = pizzas;
     //if you changed fridayPizzas, pizzas would also be changed too! Uh oh!
     //const fridayPizzas = pizzas; is not a COPY, but a reference
-    
+
     //OLD way to duplicate and array
     cost fridayPizzas = [].concat(pizzas);
     //ES6 way
@@ -915,7 +921,7 @@ https://courses.wesbos.com/
 ## Module 9: Object Literal Upgrades
 
 ###  Module 9.33: Object Literal Upgrades
-* 
+*
     ```javascript
     //OLD WAY
     const dog = {
@@ -989,7 +995,7 @@ https://courses.wesbos.com/
     ```javascript
     //equal $.getJSON or $.ajax
     const posts = fetch(url);
-    //^queues up the search immediately but doesn't store it in variable, stores a promise 
+    //^queues up the search immediately but doesn't store it in variable, stores a promise
 
     posts
       .then(data => data.json())
@@ -999,7 +1005,7 @@ https://courses.wesbos.com/
     ```
 
 ###  Module 10.35: Building your own Promises
-* 
+*
     ```javascript
     const p = new Promise((resolve,reject) => {
       //call resolve() when you finish the promise
@@ -1077,7 +1083,7 @@ https://courses.wesbos.com/
     ```
 
 ###  Module 10.37: Working with Multiple Promises
-* 
+*
     ```javascript
      const weather = new Promise((resolve) => {
        setTimeout(() => {
@@ -1123,7 +1129,7 @@ https://courses.wesbos.com/
 * Symbol is a unique identifier to avoid naming collision
     ```javascript
     const wes = Symbol('Wes'); //where 'Wes' is the discriptor
-    const person = Symbol('Wes'); 
+    const person = Symbol('Wes');
     //(wes === person) returns false
     //(wes == person) returns false
     ```
@@ -1155,7 +1161,7 @@ https://courses.wesbos.com/
     ```shell
     npm install npm@latest -g #install latest npm, -g for global
     npm install eslint -g     #install eslint, -g for global
-    eslint file.js            #to eslint a file through command line (file.js) 
+    eslint file.js            #to eslint a file through command line (file.js)
     ```
 * different eslint settings for project
 * `.eslintrc` is your settings
@@ -1172,7 +1178,7 @@ https://courses.wesbos.com/
       "extends": "airbnb", /*need to install module first (see Module 12.40)*/
       /*https://eslint.org/docs/rules/*/
       "rules": {
-        "no-console": 0, 
+        "no-console": 0,
         "no-unused-vars": 1
       },
       "plugins": ["html", "markdown"]
@@ -1291,10 +1297,10 @@ but this only imports, we need to export
     const dog = 'Loki';
     export { age, dog };
     ```
-* if you want to import Named export, 
+* if you want to import Named export,
     ```javascript
     //config.js
-    import { apiKey, age, dog } from './src/config'; 
+    import { apiKey, age, dog } from './src/config';
     ```
 * Can also export functions:
     ```javascript
@@ -1420,7 +1426,7 @@ but this only imports, we need to export
       console.log(`Bark! My name is ${this.name}`);
     }
     const loki = new Dog('Loki',"Pomeranian");
-    loki.bark(); //'Bark! My name is Loki`
+    loki.bark(); //`Bark! My name is Loki`
     ```
 
 ###  Module 15.52: Say Hello to Classes
@@ -1524,7 +1530,7 @@ but this only imports, we need to export
 * functions run top to bottom
 * generator functions (generators) is a function you can start/stop/pause/pass additional information at a later time
 * `function*` to make a generator function, `yield` is a return - it will return the item until the function is called again
-* function will need to be 
+* function will need to be
     ```javascript
     function* listPeople() {
       yield 'Wes';
@@ -1583,7 +1589,7 @@ but this only imports, we need to export
       const fatJoe = yield ajax('https://api.discogs.com/artists/51988');
       console.log(fatJoe);
     }
-    
+
     const dataGen = steps(); //on page load, create dataGen
     dataGen.next(); // kick it off
     //after that, the ajax function continues the .next() and continues the steps() function
@@ -1672,7 +1678,7 @@ but this only imports, we need to export
     }
     people.keys(); // = people.values()
     people.entries(); //returns {["Snickers","Snickers"],["Kait","Kait"],}
-    
+
     const students = new Set(['Wes', 'Kara', 'Tony']);
     students.has('Tony'); //returns true
     students.has('Wess'); //returns false
@@ -1683,7 +1689,7 @@ but this only imports, we need to export
 
 ###  Module 18.62: Understanding Sets with Brunch
 *
-    ```javascript  
+    ```javascript
     const brunch = new Set();
     // as people start coming in
     brunch.add('wes');
@@ -1937,7 +1943,7 @@ but this only imports, we need to export
       console.log(people);
     }
 
-    getData(['wesbos', 'stolinski', 'darcyclarke']);  
+    getData(['wesbos', 'stolinski', 'darcyclarke']);
     ```
 
 ###  Module 20.72: Promisifying Callback Based Functions
@@ -1966,7 +1972,7 @@ but this only imports, we need to export
 * Adding a properties to the class, for example, a bark property for class Dog, rather than creating this.barks into the constructor
 
 ###  Module 21.74: padStart and padEnd
-* 
+*
     ```javascript
     'string'.padStart(3) //returns "   string"
     'string'.padEnd(3) //returns "string   "
@@ -1976,11 +1982,11 @@ but this only imports, we need to export
     const strings = ['short', 'medium size', 'this is really really long', 'this is really really really really really really long'];
     const longestString = strings.sort(str => str.length).map(str => str.length)[0];
 
-    strings.forEach(str => console.log(str.padStart(longestString)));  
+    strings.forEach(str => console.log(str.padStart(longestString)));
     ```
 
 ###  Module 21.75: ES7 Exponential Operator
-* 
+*
     ```javascript
     //OLD WAY
     Math.pow(3,3)
