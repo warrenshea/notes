@@ -217,7 +217,7 @@ https://courses.wesbos.com/
         console.log(this) // this is the window!
       }); //this is bad!
 
-      box.addEventListener('click', function() => {
+      box.addEventListener('click', function() {
         this.classList.toggle('add-class');
         setTimeout(() => {
           this.classList.toggle('add-second-class');
@@ -312,7 +312,7 @@ https://courses.wesbos.com/
       })
       console.log(arguments);
     }
-    orderChilden('alan','hal','guy','john','kyle');
+    orderChildren('alan','hal','guy','john','kyle');
     ```
 
 ### Module 2.11: Arrow Functions Exercises
@@ -646,7 +646,7 @@ https://courses.wesbos.com/
 ###  Module 6.22: The for of loop
 * The for of loop loops over iterables (anything that can be looped over like a DOM collection, arguments, array, string, map, set)
     ```javascript
-    const cuts ['chuck','brisket','shank','short rib'];
+    const cuts = ['chuck','brisket','shank','short rib'];
     ```
 
     ```javascript
@@ -658,7 +658,7 @@ https://courses.wesbos.com/
 
     ```javascript
     //can't use break; or continue;
-    cuts.forEach((cut) => {
+    cuts.forEach((cut,i) => {
       console.log(cuts[i]);
     });
     ```
@@ -681,7 +681,7 @@ https://courses.wesbos.com/
 ### Module 6.23: The for of Loop in Action
 *
     ```javascript
-    const cuts ['chuck','brisket','shank','short rib'];
+    const cuts = ['chuck','brisket','shank','short rib'];
 
     //cuts.entries(); // Array Iterator
     const meat = cuts.entries();
@@ -725,7 +725,7 @@ https://courses.wesbos.com/
 * object.entries() will be available later (in ES2017 and can be polyfilled)
 * Alternatives to `for of` with Objects:
     ```javascript
-    const cuts ['chuck','brisket','shank','short rib'];
+    const cuts = ['chuck','brisket','shank','short rib'];
 
     for const cut of Object.keys(cuts)) {
       const value = cuts[cut];
