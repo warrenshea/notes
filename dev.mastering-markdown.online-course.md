@@ -16,20 +16,20 @@ https://courses.wesbos.com/
 * [Module 10: Github Treats](#module-10-github-treats)
 ---
 
-## Module 1: Introduction to Markdown & The Tooling
+## Module 01: Introduction to Markdown & The Tooling
 * For Sublime, Markdown Editing is the best package (https://github.com/SublimeText-Markdown/MarkdownEditing)
 * GitHub uses Markdown GFM (GitHub Flavored Markdown)
 * Specs and examples can be found here - https://github.github.com/gfm
 * To change theme: `Sublime Text` > `Preferences` > `Package Settings` > `Markdown Editing` > `GFM Settings - User`
 * `CTRL + B` inside Sublime will create an `.html` page
 
-## Module 2: Paragraphs and Text Decoration
+## Module 02: Paragraphs and Text Decoration
 * Markdown needs a full line space between items to become a paragraph
 * Strikethrough: surround with `~~`
 
-## Module 3: Headings in Markdown
+## Module 03: Headings in Markdown
 
-## Module 4: Links in Markdown
+## Module 04: Links in Markdown
 * Regular Link
   `<https://www.warrenshea.com>` = <https://www.warrenshea.com>
 
@@ -43,7 +43,7 @@ https://courses.wesbos.com/
   `[warrenshea.com][1]` + `[1]: https://www.warrenshea.com`
   `[warrenshea.com][ws]` + `[ws]: https://www.warrenshea.com`
 
-## Module 5: Markdown Images
+## Module 05: Markdown Images
 * Image with Alt Text and Tooltip
   `![ALT TEXT](IMG PATH "This is a tooltip")` = ![Mega Man GIF](http://www.v1.worldofwarren.com/common/megaman/ani_beat_rush_megaman.gif "This is a tooltip")
 
@@ -53,17 +53,17 @@ https://courses.wesbos.com/
 * Combining Hyperlink and Image
   `[![ALT TEXT](IMG PATH)](http://www.v1.worldofwarren.com)` = [![ALT TEXT](IMG PATH)](http://www.v1.worldofwarren.com)
 
-## Module 6: Lists — Ordered, Unorderd, Bullets and Nesting
+## Module 06: Lists — Ordered, Unorderd, Bullets and Nesting
 * Unordered List `*` or `-` or `+`
 * Ordered List `1.` - just put a `1.` and the browser will automatically order it. Do not put `1.`, `2.`, `3.` as that leads to manual changes later
 * Nest copy with indents
 
-## Module 7: Line Breaks, Horizontal Rules and BlockQuotes
+## Module 07: Line Breaks, Horizontal Rules and BlockQuotes
 * Line Breaks: use `<br>` or `\`
 * Horizontal Rules: `---` or `===` but put space between that and the item, or it becomes a header
 * Block Quotes: `>`
 
-## Module 8: Code Blocks
+## Module 08: Code Blocks
 * 3 backticks: ` ``` ` and then the language, e.g. ````javascript`
 * 1 backtick: ``code``
 * Diff:
@@ -73,7 +73,7 @@ var x = 100;
 - var y = 100;
 ```
 
-## Module 9: Tables
+## Module 09: Tables
 * `:---` = Left Aligned
 * `---:` = Right Aligned
 * `:--:` = Centered Aligned
