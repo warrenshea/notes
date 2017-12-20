@@ -9,7 +9,7 @@ https://courses.wesbos.com/
 * [Module 3: Headings in Markdown](#module-3-headings-in-markdown)
 * [Module 4: Links in Markdown](#module-4-links-in-markdown)
 * [Module 5: Markdown Images](#module-5-markdown-images)
-* [Module 6: Lists — Ordered, Unorderd, Bullets and Nesting](#module-6-lists-ordered-unorderd-bullets-and-nesting)
+* [Module 6: Lists — Ordered, Unorderd, Bullets and Nesting](#module-6-lists--ordered-unorderd-bullets-and-nesting)
 * [Module 7: Line Breaks, Horizontal Rules and BlockQuotes](#module-7-line-breaks-horizontal-rules-and-blockquotes)
 * [Module 8: Code Blocks](#module-8-code-blocks)
 * [Module 9: Tables](#module-9-tables)
@@ -25,7 +25,7 @@ https://courses.wesbos.com/
 
 ## Module 2: Paragraphs and Text Decoration
 * Markdown needs a full line space between items to become a paragraph
-* Strikethrough - surround with ~~
+* Strikethrough: surround with `~~`
 
 ## Module 3: Headings in Markdown
 
