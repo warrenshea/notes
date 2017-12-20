@@ -4,7 +4,7 @@ https://courses.wesbos.com/
 
 ---
 ## Table of Contents
-* [Module 1: Introduction to Markdown &amp; The Tooling](#module-1-introduction-to-markdown-and-the-tooling)
+* [Module 1: Introduction to Markdown &amp; The Tooling](#module-1-introduction-to-markdown--the-tooling)
 * [Module 2: Paragraphs and Text Decoration](#module-2-paragraphs-and-text-decoration)
 * [Module 3: Headings in Markdown](#module-3-headings-in-markdown)
 * [Module 4: Links in Markdown](#module-4-links-in-markdown)
