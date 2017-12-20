@@ -37,11 +37,11 @@ https://courses.wesbos.com/
 
 ## Module 01: New Variables - Creation, Updating and Scoping
 
-###  Module 01.1: var Scoping refresh
+###  Module 01.01: var Scoping refresh
 
 * `var` variables are function scoped, but if there’s no function, it will be block scoped (between { and } )
 
-###  Module 01.2: `let` VS `const`
+###  Module 01.02: `let` VS `const`
 
 * `let` variables are block scoped
     ```javascript
@@ -66,7 +66,7 @@ https://courses.wesbos.com/
     console.log(warren.age); //35
     ```
 
-###  Module 01.3: `let` and `const` in Real World
+###  Module 01.03: `let` and `const` in Real World
 
 * Immediately-invoked function expression - [iife](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
     ```javascript
@@ -105,7 +105,7 @@ https://courses.wesbos.com/
     //** this i variable is now scoped to the loop
     ```
 
-###  Module 01.4: Temporal Dead Zone
+###  Module 01.04: Temporal Dead Zone
 
 * Temporal Dead zone
     ```javascript
@@ -121,7 +121,7 @@ https://courses.wesbos.com/
     ```
     You can't access the variable (`let` / `const`) before it's defined
 
-###  Module 01.5: Is `var` Dead? What should I use?
+###  Module 01.05: Is `var` Dead? What should I use?
 
 * Using `let` / `const` / `var` : the [Mathias Bynens](https://mathiasbynens.be/notes/es6-const) & Wes Bos approach &#35;BESTPRACTICE
   * use `const` by default
@@ -135,7 +135,7 @@ https://courses.wesbos.com/
 
 ## Module 02: Function Improvements: Arrows and Default Arguments
 
-###  Module 02.6: Arrow Functions Introduction
+###  Module 02.06: Arrow Functions Introduction
 
 * 3 benefits:
   * More concise
@@ -188,7 +188,7 @@ https://courses.wesbos.com/
     sayMyName('warren'); //returns 'warren'
     ```
 
-###  Module 02.7: More Arrow Function Examples
+###  Module 02.07: More Arrow Function Examples
 
 *
     ```javascript
@@ -208,7 +208,7 @@ https://courses.wesbos.com/
     const old = ages.filter(age => age >= 60); //returns [62,76] #BESTPRACTICE #FILTER
     ```
 
-###  Module 02.8: Arrow Functions and `this`
+###  Module 02.08: Arrow Functions and `this`
 
 *
     ```javascript
@@ -235,7 +235,7 @@ https://courses.wesbos.com/
       //use let because they will change
     ```
 
-###  Module 02.9: Default Function Arguments
+###  Module 02.09: Default Function Arguments
 
 *
     ```javascript
