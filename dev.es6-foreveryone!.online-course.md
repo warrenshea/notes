@@ -11,15 +11,15 @@ https://courses.wesbos.com/
 
 ## Table of Contents
 
-* [Module 1: New Variables - Creation, Updating and Scoping](#module-1-new-variables---creation-updating-and-scoping)
-* [Module 2: Function Improvements: Arrows and Default Arguments](#module-2-function-improvements-arrows-and-default-arguments)
-* [Module 3: Template Strings](#module-3-template-strings)
-* [Module 4: Additional String Improvements](#module-4-additional-string-improvements)
-* [Module 5: Destructuring](#module-5-destructuring)
-* [Module 6: Iterables & Looping](#module-6-iterables--looping)
-* [Module 7: An Array of Array Improvements](#module-7-an-array-of-array-improvements)
-* [Module 8: Say Hello to ...Spread and ...Rest](#module-8-say-hello-to-spread-and-rest)
-* [Module 9: Object Literal Upgrades](#module-9-object-literal-upgrades)
+* [Module 01: New Variables - Creation, Updating and Scoping](#module-01-new-variables---creation-updating-and-scoping)
+* [Module 02: Function Improvements: Arrows and Default Arguments](#module-02-function-improvements-arrows-and-default-arguments)
+* [Module 03: Template Strings](#module-03-template-strings)
+* [Module 04: Additional String Improvements](#module-04-additional-string-improvements)
+* [Module 05: Destructuring](#module-05-destructuring)
+* [Module 06: Iterables & Looping](#module-06-iterables--looping)
+* [Module 07: An Array of Array Improvements](#module-07-an-array-of-array-improvements)
+* [Module 08: Say Hello to ...Spread and ...Rest](#module-08-say-hello-to-spread-and-rest)
+* [Module 09: Object Literal Upgrades](#module-09-object-literal-upgrades)
 * [Module 10: Promises](#module-10-promises)
 * [Module 11: Symbols](#module-11-symbols)
 * [Module 12: Code Quality with ESLint](#module-12-code-quality-with-eslint)
@@ -35,13 +35,13 @@ https://courses.wesbos.com/
 ---
 
 
-## Module 1: New Variables - Creation, Updating and Scoping
+## Module 01: New Variables - Creation, Updating and Scoping
 
-###  Module 1.1: var Scoping refresh
+###  Module 01.1: var Scoping refresh
 
 * `var` variables are function scoped, but if there’s no function, it will be block scoped (between { and } )
 
-###  Module 1.2: `let` VS `const`
+###  Module 01.2: `let` VS `const`
 
 * `let` variables are block scoped
     ```javascript
@@ -66,7 +66,7 @@ https://courses.wesbos.com/
     console.log(warren.age); //35
     ```
 
-###  Module 1.3: `let` and `const` in Real World
+###  Module 01.3: `let` and `const` in Real World
 
 * Immediately-invoked function expression - [iife](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
     ```javascript
@@ -105,7 +105,7 @@ https://courses.wesbos.com/
     //** this i variable is now scoped to the loop
     ```
 
-###  Module 1.4: Temporal Dead Zone
+###  Module 01.4: Temporal Dead Zone
 
 * Temporal Dead zone
     ```javascript
@@ -121,7 +121,7 @@ https://courses.wesbos.com/
     ```
     You can't access the variable (`let` / `const`) before it's defined
 
-###  Module 1.5: Is `var` Dead? What should I use?
+###  Module 01.5: Is `var` Dead? What should I use?
 
 * Using `let` / `const` / `var` : the [Mathias Bynens](https://mathiasbynens.be/notes/es6-const) & Wes Bos approach &#35;BESTPRACTICE
   * use `const` by default
@@ -133,9 +133,9 @@ https://courses.wesbos.com/
   * use `let` for localized variables in smaller scopes
   * refactor `let` to `const` only after some code has been written and you're reasonably sure you've got a case where there shouldn't be variable reassignment
 
-## Module 2: Function Improvements: Arrows and Default Arguments
+## Module 02: Function Improvements: Arrows and Default Arguments
 
-###  Module 2.6: Arrow Functions Introduction
+###  Module 02.6: Arrow Functions Introduction
 
 * 3 benefits:
   * More concise
@@ -188,7 +188,7 @@ https://courses.wesbos.com/
     sayMyName('warren'); //returns 'warren'
     ```
 
-###  Module 2.7: More Arrow Function Examples
+###  Module 02.7: More Arrow Function Examples
 
 *
     ```javascript
@@ -208,7 +208,7 @@ https://courses.wesbos.com/
     const old = ages.filter(age => age >= 60); //returns [62,76] #BESTPRACTICE #FILTER
     ```
 
-###  Module 2.8: Arrow Functions and `this`
+###  Module 02.8: Arrow Functions and `this`
 
 *
     ```javascript
@@ -235,7 +235,7 @@ https://courses.wesbos.com/
       //use let because they will change
     ```
 
-###  Module 2.9: Default Function Arguments
+###  Module 02.9: Default Function Arguments
 
 *
     ```javascript
@@ -265,7 +265,7 @@ https://courses.wesbos.com/
     //assume tax=0.13, but the tip is 0.25
     ```
 
-### Module 2.10: When NOT to use the Arrow Function
+### Module 02.10: When NOT to use the Arrow Function
 
 *
     ```javascript
@@ -315,7 +315,7 @@ https://courses.wesbos.com/
     orderChildren('alan','hal','guy','john','kyle');
     ```
 
-### Module 2.11: Arrow Functions Exercises
+### Module 02.11: Arrow Functions Exercises
 
 *
     ```javascript
@@ -338,15 +338,15 @@ https://courses.wesbos.com/
     items.reduce((value1,value2) => value1+value2,0); //I don't know how this works
     ```
 
-## Module 3: Template Strings
+## Module 03: Template Strings
 
-###  Module 3.12: Template String Introduction
+###  Module 03.12: Template String Introduction
 * Dropping variables in a string via Template Strings or Template Literals
     ```javascript
     let sentence = `backtick ${variable} backtick`;
     ```
 
-###  Module 3.13: Creating HTML fragments with Template Literals
+###  Module 03.13: Creating HTML fragments with Template Literals
 *
     ```javascript
     //#REFERENCE Multiline HTML string with backticks
@@ -404,7 +404,7 @@ https://courses.wesbos.com/
     ${renderFunction(beer.keywords)}
     ```
 
-###  Module 3.14: Tagged Template Literals/Strings
+###  Module 03.14: Tagged Template Literals/Strings
 *
     ```javascript
     //BASE EXAMPLE/UNDERSTANDING
@@ -446,7 +446,7 @@ https://courses.wesbos.com/
     }
     ```
 
-###  Module 3.15: Tagged Templates Exercise
+###  Module 03.15: Tagged Templates Exercise
 * A good use of Template strings is a dictionary/abbreviations example
     ```javascript
     const dict = {
@@ -478,7 +478,7 @@ https://courses.wesbos.com/
     bio.appendChild(p);
     ```
 
-###  Module 3.16: Sanitizing User Data with Tagged Templates
+###  Module 03.16: Sanitizing User Data with Tagged Templates
 * Any time you display data from a user, you need to sanitize it
 * When you let someone else put malicious code/JavaScript in your site, that's XSS Scripting
 * Loaded library called dompurify [dompurify](https://cdnjs.cloudlfare.com/ajax/libs/dompurify/0.8.2/purify.min.js")
@@ -489,9 +489,9 @@ https://courses.wesbos.com/
     }
     ```
 
-## Module 4: Additional String Improvements
+## Module 04: Additional String Improvements
 
-###  Module 4.17: New String Methods
+###  Module 04.17: New String Methods
 * 4 new methods that help reduce the need for Regex
     ```javascript
     //string.startsWith();
@@ -517,9 +517,9 @@ https://courses.wesbos.com/
     ```
 * &#35;REFERENCE Batman joke :D
 
-## Module 5: Destructuring
+## Module 05: Destructuring
 
-###  Module 5.18: Destructuring Objects
+###  Module 05.18: Destructuring Objects
 * Destructuring: A JavaScript expression that allows us to extra data from arrays, objects, and #TODO(something sets)
 * Old way VS ES6 Way
     ```javascript
@@ -570,7 +570,7 @@ https://courses.wesbos.com/
     //fontSize = 25
     ```
 
-###  Module 5.19: Destructing Arrays
+###  Module 05.19: Destructing Arrays
 *
     ```javascript
     const details = ['Wes Bos', 123, 'wesbos.com'];
@@ -600,10 +600,10 @@ https://courses.wesbos.com/
     //...variable is "the rest" operator. We have the captain, assistant and the rest
     ```
 
-###  Module 5.20: Swapping Variables with Destructuring
+###  Module 05.20: Swapping Variables with Destructuring
 * Switching variables (see [2.8](#module-28-arrow-functions-and-this))
 
-###  Module 5.21: Destructuring Functions - Multiple returns and named defaults
+###  Module 05.21: Destructuring Functions - Multiple returns and named defaults
 *
     ```javascript
     function convertCurrency(amount) {
@@ -641,9 +641,9 @@ https://courses.wesbos.com/
     console.log(bill);
     ```
 
-## Module 6: Iterables & Looping
+## Module 06: Iterables & Looping
 
-###  Module 6.22: The for of loop
+###  Module 06.22: The for of loop
 * The for of loop loops over iterables (anything that can be looped over like a DOM collection, arguments, array, string, map, set)
     ```javascript
     const cuts = ['chuck','brisket','shank','short rib'];
@@ -678,7 +678,7 @@ https://courses.wesbos.com/
     }
     ```
 
-### Module 6.23: The for of Loop in Action
+### Module 06.23: The for of Loop in Action
 *
     ```javascript
     const cuts = ['chuck','brisket','shank','short rib'];
@@ -721,7 +721,7 @@ https://courses.wesbos.com/
     }
     ```
 
-### Module 6.24: Using for of with Objects
+### Module 06.24: Using for of with Objects
 * object.entries() will be available later (in ES2017 and can be polyfilled)
 * Alternatives to `for of` with Objects:
     ```javascript
@@ -737,9 +737,9 @@ https://courses.wesbos.com/
     }
     ```
 
-## Module 7: An Array of Array Improvements
+## Module 07: An Array of Array Improvements
 
-###  Module 7.25: Array.from() and Array.of()
+###  Module 07.25: Array.from() and Array.of()
 * New array method
 * Array.from() -> turns something Array-ish (e.g. NodeList) and turn it into an Array
     ```javascript
@@ -767,7 +767,7 @@ https://courses.wesbos.com/
     ```
 * Array.of(arguments) -> pass it as many arguments that you want, creates array for every argument that you pass it
 
-###  Module 7.25: Array.find() and Array.findIndex()
+###  Module 07.25: Array.find() and Array.findIndex()
 * nice utility - might not need to add lodash because of this
 * Array.find()
     ```javascript
@@ -798,7 +798,7 @@ https://courses.wesbos.com/
     const apiObjectItemIndex = apiObject.findIndex(apiObjectItem => apiObjectItem.key === value);
     ```
 
-###  Module 7.26: Array.some() and Array.every()
+###  Module 07.26: Array.some() and Array.every()
 * Array.some(): check items in array to see if some of the items meet the criteria you're looking for
     ```javascript
     const ages = [32,15,19,12]
@@ -816,9 +816,9 @@ https://courses.wesbos.com/
     //returns false
     ```
 
-## Module 8: Say Hello to ...Spread and ...Rest
+## Module 08: Say Hello to ...Spread and ...Rest
 
-###  Module 8.28: Spread Operator Introduction
+###  Module 08.28: Spread Operator Introduction
 
 * ...The Spread Operator: Takes every single item from an iterable (anything that can be looped over like a DOM collection, arguments, array, string, map, set) and apply it to the containing Array
     ```javascript
@@ -848,10 +848,10 @@ https://courses.wesbos.com/
     const fridayPizzas = [...pizzas];
     ```
 
-###  Module 8.29: Spread Exercise
+###  Module 08.29: Spread Exercise
 * Exercise to make each character in a string do something on hover
 
-###  Module 8.30: More Spread Examples
+###  Module 08.30: More Spread Examples
 * Spread is an alternative to `Array.from(arrayIsh);`
 *
     ```javascript
@@ -875,7 +875,7 @@ https://courses.wesbos.com/
     const newComments = [...comments.slice(0,commentIndex), ...comments.slice(commentIndex + 1)];
     ```
 
-###  Module 8.31: Spreading into a function
+###  Module 08.31: Spreading into a function
 * Combining arrays
     ```javascript
     const inventors = ['Einstein', 'Newton', 'Galileo'];
@@ -903,7 +903,7 @@ https://courses.wesbos.com/
     sayHi(...name);
     ```
 
-###  Module 8.32: The ...Rest param in Functions and destructuring
+###  Module 08.32: The ...Rest param in Functions and destructuring
 * ... for a Spread takes one array and unpacks it into items
 * ... for a Rest takes multiple things and packs it into a single array
     ```javascript
@@ -918,9 +918,9 @@ https://courses.wesbos.com/
     const [name, id, ...runs] = runner; //runs is [5,3,6,35]
     ```
 
-## Module 9: Object Literal Upgrades
+## Module 09: Object Literal Upgrades
 
-###  Module 9.33: Object Literal Upgrades
+###  Module 09.33: Object Literal Upgrades
 *
     ```javascript
     //OLD WAY
