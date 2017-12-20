@@ -4,15 +4,15 @@ https://courses.wesbos.com/
 
 ---
 ## Table of Contents
-* [Module 1: Introduction to Markdown &amp; The Tooling](#module-1-introduction-to-markdown--the-tooling)
-* [Module 2: Paragraphs and Text Decoration](#module-2-paragraphs-and-text-decoration)
-* [Module 3: Headings in Markdown](#module-3-headings-in-markdown)
-* [Module 4: Links in Markdown](#module-4-links-in-markdown)
-* [Module 5: Markdown Images](#module-5-markdown-images)
-* [Module 6: Lists — Ordered, Unorderd, Bullets and Nesting](#module-6-lists--ordered-unorderd-bullets-and-nesting)
-* [Module 7: Line Breaks, Horizontal Rules and BlockQuotes](#module-7-line-breaks-horizontal-rules-and-blockquotes)
-* [Module 8: Code Blocks](#module-8-code-blocks)
-* [Module 9: Tables](#module-9-tables)
+* [Module 01: Introduction to Markdown &amp; The Tooling](#module-01-introduction-to-markdown--the-tooling)
+* [Module 02: Paragraphs and Text Decoration](#module-02-paragraphs-and-text-decoration)
+* [Module 03: Headings in Markdown](#module-03-headings-in-markdown)
+* [Module 04: Links in Markdown](#module-04-links-in-markdown)
+* [Module 05: Markdown Images](#module-05-markdown-images)
+* [Module 06: Lists — Ordered, Unorderd, Bullets and Nesting](#module-06-lists--ordered-unorderd-bullets-and-nesting)
+* [Module 07: Line Breaks, Horizontal Rules and BlockQuotes](#module-07-line-breaks-horizontal-rules-and-blockquotes)
+* [Module 08: Code Blocks](#module-08-code-blocks)
+* [Module 09: Tables](#module-09-tables)
 * [Module 10: Github Treats](#module-10-github-treats)
 ---
 
