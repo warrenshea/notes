@@ -1,4 +1,4 @@
-# Warren's Notes for Sublime Text Power User (Book)
+# Warren's Notes for Sublime Text Power User (Online Course / Book)
 v.20171220\
 https://courses.wesbos.com/
 
@@ -27,6 +27,9 @@ https://courses.wesbos.com/
 ---
 
 ## Module 01: Sublime Text Settings
+* Review Sublime Setttings and override them below
+* Sublime User Settings found here: `C:\Users\<username>\AppData\Roaming\Sublime Text 3\Packages\User\Preferences.sublime-settings`
+* There are specific language settings files, e.g. `C:\Users\<username>\AppData\Roaming\Sublime Text 3\Packages\User\Markdown.sublime-settings`
 
 ## Module 02: Bookmarking
 
