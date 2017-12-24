@@ -32,16 +32,40 @@ https://courses.wesbos.com/
 * There are specific language settings files, e.g. `C:\Users\<username>\AppData\Roaming\Sublime Text 3\Packages\User\Markdown.sublime-settings`
 
 ## Module 02: Bookmarking
+* `CTRL + F2` to set a bookmark, `F2` and `SHIFT+F2` to traverse bookmarks
+* To select all bookmarks, use the `Goto` menu
+* `CTRL + SHIFT + F2` clears all bookmarks
 
 ## Module 03: The Command Palette
+* `CTRL + SHIFT + P` to open
+* To set syntax colors: type `ssx`
+* Can set up Build tasks
+* `file` to delete/rename
 
 ## Module 04: Mastering Goto Anything
+* `CTRL + P` to open
+* "fuzzy matching" used
+* `:` to go to a line number
+* `@` to search a symbol
 
 ## Module 05: Predictive Filename Typing
+* Package is called "AutoFileName" to suggest file names
+* Settings can add file properties, if needed
 
 ## Module 06: Code Folding
+* Click the arrow in the gutter to fold the code OR
+* `CTRL + SHIFT + [` to fold
+* `CTRL + SHIFT + ]` to unfold
+* `CTRL + K + J` to unfold all at once
+* `CTRL + K + T` to keep the tag name but hide attributes
 
 ## Module 07: Creating and Using Snippets
+* Reuable code that you can create a "tab trigger" for
+* `CTRL + SHIFT + P` and call your snippet
+* To create a snippet, go to "Tools" > "Developer" > "New Snippet"
+* Put code in line 3 to ?. You can add "Tab Trigger" in the XML.
+* Need to save as `.sublime-snippet` file and needs to go into `snippets`
+* Helpful note: But a `.` infront of all of your tab triggers so that it doesn't conflict with Emmet
 
 ## Module 08: Moving, Jumping, Selecting and Inserting
 
