@@ -68,10 +68,33 @@ https://courses.wesbos.com/
 * Helpful note: But a `.` infront of all of your tab triggers so that it doesn't conflict with Emmet
 
 ## Module 08: Moving, Jumping, Selecting and Inserting
+* Hold `Shift` and use arrows to jump around
+* `CTRL + L` will select the line
+* `CTRL + Enter` will create a line underneath your existing link
 
 ## Module 09: Finding, Selecting and Replacing
+* Find Options: RegEx, Case Sensitive, Whole Word, Wrap (probably want this on), In Selection, Highlight matches
+* `F3` and `SHIFT + F3` to traverse finds, `ESC` to edit
+* To iterate through and select only items you want, `CTRL + D` to select, and `CTRL + K` to skip
 
 ## Module 10: Emmet - HTML
+* Cheat sheet: https://docs.emmet.io/cheat-sheet/
+* `img[src="dog$.jpg"]*5` =
+```html
+<img src="dog1.jpg" alt="">
+<img src="dog2.jpg" alt="">
+<img src="dog3.jpg" alt="">
+<img src="dog4.jpg" alt="">
+<img src="dog5.jpg" alt="">
+```
+* `img[src="dog$$.jpg"]*5` =
+```html
+<img src="dog01.jpg" alt="">
+<img src="dog02.jpg" alt="">
+<img src="dog03.jpg" alt="">
+<img src="dog04.jpg" alt="">
+<img src="dog05.jpg" alt="">
+```
 
 ## Module 11: Emmet - Tag Wrapping
 
