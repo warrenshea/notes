@@ -3,7 +3,7 @@
 ## Developer Notes for Learning and Reference
 * [ES6 for Everyone! by Wes Bos](dev.es6-foreveryone!.online-course.md) (Status: Complete)
 * [Mastering Markdown by Wes Bos](dev.mastering-markdown.online-course.md) (Status: Complete)
-* [Sublime Text Power User by Wes Bos](dev.sublime-text.book.md) (Status: **In Progress**)
+* [Sublime Text Power User by Wes Bos](dev.sublime-text.book.md) (Status: Complete)
 * [Git Reference and Notes](dev.git.md)
 
 ## Developer Notes for Projects
