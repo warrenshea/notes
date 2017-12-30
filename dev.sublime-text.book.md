@@ -97,21 +97,46 @@ https://courses.wesbos.com/
 ```
 
 ## Module 11: Emmet - Tag Wrapping
+* Emmet wrapping feature is more flexible
+* Select the copy, `CTRL + SHIFT + G`
 
 ## Module 12: Emmet - CSS
+* Uses fuzzy search
+* You can use `-` to mean `:`
+* can use `-` at the start of the value to do all the vendor prefixes
+* `@kf` to do keyframes
 
 ## Module 13: Emmet - Value Bumping
+* `CTRL + ↑` + `CTRL + ↓` to bump
+* `CTRL + SHIFT + ↑` + `CTRL + SHIFT + ↓` to bump by larger margin
 
 ## Module 14: Emmet - Filters
+* `|c` at the end to create closing comments
+* `|jade` at the end to create jade code, rather than default
+* `|e` to escape code into html entities
+* `|s` to single line it
 
 ## Module 15: Line Bubbling or Swapping
+* `CTRL + SHIFT + ↑` and `CTRL + SHIFT + ↓` to move lines up and down
 
 ## Module 16: Introduction to Panes and Groups
 
 ## Module 17: Mastering Panes and Groups with Origami
+* Install `Origami` Package
+* Create/destroy panes however you'd like
+* `Clone` to create same file on different pane
+* `CTRL + K` to start, `← ↑ → ↓` to focus
+* `CTRL + K` to start, `CTRL + ← ↑ → ↓` to create
+* `CTRL + K` to start, `CTRL + SHIFT + ← ↑ → ↓` to delete
 
 ## Module 18: Working with Multiple Carets
+* `CTRL + mouse click` creates multiple carets
+* `CTRL + middle click` helps create multile carets quickly
 
 ## Module 19: JavaScript Code Quality with JSHint
+* Install `JSHint Gutter` and `jshint` in bash via `npm install jshint -g`
 
 ## Module 20: Lint Any Language with Sublime Linter
+* Sublime Linter base
+* Install various SublimeLinters, e.g. `jshint`, `csshint`, etc.
+* Read the Sublime Linter docs
