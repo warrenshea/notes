@@ -4,6 +4,7 @@
 * [ES6 for Everyone! by Wes Bos](dev.es6-foreveryone!.online-course.md) (Status: Complete)
 * [Mastering Markdown by Wes Bos](dev.mastering-markdown.online-course.md) (Status: Complete)
 * [Sublime Text Power User by Wes Bos](dev.sublime-text.book.md) (Status: Complete)
+* [React for Beginners by Wes Bos](dev.react-for-beginners.online-course.md) (Status: In Progress)
 * [Git Reference and Notes](dev.git.md)
 
 ## Developer Notes for Projects
