@@ -1,5 +1,5 @@
 # Warren's Notes for React for Beginners (Online Course)
-v.20180121\
+v.20180122\
 https://courses.wesbos.com/
 
 ---
