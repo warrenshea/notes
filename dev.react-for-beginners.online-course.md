@@ -155,9 +155,46 @@ export default App
 (in Header.js)
 <h3 className="tagline">{this.props.tagline}</h3>
 ```
-
+* If you need to debug a component, go to the component in React Dev Tools, then go to `Console` and press `$r`
+* (Not React Related) If you need to debug some html, go to the component in Dev Tools, then go to `Console` and press `$0`
 
 ## Module 08: Stateless Functional Components
+* Used for "simple" components that don't really do anything else/have no other methods expect render stuff
+* Instead of
+```
+class Header extends React.Component {
+  render () {
+    return (
+      {/* code */}
+    );
+  }
+}
+```
+You can use (best practice):
+```
+const Header = (props) = > {
+    return (
+      {/* code */}
+    );
+}
+```
+or
+```
+function Header(props) {
+    return (
+      {/* code */}
+    );
+}
+```
+or
+```
+const Header = function(props) {
+    return (
+      {/* code */}
+    );
+}
+```
+
 ## Module 09: Routing with React Router
 ## Module 10: Helper and Utility Functions
 ## Module 11: Working with React Events
