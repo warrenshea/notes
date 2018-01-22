@@ -146,9 +146,17 @@ class App extends React.Component {
 export default App
 ```
 
-
-
 ## Module 07: Passing Dynamic data with props
+* Pass data to component via `props`, with is like an attribute for a component
+```
+(in App.js)
+<Header tagline="Fresh Seafood Market"/>
+
+(in Header.js)
+<h3 className="tagline">{this.props.tagline}</h3>
+```
+
+
 ## Module 08: Stateless Functional Components
 ## Module 09: Routing with React Router
 ## Module 10: Helper and Utility Functions
