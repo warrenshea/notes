@@ -155,6 +155,7 @@ export default App
 (in Header.js)
 <h3 className="tagline">{this.props.tagline}</h3>
 ```
+* Passing a number, variable, for bollean, you need to wrap value in `{ }`
 * If you need to debug a component, go to the component in React Dev Tools, then go to `Console` and press `$r`
 * (Not React Related) If you need to debug some html, go to the component in Dev Tools, then go to `Console` and press `$0`
 
@@ -196,6 +197,36 @@ const Header = function(props) {
 ```
 
 ## Module 09: Routing with React Router
+* React Router is not part of React
+* React Router 4 is being used - to show/hide components depending on URL
+* index.js
+```
+import React from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter, Match, Miss } from 'react-router';
+
+import App from './components/App';
+import StorePicker from './components/StorePicker';
+import NotFound from './components/NotFound';
+
+const Root = () => {
+  return (
+    <BrowserRouter>
+      <div>{/* Match cannot be a child of BrowserRouter....I guess? */}
+        {/* For the root */}
+        <Match exactly pattern='/' component={StorePicker} />
+        {/* For anything '/store' */}
+        <Match pattern='/store/:storeId' component={App} />
+        {/* For anything '/store' */}
+        <Miss component={NotFound} />
+      </div>
+    </BrowserRouter>
+  )
+}
+
+render(<Root/>,document.querySelector('#main'));
+```
+
 ## Module 10: Helper and Utility Functions
 ## Module 11: Working with React Events
 ## Module 12: All About React Router
