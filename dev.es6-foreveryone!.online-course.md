@@ -1521,7 +1521,7 @@ but this only imports, we need to export
 
     movies.add({ name: 'Titanic', stars: 5 });
     ```
-* for in will iterate over everything (it will iternate name, then the movies)
+* for in will iterate over everything (it will iterate name, then the movies)
 * for of will only iterate over the iterables (it will only iterate over the movies)
 
 ## Module 16: Generators
