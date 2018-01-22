@@ -121,6 +121,33 @@ This is not:
 * In this example, we're loading a file into the HTML file via `import './css/style.css';`
 
 ## Module 06: Creating our application layout with components
+* Modified App component + Created 3 new components
+```
+import React from 'react';
+import Header from './Header';
+import Order from './Order';
+import Inventory from './Inventory';
+
+class App extends React.Component {
+  render() {
+    /* comment */
+    return (
+      <div className="catch-of-the-day">
+        <div className="menu">
+          <Header />
+        </div>
+        <Order />
+        <Inventory />
+      </div>
+    );
+  }
+}
+
+export default App
+```
+
+
+
 ## Module 07: Passing Dynamic data with props
 ## Module 08: Stateless Functional Components
 ## Module 09: Routing with React Router
