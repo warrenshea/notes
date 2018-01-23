@@ -228,6 +228,17 @@ render(<Root/>,document.querySelector('#main'));
 ```
 
 ## Module 10: Helper and Utility Functions
+* Helpers file to stick functions not tied to specific page/functionality - not big enough to be modules
+* In the helpers.js file
+```
+export function getFunName() {
+}
+```
+And in the place to call the helper function,
+```
+import { getFunName } from '../helpers';
+```
+
 ## Module 11: Working with React Events
 ## Module 12: All About React Router
 ## Module 13: Understanding State
