@@ -240,6 +240,35 @@ import { getFunName } from '../helpers';
 ```
 
 ## Module 11: Working with React Events
+* Add events inline into code
+* `render` is bound to the component, so refering `this` references the component
+* In other functions, `this` does not reference the component
+* In React, you don't want to touch the DOM
+* This will make it so that `StorePicker.storeInput` references the `input`
+```
+<input type='text' required placeholder='Store Name' defaultValue={getFunName()}
+  ref={(input) => { this.storeInput = input}} />
+```
+* Constructor - the code that runs when a component is created
+* To bind `this` inside a function, you can do :
+```
+  constructor() {
+    super(); /*runs React.Component*/
+    this.goToStore = this.goToStore.bind(this);
+  }
+  goToStore(event) {
+    console.log(this); /*is now the correct 'this'*/
+  }
+```
+OR
+```
+<form action='' className='store-selector' onSubmit={this.goToStore.bind(this)}>
+```
+OR
+```
+<form action='' className='store-selector' onSubmit={(e) => this.goToStore(e)}>
+```
+
 ## Module 12: All About React Router
 ## Module 13: Understanding State
 ## Module 14: Loading data into state onClick
