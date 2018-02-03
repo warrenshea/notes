@@ -52,7 +52,7 @@ https://courses.wesbos.com/
 * `import { render } from 'react-dom';` to render the code as DOM/HTML (as opposed to for an Android App)
 * `import ReactDom from 'react-dom';` will load the whole ReactDom package but we don't need entire package, just need `render` method
 * An example of a simple component, rendered to a div (`<div id="#main">`)
-```
+```javascript
 class StorePicker extends React.Component {
   render() {
     return <p>Hello</p>
@@ -64,7 +64,7 @@ render(<StorePicker/>,document.querySelector('#main'));
 * Best Practice is each component is its own file
 * Each file in the `components` folder
 * ./index.js
-```
+```javascript
 import React from 'react';
 import { render } from 'react-dom';
 
@@ -74,7 +74,7 @@ render(<StorePicker/>,document.querySelector('#main'));
 ```
 
 * ./components/StorePicker.js
-```
+```javascript
 import React from 'react';
 
 class StorePicker extends React.Component {
@@ -90,21 +90,21 @@ export default StorePicker
 * JSX - write HTML inside JavaScript
 * `return React.createElement('p', {className: 'Testing'}, 'Test');` - a (bad) way to write HTML
 * Better way
-```
+```javascript
   return (
     All the HTML code you need
   )
 ```
 * cannot use `class` because it is a reserved word/name in JavaScript - use `className`
 * Can only return 1 parent element. This is okay:
-```
+```javascript
   return (
     <form>
     </form>
   )
 ```
 This is not:
-```
+```javascript
   return (
     <form>
     </form>
@@ -122,7 +122,7 @@ This is not:
 
 ## Module 06: Creating our application layout with components
 * Modified App component + Created 3 new components
-```
+```javascript
 import React from 'react';
 import Header from './Header';
 import Order from './Order';
@@ -148,13 +148,14 @@ export default App
 
 ## Module 07: Passing Dynamic data with props
 * Pass data to component via `props`, with is like an attribute for a component
-```
-(in App.js)
+```javascript
+/*in App.js*/
 <Header tagline="Fresh Seafood Market"/>
 
-(in Header.js)
+/*in Header.js*/
 <h3 className="tagline">{this.props.tagline}</h3>
 ```
+* `this` refers to the component
 * Passing a number, variable, for bollean, you need to wrap value in `{ }`
 * If you need to debug a component, go to the component in React Dev Tools, then go to `Console` and press `$r`
 * (Not React Related) If you need to debug some html, go to the component in Dev Tools, then go to `Console` and press `$0`
@@ -162,7 +163,7 @@ export default App
 ## Module 08: Stateless Functional Components
 * Used for "simple" components that don't really do anything else/have no other methods expect render stuff
 * Instead of
-```
+```javascript
 class Header extends React.Component {
   render () {
     return (
@@ -172,7 +173,7 @@ class Header extends React.Component {
 }
 ```
 You can use (best practice):
-```
+```javascript
 const Header = (props) = > {
     return (
       {/* code */}
@@ -180,7 +181,7 @@ const Header = (props) = > {
 }
 ```
 or
-```
+```javascript
 function Header(props) {
     return (
       {/* code */}
@@ -188,7 +189,7 @@ function Header(props) {
 }
 ```
 or
-```
+```javascript
 const Header = function(props) {
     return (
       {/* code */}
@@ -200,7 +201,7 @@ const Header = function(props) {
 * React Router is not part of React
 * React Router 4 is being used - to show/hide components depending on URL
 * index.js
-```
+```javascript
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Match, Miss } from 'react-router';
@@ -230,12 +231,12 @@ render(<Root/>,document.querySelector('#main'));
 ## Module 10: Helper and Utility Functions
 * Helpers file to stick functions not tied to specific page/functionality - not big enough to be modules
 * In the helpers.js file
-```
+```javascript
 export function getFunName() {
 }
 ```
 And in the place to call the helper function,
-```
+```javascript
 import { getFunName } from '../helpers';
 ```
 
@@ -251,7 +252,7 @@ import { getFunName } from '../helpers';
 ```
 * Constructor - the code that runs when a component is created
 * To bind `this` inside a function, you can do :
-```
+```javascript
   constructor() {
     super(); /*runs React.Component*/
     this.goToStore = this.goToStore.bind(this);
@@ -260,13 +261,33 @@ import { getFunName } from '../helpers';
     console.log(this); /*is now the correct 'this'*/
   }
 ```
-OR
-```
+And call the event through
+```javascript
 <form action='' className='store-selector' onSubmit={this.goToStore.bind(this)}>
 ```
 OR
-```
+```javascript
 <form action='' className='store-selector' onSubmit={(e) => this.goToStore(e)}>
+```
+* Altogether
+```javascript
+class StorePicker extends React.Component {
+  goToStore(event) {
+    /*stopped form from submitting*/
+    event.preventDefault();
+    //grab text from box
+    console.log(this.storeInput.value);
+    //transition from / to store/id
+  }
+
+  render () {
+    return (
+      <form action='' className='store-selector' onSubmit={(e) => this.goToStore(e)}>
+
+      </form>
+    );
+  }
+}
 ```
 
 ## Module 12: All About React Router
