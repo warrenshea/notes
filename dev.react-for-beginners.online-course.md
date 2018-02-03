@@ -283,7 +283,7 @@ class StorePicker extends React.Component {
   render () {
     return (
       <form action='' className='store-selector' onSubmit={(e) => this.goToStore(e)}>
-
+        <input type='text' required placeholder='Store Name' defaultValue={getFunName()} ref={(input) => { this.storeInput = input}} />
       </form>
     );
   }
@@ -291,6 +291,30 @@ class StorePicker extends React.Component {
 ```
 
 ## Module 12: All About React Router
+* React Router 4: 2 main ways to change the page: Declarative (use a component) and Imperative (use a function e.g. `.transitionTo`)
+* BrowserRouter is the parent of the entire application, so you can access it at any time
+* Use "Context" to surface the router - delcare something at a top level and it will be made available to children
+* State holds data, Props passes data from parent to child
+* At the bottom:
+```javascript
+/* Tells react that StorePicker wants router */
+StorePicker.contextTypes = {
+  router: React.PropTypes.object
+}
+```
+* Using transitionTo:
+```javascript
+  goToStore(event) {
+    /*
+      code...
+    */
+    const storeId = this.storeInput.value;
+    //transition from / to store/id
+    this.context.router.transitionTo(`/store/${storeId}`);
+  }
+```
+* This is all client side so transitionTo uses HTML5 pushState
+
 ## Module 13: Understanding State
 ## Module 14: Loading data into state onClick
 ## Module 15: Displaying State with JSX
