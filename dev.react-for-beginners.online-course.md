@@ -246,7 +246,7 @@ import { getFunName } from '../helpers';
 * In other functions, `this` does not reference the component
 * In React, you don't want to touch the DOM
 * This will make it so that `StorePicker.storeInput` references the `input`
-```
+```javascript
 <input type='text' required placeholder='Store Name' defaultValue={getFunName()}
   ref={(input) => { this.storeInput = input}} />
 ```
@@ -316,6 +316,72 @@ StorePicker.contextTypes = {
 * This is all client side so transitionTo uses HTML5 pushState
 
 ## Module 13: Understanding State
+* State is one object that holds all the data related to all/a piece of the application
+* You store all data in a massive object called State - if you change anything on the page, you change State
+* If you want to change anything on the page, you change the state / let React handle it for you
+* State is tied to App Component - functions that change state are in App.js (in this example)
+* State is always tied to a specific Component
+* Each Component can have its own state
+* Sometimes state needs to be shared among components (e.g. App w/ Order, Inventory) - so then we put State on App Component and pass it down
+* Don't forget that if you need to access the function that changes state (e.g. AddFish), you have to attach it to components and reference them as props in the component
+App.js
+```javascript
+class App extends React.Component {
+  constructor () {
+    super();
+    this.addFish = this.addFish.bind(this);
+    this.state = {
+      fishes: {}
+    };
+  }
+
+  addFish (fish) {
+    const fishes = {...this.state.fishes};
+    /* change fishes */
+    this.setState({ fishes });
+  }
+  render () {
+    return (
+      <div>
+        <Inventory addFish={this.addFish} /> {/* addFish is passed down */}
+      </div>
+    );
+  }
+}
+export default App;
+```
+
+Inventory.js
+```javascript
+        <AddFishForm addFish={this.props.addFish} />
+```
+
+AddFishForm.js
+```javascript
+class addFishForm extends React.Component {
+  createFish (event) {
+    event.preventDefault();
+    const fish = {
+      name: this.name.value,
+      price: this.price.value,
+      status: this.status.value,
+      desc: this.desc.value,
+      image: this.image.value
+    };
+    this.props.addFish(fish);
+    this.fishForm.reset();
+  }
+  render () {
+    return (
+      <form ref={(input) => { this.fishForm = input; }} action='' className='fish-edit' onSubmit={(e) => this.createFish(e)}>
+        <button type='submit'>Add Item</button>
+      </form>
+    );
+  }
+}
+export default addFishForm;
+```
+
 ## Module 14: Loading data into state onClick
 ## Module 15: Displaying State with JSX
 ## Module 16: Updating Order State
