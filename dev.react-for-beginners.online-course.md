@@ -63,7 +63,7 @@ render(<StorePicker/>,document.querySelector('#main'));
 ```
 * Best Practice is each component is its own file
 * Each file in the `components` folder
-* ./index.js
+* `./index.js`
 ```javascript
 import React from 'react';
 import { render } from 'react-dom';
@@ -73,7 +73,7 @@ import StorePicker from './components/StorePicker';
 render(<StorePicker/>,document.querySelector('#main'));
 ```
 
-* ./components/StorePicker.js
+* `./components/StorePicker.js`
 ```javascript
 import React from 'react';
 
@@ -149,10 +149,10 @@ export default App
 ## Module 07: Passing Dynamic data with props
 * Pass data to component via `props`, with is like an attribute for a component
 ```javascript
-/*in App.js*/
+in `App.js`
 <Header tagline="Fresh Seafood Market"/>
 
-/*in Header.js*/
+in `Header.js`
 <h3 className="tagline">{this.props.tagline}</h3>
 ```
 * `this` refers to the component
@@ -200,7 +200,7 @@ const Header = function(props) {
 ## Module 09: Routing with React Router
 * React Router is not part of React
 * React Router 4 is being used - to show/hide components depending on URL
-* index.js
+* `index.js`
 ```javascript
 import React from 'react';
 import { render } from 'react-dom';
@@ -230,7 +230,7 @@ render(<Root/>,document.querySelector('#main'));
 
 ## Module 10: Helper and Utility Functions
 * Helpers file to stick functions not tied to specific page/functionality - not big enough to be modules
-* In the helpers.js file
+* In the `helpers.js` file
 ```javascript
 export function getFunName() {
 }
@@ -324,7 +324,7 @@ StorePicker.contextTypes = {
 * Each Component can have its own state
 * Sometimes state needs to be shared among components (e.g. App w/ Order, Inventory) - so then we put State on App Component and pass it down
 * Don't forget that if you need to access the function that changes state (e.g. AddFish), you have to attach it to components and reference them as props in the component
-App.js
+`App.js`
 ```javascript
 class App extends React.Component {
   constructor () {
@@ -351,12 +351,12 @@ class App extends React.Component {
 export default App;
 ```
 
-Inventory.js
+`Inventory.js`
 ```javascript
         <AddFishForm addFish={this.props.addFish} />
 ```
 
-AddFishForm.js
+`AddFishForm.js`
 ```javascript
 class addFishForm extends React.Component {
   createFish (event) {
@@ -383,7 +383,43 @@ export default addFishForm;
 ```
 
 ## Module 14: Loading data into state onClick
+* On click of a button in `Inventory.js`
+```javascript
+<button onClick={this.props.loadSamples}>Load Samples</button>
+```
+
+We load in a fishes object from `sample-fishes.js`
+In `App.js`
+```javascript
+import sampleFishes from '../sample-fishes';
+
+class App extends React.Component {
+  constructor () {
+    super();
+    this.loadSamples = this.loadSamples.bind(this);
+    // getInitialState
+    this.state = {
+      fishes: {}
+    };
+  }
+  loadSamples () {
+    this.setState({
+      fishes: sampleFishes
+    });
+  }
+  render () {
+    return (
+      <div className='catch-of-the-day'>
+        <Inventory addFish={this.addFish} loadSamples={this.loadSamples} /> {/* addFish is passed down */}
+      </div>
+    );
+  }
+}
+```
+
 ## Module 15: Displaying State with JSX
+
+
 ## Module 16: Updating Order State
 ## Module 17: Displaying Order State with JSX
 ## Module 18: Persisting our State with Firebase
