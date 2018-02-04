@@ -418,7 +418,16 @@ class App extends React.Component {
 ```
 
 ## Module 15: Displaying State with JSX
-
+* No loops or login in JSX - if you want it, you use regular JavaScript
+* `Object.keys(**object**)` will map over object
+* loop over object (`this.state.fishes`)
+```javascript
+  {
+    Object
+      .keys(this.state.fishes)
+      .map(key => <Fish key={key} details={this.state.fishes[key]}/>)
+  }
+```
 
 ## Module 16: Updating Order State
 ## Module 17: Displaying Order State with JSX
