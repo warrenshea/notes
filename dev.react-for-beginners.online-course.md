@@ -4,8 +4,8 @@ https://courses.wesbos.com/
 
 ---
 ## Table of Contents
-* [Module 01: Introduction, Tooling and Editor Setup]()
-* [Module 02: Thinking and Understanding React Components]()
+* [Module 01: Introduction, Tooling and Editor Setup](#module-01-introduction-tooling-and-editor-setup)
+* [Module 02: Thinking and Understanding React Components](#module-02-thinking-and-understanding-react-components)
 * [Module 03: Creating our First Components]()
 * [Module 04: Writing HTML with JSX]()
 * [Module 05: Loading CSS into our React Application]()
