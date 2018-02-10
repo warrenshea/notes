@@ -433,7 +433,28 @@ class App extends React.Component {
 * if you need to pass a key, use `index`. `key` is for the component, `index` is for you.
 
 ## Module 17: Displaying Order State with JSX
+* Not good practice to push state down
+
 ## Module 18: Persisting our State with Firebase
+* Firebase is product from Google
+* Uses HTML5 websockets - you can sync data from app and firebase and vice versa
+* Firebase saves information as one big object which is good because state is one big object
+* created base.js and filled it with Firebase code allowing export of `base` so it can be imported elsewhere
+* `componentWillMount` - when component is mounted, you can do ajax request/connect to rebase/sync component state with firebase state
+* Use firebase and these functions to maintain state across Firebase
+```javascript
+  componentWillMount () {
+    this.ref = base.syncState(`${this.props.params.storeId}/fishes`, {
+      context: this,
+      state: 'fishes'
+    });
+  }
+
+  componentWillUnmount () {
+    base.removeBinding(this.ref);
+  }
+```
+
 ## Module 19: Persisting Order State with localstorage
 ## Module 20: Bi-directional Data Flow and Live State Editing
 ## Module 21: Removing Items from State
