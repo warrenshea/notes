@@ -456,6 +456,26 @@ class App extends React.Component {
 ```
 
 ## Module 19: Persisting Order State with localstorage
+* Better to store this information as local storage VS cookies or Firebase
+* Hook into `componentWillUpdate` - invoked before props or state changes
+* information stored in Local Storage
+``` javascript
+  componentWillUpdate (nextProps, nextState) {
+    localStorage.setItem('order-${this.props.params.storeId}',JSON.stringify(nextState.order);
+  }
+```
+* `JSON.stringify` to convert `object` to `string`
+* information to load from Local Storage
+```javascript
+  const localStorageRef = localStorage.getItem(`order-${this.props.params.storeId}`);
+  if (localStorageRef) {
+    this.setState({
+      order: JSON.parse(localStorageRef)
+    });
+  }
+```
+* `JSON.parse` to convert `string` to `object`
+
 ## Module 20: Bi-directional Data Flow and Live State Editing
 ## Module 21: Removing Items from State
 ## Module 22: Animating React Components
