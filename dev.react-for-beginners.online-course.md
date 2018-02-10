@@ -430,6 +430,8 @@ class App extends React.Component {
 ```
 
 ## Module 16: Updating Order State
+* if you need to pass a key, use `index`. `key` is for the component, `index` is for you.
+
 ## Module 17: Displaying Order State with JSX
 ## Module 18: Persisting our State with Firebase
 ## Module 19: Persisting Order State with localstorage
