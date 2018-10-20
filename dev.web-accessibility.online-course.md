@@ -91,16 +91,95 @@ v.20181015
       * Deque's aXe (for Chrome): https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd
       * Aria Cheat Sheet https://www.cheatography.com/jreiche/cheat-sheets/wai-aria-1-1/
 
-5 instances of static WAI-ARIA
-role="navigation" used to describe the main/left hand navigation. The HTML element is already a <nav> element, but it's good to include redundant WAI_ARIA roles for broader support.
-aria-label="Home" used to define tha label of the current element (Home) in the navigation
-aria-haspopup="true" indicates that the Examples menu can be triggered by this element
-role="main" used to describe the <main id="maincontent"> element
-aria-live="off" on the <div id="slider"> to indicates no changes to the live region is intimated to the user. This is used when changes are expected very frequently.
+* WAI-ARIA Landmarks
+      * WAI-ARIA landmarks are used to define regions on a web page, providing a means for assistive technology users to effectively navigate among the various areas of the page. They should be used with other means of within-page navigation, such as bypass links and page headings. These two latter means have been around for much longer and many will continue to use these elements as their primary method of moving around within a web page.
+      * 8 landmark roles
+            * banner
+            * complementary
+            * contentinfo
+            * form
+            * main
+            * navigation
+            * region (accompanied by `aria-label` / `aria-labelledby`)
+            * search
+      * Best Practice: All information presented on a page is within a region
+      * For duplicate landmarks, use `aria-label` / `aria-labelledby` to distinguish
 
-5 instances of dynamic WAI-ARIA
-aria-hidden="true" to express that a slide is hidden/not visible in the showcase, when another slide is active (aria-hidden="false")
-aria-selected="true"/"false" to express that the tabs in the <uL class="ik-tabber"> are selected/not selected
-aria-hidden="true"/"false" to express that the tabs panel <div class="cf ik-tabpanel"> is hidden/not visibile
-aria-expanded="true" to express that the <dt aria-controls="accordion_panel_0"> in the Useful Resource section is expanded
-aria-hidden="true"/"false" to express that the accordion panels <dd id="accordion_panel_#" role="tabpanel"> is hidden/not visibile
+* Static WAI-ARIA often used
+      * aria-describedby - https://www3.org/TR/wai-aria-1.1/#aria-describedby
+      * aria-labelledby - https://www3.org/TR/wai-aria-1.1/#aria-labelledby
+      * aria-label - https://www3.org/TR/wai-aria-1.1/#aria-label
+      * aria-required - https://www3.org/TR/wai-aria-1.1/#aria-required
+      * aria-controls - https://www3.org/TR/wai-aria-1.1/#aria-controls
+      * aria-details - https://www3.org/TR/wai-aria-1.1/#aria-details
+      * aria-haspopup - https://www3.org/TR/wai-aria-1.1/#aria-haspopup
+      * aria-live - https://www3.org/TR/wai-aria-1.1/#aria-live
+      * aria-owns - https://www3.org/TR/wai-aria-1.1/#aria-owns
+      * aria-relevant - https://www3.org/TR/wai-aria-1.1/#aria-relevant
+      * aria-roledescription - https://www3.org/TR/wai-aria-1.1/#aria-roledescription
+
+* WAI-ARIA Alert and Message Dialogs
+      * When the content of the container element with `role=”alert”` changes, the content that appears is automatically read aloud by screen readers
+      * A WAI-ARIA alert has an implicit `aria-live=”assertive”` and `aria-atomic=”true”`
+      * `role=alert`
+            * for Errors, Warning, Completion Feedback
+            * when no user input is needed
+      * `role=alertdialog`
+            * for Confirmatiom Feedback
+            * when user input is expected, with focus sent to the dialog
+            * At least one element in the dialog must be focusable when using role=”alertdialog”
+      * Model Dialogs
+            * Interrupt users and require an action
+            * defined using `role=”alertdialog”` and `aria-modal=”true”`
+            * when a modal dialog is displayed, focus must be sent to the dialog and must remain in the dialog until whatever interaction (e.g. click the confirmation button) is complete and the dialog has been closed
+            * when the dialog closes, focus must be returned to the location from where the dialog was opened
+
+* Tabindex
+      * `tabindex=”0”` was added to make it possible for developers to add keyboard accessibility to an element that would not normally have keyboard functionality
+      * `tabindex=”0”` can be used in static way when context is needed, to describe how to use a menu for instance
+```html
+<div tabindex=”0” aria-label=”Use tab key to enter menu, up and down arrow keys to navigate, left and right to open or collapse submenus, space or enter to select.”>
+  // Menu code goes here
+</div>
+```
+      * `tabindex=”-1”` was added to remove keyboard accessibility from an element.
+
+* Keyboard interaction
+```html
+<p>Click on the DIV below, or use Tab key to move focus to it and press Enter.</p>
+<div id="button" tabindex="0" role="button">Click Me</div>
+<div id="message" aria-live="assertive" aria-atomic="false"></div>
+```
+```javascript
+var btn, msg;
+btn = document.getElementById('button');
+msg = document.getElementById('message');
+btn.addEventListener('click', handleEvents, false);
+btn.addEventListener('keydown', handleEvents, false);
+function handleEvents(evt) {
+  if (evt.type === 'click' || ( evt.type === 'keydown' && evt.keyCode === 13 ) ) {
+    msg.innerHTML += 'action triggered by ' + ( evt.type === 'click' ? 'mouse' : 'keyboard') + '<br>';
+  }
+}
+```
+      * Predictability, Consistency, Convention - rules for keyboard interaction
+      * Combo box (aka Select box) example
+      * Conventional keyboard interaction for a combo box
+            * Tab to navigate into the combo box
+            * While in focus, tab to navigate beyond the combo box
+            * While in focus, Shift+Tab to navigate before the combo box
+            * While in focus, Down Arrow to show next option
+            * While in focus, Up Arrow to show previous option
+            * While in focus, Alt+Down Arrow to display options list
+            * While options list is open, Alt+Up Arrow to close the options list
+            * While options list is open, Esc to close the options list and return to default state
+            * While an option is in focus, Enter to select that option
+      * Other Design patterns
+            * Combobox - https://www.w3.org/TR/wai-aria-practices/#combobox
+            * Grid - https://www.w3.org/TR/wai-aria-practices/#grid
+            * Listbox - https://www.w3.org/TR/wai-aria-practices/#listbox
+            * Menu or menu bar - https://www.w3.org/TR/wai-aria-practices/#menu
+            * Radiogroup - https://www.w3.org/TR/wai-aria-practices/#radiobutton
+            * Tabs - https://www.w3.org/TR/wai-aria-practices/#tabpanel
+            * Toolbar - https://www.w3.org/TR/wai-aria-practices/#toolbar
+            * Tree View - https://www.w3.org/TR/wai-aria-practices/#TreeView
