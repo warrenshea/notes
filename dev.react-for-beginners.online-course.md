@@ -4,8 +4,8 @@ https://courses.wesbos.com/
 
 ---
 ## Table of Contents
-* [Module 01: Introduction, Tooling and Editor Setup]()
-* [Module 02: Thinking and Understanding React Components]()
+* [Module 01: Introduction, Tooling and Editor Setup](#module-01-introduction-tooling-and-editor-setup)
+* [Module 02: Thinking and Understanding React Components](#module-02-thinking-and-understanding-react-components)
 * [Module 03: Creating our First Components]()
 * [Module 04: Writing HTML with JSX]()
 * [Module 05: Loading CSS into our React Application]()
@@ -430,9 +430,52 @@ class App extends React.Component {
 ```
 
 ## Module 16: Updating Order State
+* if you need to pass a key, use `index`. `key` is for the component, `index` is for you.
+
 ## Module 17: Displaying Order State with JSX
+* Not good practice to push state down
+
 ## Module 18: Persisting our State with Firebase
+* Firebase is product from Google
+* Uses HTML5 websockets - you can sync data from app and firebase and vice versa
+* Firebase saves information as one big object which is good because state is one big object
+* created base.js and filled it with Firebase code allowing export of `base` so it can be imported elsewhere
+* `componentWillMount` - when component is mounted, you can do ajax request/connect to rebase/sync component state with firebase state
+* Use firebase and these functions to maintain state across Firebase
+```javascript
+  componentWillMount () {
+    this.ref = base.syncState(`${this.props.params.storeId}/fishes`, {
+      context: this,
+      state: 'fishes'
+    });
+  }
+
+  componentWillUnmount () {
+    base.removeBinding(this.ref);
+  }
+```
+
 ## Module 19: Persisting Order State with localstorage
+* Better to store this information as local storage VS cookies or Firebase
+* Hook into `componentWillUpdate` - invoked before props or state changes
+* information stored in Local Storage
+``` javascript
+  componentWillUpdate (nextProps, nextState) {
+    localStorage.setItem('order-${this.props.params.storeId}',JSON.stringify(nextState.order);
+  }
+```
+* `JSON.stringify` to convert `object` to `string`
+* information to load from Local Storage
+```javascript
+  const localStorageRef = localStorage.getItem(`order-${this.props.params.storeId}`);
+  if (localStorageRef) {
+    this.setState({
+      order: JSON.parse(localStorageRef)
+    });
+  }
+```
+* `JSON.parse` to convert `string` to `object`
+
 ## Module 20: Bi-directional Data Flow and Live State Editing
 ## Module 21: Removing Items from State
 ## Module 22: Animating React Components
