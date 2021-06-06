@@ -91,7 +91,7 @@ v.20181015
       * Deque's aXe (for Chrome): https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd
       * Aria Cheat Sheet https://www.cheatography.com/jreiche/cheat-sheets/wai-aria-1-1/
 
-* WAI-ARIA Landmarks
+* WAI-ARIA Landmarksl
       * WAI-ARIA landmarks are used to define regions on a web page, providing a means for assistive technology users to effectively navigate among the various areas of the page. They should be used with other means of within-page navigation, such as bypass links and page headings. These two latter means have been around for much longer and many will continue to use these elements as their primary method of moving around within a web page.
       * 8 landmark roles
             * banner
@@ -183,3 +183,26 @@ function handleEvents(evt) {
             * Tabs - https://www.w3.org/TR/wai-aria-practices/#tabpanel
             * Toolbar - https://www.w3.org/TR/wai-aria-practices/#toolbar
             * Tree View - https://www.w3.org/TR/wai-aria-practices/#TreeView
+
+* Application Role
+      * The application role is used when there is not a corresponding widget interaction pattern available to provide semantics for a custom widget.
+      * Disables default keyboard functionality
+
+* Presentation Role
+      * `role="none"` removes default semantics from children of the element it applies to
+      * Disables default keyboard functionality
+      * So, for instance, if you have a list with role=”presentation”, it should not announce as a list, and its list items should not announce as list items. However, nested lists within those suppressed list items will announce as usual.
+      * If you are trying to hide elements completely from screen readers, you might consider using either `aria-hidden` or CSS `display:none`.
+      * Three common uses for role=”presentation” include:
+            * Hiding a decorative image; it is equivalent to giving the image null alt text.
+            * Suppressing table semantics for tables used for layout in circumstances where the table semantics do not convey meaningful relationships.
+            * Eliminating semantics of intervening orphan elements in the structure of a composite widget, such as a tablist, menu, or tree as demonstrated in the example above.
+
+* Live Regions
+      * Live regions are used to present changes in web content that occur after a web page has loaded. e.g. news feeds, feedback/error messages, live chat output
+      * `aria-live: polite` indictes the priority of the content updated - will wait for a break in audio before announcng
+      * `aria-live: assertive` inpterrupts screen reader and reads changed content before continuing. To be avoided except in cases of critical information (e.g. error mesage or critical feedback)
+      * `aria-live` would not be used for feedback/error messages, `role=alert` would be used
+      * `role=log`, `role=marquee`, `role=timer`, `role=status` are other common live regions
+      * Be careful with Live Regions with Carousel bannerws and timers.
+
