@@ -7,11 +7,12 @@
 * [React for Beginners by Wes Bos](dev.react-for-beginners.online-course.md) (Status: In Progress)
 * [Git Reference and Notes](dev.git.md)
 
+<!--
 ## Developer Notes for Projects
 * [Lego Project Notes](dev.lego.warrenshea.notes.md) (Status: **In Progress**)
 
 ## Warren's Store
 * [Comics for sale](store.comics.md) (Status: **In Progress**)
-<!--
+
 * [Toys and Statues for sale](store.toys.md)
 * [Other stuff for sale](store.misc.md) (Status: Complete)-->
