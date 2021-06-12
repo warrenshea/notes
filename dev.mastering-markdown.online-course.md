@@ -1,5 +1,5 @@
 # Warren's Notes for Mastering Markdown (Online Course)
-*Version*: 20171219 | https://courses.wesbos.com/ | *Status*: Completed
+**Version**: 20171219 | https://courses.wesbos.com/ | **Status**: Completed
 
 ---
 ## Table of Contents
