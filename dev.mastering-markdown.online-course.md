@@ -1,4 +1,4 @@
-# Warren's Notes for Mastering Markdown (Online Course)
+# Warren Shea's Notes for Mastering Markdown (Online Course)
 https://courses.wesbos.com/ | https://masteringmarkdown.com/ \
 **Version**: 20171219 | **Status**: Completed
 
