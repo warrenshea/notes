@@ -1,4 +1,4 @@
-# Warren Sheas's Notes for React for Beginners (Online Course)
+# Warren Shea's Notes for React for Beginners (Online Course)
 https://courses.wesbos.com/ | https://reactforbeginners.com/ \
 **Version**: 20180122 | **Status**:  ~In Progress~ Abandoned
 
