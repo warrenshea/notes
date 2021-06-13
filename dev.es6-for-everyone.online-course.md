@@ -1,6 +1,6 @@
-# Warren's Notes for ES6 for Everyone! (Online Course)
-v.20171219\
-https://courses.wesbos.com/
+# Warren Shea's Notes for ES6 for Everyone (Online Course)
+https://courses.wesbos.com/ | https://es6.io/ \
+**Version**: 20171219 | **Status**: Mostly Complete
 
 ---
 ## Legend
@@ -1422,11 +1422,7 @@ but this only imports, we need to export
       this.name = name;
       this.breed = breed;
     }
-    Dog.prototype.bark = function() {
-      console.log(`Bark! My name is ${this.name}`);
-    }
     const loki = new Dog('Loki',"Pomeranian");
-    loki.bark(); //`Bark! My name is Loki`
     ```
 
 ###  Module 15.52: Say Hello to Classes
