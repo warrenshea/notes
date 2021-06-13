@@ -1,6 +1,6 @@
-# Warren's Notes for ES6 for Everyone! (Online Course)
-v.20171219\
-https://courses.wesbos.com/
+# Warren Shea's Notes for ES6 for Everyone (Online Course)
+https://courses.wesbos.com/ | https://es6.io/ \
+**Version**: 20171219 | **Status**: Mostly Complete
 
 ---
 ## Legend
