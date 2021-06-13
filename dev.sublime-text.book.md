@@ -1,6 +1,6 @@
-# Warren's Notes for Sublime Text Power User (Online Course / Book)
-v.20171220\
-https://courses.wesbos.com/
+# Warren Shea's Notes for Sublime Text Power User (Online Course / Book)
+https://courses.wesbos.com/ | https://sublimetextbook.com/ \
+**Version**: 20171220 | **Status**:  Completed
 
 ---
 ## Table of Contents
