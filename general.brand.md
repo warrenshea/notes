@@ -1,6 +1,10 @@
 # Warren Shea's Notes for Brand
 
-
+* A Brand is a collection of perceptions in the mind of a customer
+* A Personal Brand:
+  * The idea that comes to mind whenever people think of you. It stands for the values, abilities, and actions that other associate with you.
+  * Focus is on who **you** are, what **you** do, and what differenties **you** or how **you** add value
+  * What people say about you when you're not in the room
 
 # Warren Shea's Notes for Inspiration & Motivation
 
