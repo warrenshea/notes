@@ -1,4 +1,4 @@
-# Warren Shea's Notes for Brand
+# Warren Shea's Notes for Personal Brand
 
 * A Brand is a collection of perceptions in the mind of a customer
 * A Personal Brand:
