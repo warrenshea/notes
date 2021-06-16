@@ -19,6 +19,9 @@ Don't pollute the global object, simple way to isolate variables declarations
 })()
 ```
 
+event.preventDefault();
+event.preventStopPropagation();
+
 ## Vanilla JS IE11 Friendly AJAX Request
 ```javascript
 Vanilla JS IE11 Friendly AJAX Requestfunction jsonp(uri) {
