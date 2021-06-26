@@ -1,4 +1,4 @@
-# Warren Shea's Notes for The Life-Changing Magic of Tidying Up (Book)
+# Warren Shea's Notes for The Life-Changing Magic of Tidying Up by Marie Kondo (Book)
 **Version**: 201611 | **Status**: Complete
 
 # The Life-Changing Magic of Tidying Up by Marie Kondo
