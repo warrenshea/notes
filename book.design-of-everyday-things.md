@@ -9,10 +9,6 @@ conceptual models points out that good design is also an act of communication be
 
 *Feedback*
 
-
-
-
-
 *Constraints*. The surest way to make something easy to use, with few errors, is to make it impossible to do otherwise—to constrain the choices.
 *Affordances*. A good designer makes sure that appropriate actions are perceptible and inappropriate ones invisible. *DOET* introduced the con- cept of "perceived affordances" to the design community, and to my pleas- ure, the concept has become immensely popular.
 Technology may change rapidly, but people change slowly.
