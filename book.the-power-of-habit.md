@@ -1,4 +1,4 @@
-# Warren Shea's Notes for The Power of Habit (Book)
+# Warren Shea's Notes for The Power of Habit by Charles Duhigg (Book)
 **Version**: 201611 | **Status**: Complete
 
 # The Power of Habit by Charles Duhigg
