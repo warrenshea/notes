@@ -1,4 +1,4 @@
-# Warren Shea's Notes for The Design of Everyday Things (Book)
+# Warren Shea's Notes for The Design of Everyday Things by Donald Norman (Book)
 **Version**: 201506 | **Status**: Complete
 
 # The Design of Everyday Things by Don Norman #
