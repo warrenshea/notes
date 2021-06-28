@@ -8,8 +8,8 @@
 
 # Warren Shea's Notes for Inspiration & Motivation
 
-* [Inside the mind of a master procrastinator by Tim Urban](https://www.ted.com/talks/tim_urban_inside_the_mind_of_a_master_procrastinator?language=en){:target="_blank"}
-* "[Necessity is the mother of invention](https://en.wikipedia.org/wiki/Necessity_is_the_mother_of_invention){:target="_blank"}"
+* [Inside the mind of a master procrastinator by Tim Urban](https://www.ted.com/talks/tim_urban_inside_the_mind_of_a_master_procrastinator?language=en)
+* "[Necessity is the mother of invention](https://en.wikipedia.org/wiki/Necessity_is_the_mother_of_invention)"
 * "Better to remain silent and be thought a fool than to speak and to remove all doubt" - Abraham Lincoln
 * "Everyone fails at who they're supposed to be. The measure of a person is how well they succeed at being who they are" - Frigga (Avengers Endgame)
 * "You can't wait until life isn't hard anymore before you decide to be happy" - Nightbirde
