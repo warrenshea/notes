@@ -217,7 +217,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
         console.log(this) // this is the window!
       }); //this is bad!
 
-      box.addEventListener('click', function() {
+      box.addEventListener('click', () => {
         this.classList.toggle('add-class');
         setTimeout(() => {
           this.classList.toggle('add-second-class');
@@ -272,7 +272,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
     // When you really need `this`
     const button = document.querySelector('#pushy');
     //button.addEventListener('click', () =>  { // because `this` will be the window
-    button.addEventListener('click', function() { //good
+    button.addEventListener('click', () => { //good
       console.log(this);
       this.classList.toggle('on');
     });
