@@ -10,6 +10,9 @@ A design system unites product teams around a common visual language. It:
 
 ## 1 Introducting Design Systems: The power of scale
 
+Scaling design with systems thinking
+* Standards
+* Components
 ## 2 Designing your design system: Step by step
 
 ## 3 Building your design system: A strong foundation
