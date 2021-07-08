@@ -34,6 +34,10 @@ A design system unites product teams around a common visual language. It:
 
 ## 2 Designing your design system: Step by step
 
+### Who should be involved
+* Designers, Front-end Developers, a11y experts, content strategists, researches, performance experts, product managers, leaders
+* Choosing the right team model: solitary, centralized, federates
+
 ## 3 Building your design system: A strong foundation
 
 ## 4 Putting your design system into practice: Better together
