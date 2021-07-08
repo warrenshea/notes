@@ -20,6 +20,17 @@ A design system unites product teams around a common visual language. It:
 
 ### The value of design systems
 * Scale Design
+* Manage your debt
+* Design consistently
+* Prototype faster
+* Iterate more quickly
+* Improve usability
+* Build in accessibility
+
+### Myths of design systems
+* Too limiting
+* Loss of creativity
+* One and done
 
 ## 2 Designing your design system: Step by step
 
