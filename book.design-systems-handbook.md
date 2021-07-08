@@ -9,7 +9,8 @@ A design system unites product teams around a common visual language. It:
 * builds bridges between teams working in concert to bring products to life
 
 # Examples
-* [Material Design System](https://material.io/design)
+* [Google's Material Design System](https://material.io/design)
+* [Shopify's Polaris Design System](https://polaris.shopify.com/)
 
 ## 1 Introducting Design Systems: The power of scale
 
