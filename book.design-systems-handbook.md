@@ -1,16 +1,16 @@
 # Warren Shea's Notes for Design Systems Handbook by Invision (Book)
 **Version**: 20210706 | **Status**: In Progress*
 
-# Design Systems Handbook
+## Examples
+* [Google's Material Design System](https://material.io/design)
+* [Shopify's Polaris Design System](https://polaris.shopify.com/)
+* [Salesforce's Lightning Design System](https://www.lightningdesignsystem.com/)
 
+## Introduction
 A design system unites product teams around a common visual language. It:
 * reduces design debt
 * accelerates the design process
 * builds bridges between teams working in concert to bring products to life
-
-# Examples
-* [Google's Material Design System](https://material.io/design)
-* [Shopify's Polaris Design System](https://polaris.shopify.com/)
 
 ## 1 Introducting Design Systems: The power of scale
 
@@ -36,7 +36,7 @@ A design system unites product teams around a common visual language. It:
 
 ### Who should be involved
 * Designers, Front-end Developers, a11y experts, content strategists, researches, performance experts, product managers, leaders
-* Choosing the right team model: solitary, centralized, federates
+* Choosing the right team model: solitary (overlord), centralized (dedicated team), federated (various team members join)
 
 ## 3 Building your design system: A strong foundation
 
