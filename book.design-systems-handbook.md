@@ -41,6 +41,16 @@ A design system unites product teams around a common visual language. It:
 ### Who should be involved
 * Designers, Front-end Developers, a11y experts, content strategists, researches, performance experts, product managers, leaders
 * Choosing the right team model: solitary (overlord), centralized (dedicated team), federated (various team members join)
+* Creating a visual inventory:
+  * Conducting a visual audit
+* Creating a visual design language
+  * Colors
+  * Typography (size, leading, typefaces)
+  * Spacing (margins, paddings, position coordinates, border spacing)
+  * Images (icons, illustrations)
+  * Visual form (depth, elevation, shadows, rounded corners, textures)
+  * Motion
+  * Sound
 
 ## 3 Building your design system: A strong foundation
 
