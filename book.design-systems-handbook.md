@@ -54,10 +54,14 @@ A design system unites product teams around a common visual language. It:
   * Motion
   * Sound
 
+
 ## 3 Building your design system: A strong foundation
+
 
 ## 4 Putting your design system into practice: Better together
 
+
 ## 5 Expanding your design system: More than the sum of its parts
+
 
 ## 6 The future of design systems: To infinity and beyond
