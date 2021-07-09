@@ -7,6 +7,9 @@
 * [Salesforce's Lightning Design System](https://www.lightningdesignsystem.com/)
 * [Mina Markham's Pantsuit Design System](https://medium.com/git-out-the-vote/pantsuit-the-hillary-clinton-ui-pattern-library-238e9bf06b54)
 
+## To watch/read:
+* [Donna Chan & Isaak Hayes: “Building Empowering Style Guides with Practical Research](https://www.clarityconf.com/session/building-empowering-style-guides-with-practical-research)
+
 ## Introduction
 A design system unites product teams around a common visual language. It:
 * reduces design debt
