@@ -5,6 +5,7 @@
 * [Google's Material Design System](https://material.io/design)
 * [Shopify's Polaris Design System](https://polaris.shopify.com/)
 * [Salesforce's Lightning Design System](https://www.lightningdesignsystem.com/)
+* [Mina Markham's Pantsuit Design System](https://medium.com/git-out-the-vote/pantsuit-the-hillary-clinton-ui-pattern-library-238e9bf06b54)
 
 ## Introduction
 A design system unites product teams around a common visual language. It:
