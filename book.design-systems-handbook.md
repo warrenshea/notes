@@ -12,9 +12,10 @@
 
 ## Introduction
 A design system unites product teams around a common visual language. It:
-* reduces design debt
-* accelerates the design process
-* builds bridges between teams working in concert to bring products to life
+* Reduces design debt
+* Accelerates the design process
+* Builds bridges between teams working in concert to bring products to life
+
 
 ## 1 Introducting Design Systems: The power of scale
 
@@ -35,6 +36,7 @@ A design system unites product teams around a common visual language. It:
 * Too limiting
 * Loss of creativity
 * One and done
+
 
 ## 2 Designing your design system: Step by step
 
