@@ -8,11 +8,14 @@
 * [Mina Markham's Pantsuit Design System](https://medium.com/git-out-the-vote/pantsuit-the-hillary-clinton-ui-pattern-library-238e9bf06b54)
 * [Pivotal UI's Design System](https://styleguide.pivotal.io/)
 * [IBM's Design System](https://www.ibm.com/design/language/)
+* [U.S. Web Design Systems](https://designsystem.digital.gov/)
+* [Lonely Planet](https://rizzo.lonelyplanet.com/)
 
 ## To watch/read:
 * [Donna Chan & Isaak Hayes: “Building Empowering Style Guides with Practical Research](https://www.clarityconf.com/session/building-empowering-style-guides-with-practical-research)
 * [Programming Design Systems](https://programmingdesignsystems.com/)
 * [Modular Scale](https://type-scale.com/)
+* [Brad Frost's Atomic Design](https://atomicdesign.bradfrost.com/table-of-contents/)
 
 ## Introduction
 A design system unites product teams around a common visual language. It:
@@ -61,6 +64,10 @@ A design system unites product teams around a common visual language. It:
   * Motion
   * Sound
 * Creating a user interface library
+  * Elements (basics/atoms)
+  * Componetns (molecules/modules)
+  * Regions (zones/organisms)
+  * Layouts
 
 
 ## 3 Building your design system: A strong foundation
