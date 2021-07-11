@@ -2,6 +2,7 @@
 **Version**: 20210706 | **Status**: In Progress*
 
 ## Examples
+* [Anna Debenham's Styleguide Resources](http://styleguides.io/)
 * [Google's Material Design System](https://material.io/design)
 * [Shopify's Polaris Design System](https://polaris.shopify.com/)
 * [Salesforce's Lightning Design System](https://www.lightningdesignsystem.com/)
@@ -10,12 +11,15 @@
 * [IBM's Design System](https://www.ibm.com/design/language/)
 * [U.S. Web Design Systems](https://designsystem.digital.gov/)
 * [Lonely Planet](https://rizzo.lonelyplanet.com/)
+* [Morning Star Design System](https://designsystem.morningstar.com/)
 
 ## To watch/read:
 * [Donna Chan & Isaak Hayes: “Building Empowering Style Guides with Practical Research](https://www.clarityconf.com/session/building-empowering-style-guides-with-practical-research)
 * [Programming Design Systems](https://programmingdesignsystems.com/)
 * [Modular Scale](https://type-scale.com/)
 * [Brad Frost's Atomic Design](https://atomicdesign.bradfrost.com/table-of-contents/)
+* [Frontend Masters](https://frontendmasters.com/books/)
+* [a11y by Addy Osmani](https://addyosmani.com/a11y/)
 
 ## Introduction
 A design system unites product teams around a common visual language. It:
@@ -71,6 +75,22 @@ A design system unites product teams around a common visual language. It:
 
 
 ## 3 Building your design system: A strong foundation
+
+**Your technical approach doesn't matter as much as creating a living, breathing system that's flexible, maintainable, stable, scalable, and successful in the long-term**
+
+## Foundations
+
+* Consistent - use configuration settings for IDEs,
+* Self-contained - Design System should be separate from main codebase
+* Reusable
+* Accessible
+* Robust - Unit (Mocha, Jasmine, Jest), Functional (Nightwatch, Protractor, Casper), Visual Regression (Wraith, Gemini, Backstop, Percy), Automated (Paypal AATT, aXe)
+
+## Common Challenges
+
+* Keeping documentation up-to-date (automate it)
+* Handling breaking changes (wrong: duplication, right: versioning - semver (Major 1.0.0, Minor 0.1.0, Patches 0.0.1)
+* Avoid performance degradations
 
 
 ## 4 Putting your design system into practice: Better together
