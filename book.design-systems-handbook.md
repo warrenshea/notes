@@ -12,6 +12,7 @@
 * [U.S. Web Design Systems](https://designsystem.digital.gov/)
 * [Lonely Planet](https://rizzo.lonelyplanet.com/)
 * [Morning Star Design System](https://designsystem.morningstar.com/)
+* [Gitub's Design System](https://primer.style/)
 
 ## To watch/read:
 * [Donna Chan & Isaak Hayes: “Building Empowering Style Guides with Practical Research](https://www.clarityconf.com/session/building-empowering-style-guides-with-practical-research)
@@ -89,12 +90,28 @@ A design system unites product teams around a common visual language. It:
 ## Common Challenges
 
 * Keeping documentation up-to-date (automate it)
-* Handling breaking changes (wrong: duplication, right: versioning - semver (Major 1.0.0, Minor 0.1.0, Patches 0.0.1)
+* Handling breaking changes (wrong: duplication, right: versioning - semver: Major 1.0.0, Minor 0.1.0, Patches 0.0.1)
 * Avoid performance degradations
 
 
 ## 4 Putting your design system into practice: Better together
 
+### Large-scale redesigns
+
+Criteria for good candidates for design system projects:
+* Potential for common components
+* Potential for common patterns
+* High-value elements
+* Technical feasibility
+* Available champion
+* Scope
+* Technical independence
+* Marketing poteential
+
+Documentation is key
+* "If it's not documented, it doesn't exist"
+
+### Incredmental redesigns
 
 ## 5 Expanding your design system: More than the sum of its parts
 
