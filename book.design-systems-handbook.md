@@ -1,5 +1,5 @@
 # Warren Shea's Notes for Design Systems Handbook by Invision (Book)
-**Version**: 20210706 | **Status**: In Progress*
+**Version**: 20210711 | **Status**: Complete
 
 ## Examples
 * [Anna Debenham's Styleguide Resources](http://styleguides.io/)
@@ -108,12 +108,18 @@ Criteria for good candidates for design system projects:
 * Technical independence
 * Marketing poteential
 
-Documentation is key
-* "If it's not documented, it doesn't exist"
+### Incremental redesigns
 
-### Incredmental redesigns
+### General Notes
+* Documentation is key "If it's not documented, it doesn't exist"
+* "Waiting room" for components before moving to codebase
+* Need to prioritize Navigation and Search/findability
 
 ## 5 Expanding your design system: More than the sum of its parts
 
+Vision Statement: to help everyone know where you're going and why
+Design Principles
+Process
+Voice and Tone
 
 ## 6 The future of design systems: To infinity and beyond
