@@ -15,7 +15,7 @@
 * [Gitub's Design System](https://primer.style/)
 
 ## To watch/read:
-* [Donna Chan & Isaak Hayes: “Building Empowering Style Guides with Practical Research](https://www.clarityconf.com/session/building-empowering-style-guides-with-practical-research)
+* [Donna Chan & Isaak Hayes: Building Empowering Style Guides with Practical Research](https://www.clarityconf.com/session/building-empowering-style-guides-with-practical-research)
 * [Programming Design Systems](https://programmingdesignsystems.com/)
 * [Modular Scale](https://type-scale.com/)
 * [Brad Frost's Atomic Design](https://atomicdesign.bradfrost.com/table-of-contents/)
@@ -29,7 +29,7 @@ A design system unites product teams around a common visual language. It:
 * Builds bridges between teams working in concert to bring products to life
 
 
-## 1 Introducting Design Systems: The power of scale
+## 1 Introducing Design Systems: The power of scale
 
 ### Scaling design with systems thinking
 * Standards
@@ -70,7 +70,7 @@ A design system unites product teams around a common visual language. It:
   * Sound
 * Creating a user interface library
   * Elements (basics/atoms)
-  * Componetns (molecules/modules)
+  * Components (molecules/modules)
   * Regions (zones/organisms)
   * Layouts
 
