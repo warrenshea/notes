@@ -1,6 +1,10 @@
 # Warren Shea's Notes for Git
 v20210614
 
+## My notes
+* `git add -A` stages all changes
+* `git add .` stages the new files and modifications but not deletions
+
 ## Gitflow (my preferred git workflow)
 
 * [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
