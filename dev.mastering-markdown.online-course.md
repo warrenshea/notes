@@ -14,6 +14,7 @@ https://courses.wesbos.com/ | https://masteringmarkdown.com/ \
 * [Module 08: Code Blocks](#module-08-code-blocks)
 * [Module 09: Tables](#module-09-tables)
 * [Module 10: Github Treats](#module-10-github-treats)
+
 ---
 
 ## Module 01: Introduction to Markdown & The Tooling
