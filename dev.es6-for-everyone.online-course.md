@@ -190,7 +190,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
 
 ###  Module 02.07: More Arrow Function Examples
 
-*
+* Example
     ```javascript
     const race = '100m Dash';
     const winners = ['Wally West','Barry Allen','Bart Allen'];
@@ -210,7 +210,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
 
 ###  Module 02.08: Arrow Functions and `this`
 
-*
+* Example
     ```javascript
       var box = document.querySelector('.box'); //equals $('.box');
       box.addEventListener('click', () => {
@@ -237,7 +237,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
 
 ###  Module 02.09: Default Function Arguments
 
-*
+* Example
     ```javascript
     //what if tax and tip are undefined?
     function calculateBill(total, tax, tip) {
@@ -267,7 +267,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
 
 ### Module 02.10: When NOT to use the Arrow Function
 
-*
+* Example
     ```javascript
     // When you really need `this`
     const button = document.querySelector('#pushy');
@@ -317,7 +317,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
 
 ### Module 02.11: Arrow Functions Exercises
 
-*
+* Example
     ```javascript
     //#REFERENCE Convert Node List to Array
     Array.from(nodeList); //converts nodeList to Array
@@ -347,7 +347,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
     ```
 
 ###  Module 03.13: Creating HTML fragments with Template Literals
-*
+* Example
     ```javascript
     //#REFERENCE Multiline HTML string with backticks
     let markup = `
@@ -405,7 +405,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
     ```
 
 ###  Module 03.14: Tagged Template Literals/Strings
-*
+* Example
     ```javascript
     //BASE EXAMPLE/UNDERSTANDING
     function highlight(strings, ...values) { //...values takes the rest of the arguments
@@ -571,7 +571,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
     ```
 
 ###  Module 05.19: Destructing Arrays
-*
+* Example
     ```javascript
     const details = ['Wes Bos', 123, 'wesbos.com'];
 
@@ -604,7 +604,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
 * Switching variables (see [2.8](#module-28-arrow-functions-and-this))
 
 ###  Module 05.21: Destructuring Functions - Multiple returns and named defaults
-*
+* Example
     ```javascript
     function convertCurrency(amount) {
       const converted = {
@@ -679,7 +679,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
     ```
 
 ### Module 06.23: The for of Loop in Action
-*
+* Example
     ```javascript
     const cuts = ['chuck','brisket','shank','short rib'];
 
@@ -853,7 +853,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
 
 ###  Module 08.30: More Spread Examples
 * Spread is an alternative to `Array.from(arrayIsh);`
-*
+* Example
     ```javascript
     const people = document.querySelectorAll('p'); //return nodeList
 
@@ -921,7 +921,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
 ## Module 09: Object Literal Upgrades
 
 ###  Module 09.33: Object Literal Upgrades
-*
+* Example
     ```javascript
     //OLD WAY
     const dog = {
@@ -1005,7 +1005,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
     ```
 
 ###  Module 10.35: Building your own Promises
-*
+* Example
     ```javascript
     const p = new Promise((resolve,reject) => {
       //call resolve() when you finish the promise
@@ -1083,7 +1083,7 @@ https://courses.wesbos.com/ | https://es6.io/ \
     ```
 
 ###  Module 10.37: Working with Multiple Promises
-*
+* Example
     ```javascript
      const weather = new Promise((resolve) => {
        setTimeout(() => {
@@ -1408,7 +1408,7 @@ but this only imports, we need to export
 ## Module 15: Classes
 
 ###  Module 15.51: Prototypal Inheritance Review
-*
+* Example
     ```javascript
     function Dog(name,breed) { //capital D means Constructor function
       this.name = name;
@@ -1459,7 +1459,7 @@ but this only imports, we need to export
     ```
 
 ###  Module 15.53: Extending Classes and using super()
-*
+* Example
     ```javascript
     class Animal {
       constructor(name) {
@@ -1493,7 +1493,7 @@ but this only imports, we need to export
     ```
 
 ###  Module 15.54: Extending Arrays with Classes for Custom Collections
-*
+* Example
     ```javascript
     class MovieCollection extends Array {
       constructor(name, ...items) { //name of MovieCollect, then items
@@ -1592,7 +1592,7 @@ but this only imports, we need to export
     ```
 
 ###  Module 16.57: Looping Generators with for of
-*
+* Example
     ```javascript
     function* lyrics() {
       yield `But don't tell my heart`;
@@ -1631,7 +1631,7 @@ but this only imports, we need to export
     ```
 
 ###  Module 17.59: Another Proxy Example
-*
+* Example
     ```javascript
     const phoneHandler = {
       set(target, name, value) {
@@ -1684,7 +1684,7 @@ but this only imports, we need to export
     ```
 
 ###  Module 18.62: Understanding Sets with Brunch
-*
+* Example
     ```javascript
     const brunch = new Set();
     // as people start coming in
@@ -1968,7 +1968,7 @@ but this only imports, we need to export
 * Adding a properties to the class, for example, a bark property for class Dog, rather than creating this.barks into the constructor
 
 ###  Module 21.74: padStart and padEnd
-*
+* Example
     ```javascript
     'string'.padStart(3) //returns "   string"
     'string'.padEnd(3) //returns "string   "
@@ -1982,7 +1982,7 @@ but this only imports, we need to export
     ```
 
 ###  Module 21.75: ES7 Exponential Operator
-*
+* Example
     ```javascript
     //OLD WAY
     Math.pow(3,3)
@@ -2004,7 +2004,7 @@ but this only imports, we need to export
     ```
 
 ###  Module 21.77: Object.entries() and Object.values()
-*
+* Example
     ```javascript
     const inventory = {
       backpacks: 10,
