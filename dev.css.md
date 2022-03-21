@@ -1,16 +1,14 @@
 # Warren Shea's Notes for CSS
-v20210614
+v20220321
 
 ## Hex w/ Alpha Transparency
 #XXXXXX30 = color #XXXXXX w/ 30% alpha transparency
-
 
 ## Performance
 * Browsers read selectors right-to-left so the longe the selector is, the slower it is
 * background is twice as fast than background-color
 * "As you go down a stylesheet you should only ever be adding styles, not taking away. If you find you are having to undo styling as you go down your document the chances are you jumped the gun and started adding too much too soon." - https://csswizardry.com/2012/11/code-smells-in-css/
-
-## will-change over translate3d(0,0,0) for elements likely to change
+* will-change over translate3d(0,0,0) for elements likely to change
 
 ## Qualified Selectors (selectors prepended by an element)
 Avoid these. They are slower, increase specificity and can't be used for different elements
@@ -23,13 +21,13 @@ Sometimes qualified selectors make a classname more semantic, but a better alter
 ```
 
 ## Specificity
-Inline styles - Example: <h1 style="color: pink;">
-IDs - Example: #navbar
-Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+Inline styles - Example: <h1 style="color: pink;"><br>
+IDs - Example: #navbar<br>
+Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]<br>
 Elements and pseudo-elements - Example: h1, :before
 
 ### How to Calculate Specificity?
-Start at 0, add 100 for each ID value, add 10 for each class value (or pseudo-class or attribute selector), add 1 for each element selector or pseudo-element.
+Start at 0, add 100 for each ID value, add 10 for each class value (or pseudo-class or attribute selector), add 1 for each element selector or pseudo-element.<br>
 There is one exception to this rule: if you use the !important rule, it will even override inline styles!
 
 ## Useful Chrome Extensions
