@@ -6,33 +6,34 @@ https://courses.wesbos.com/ | https://reactforbeginners.com/
 ## Table of Contents
 * [Module 01: Introduction, Tooling and Editor Setup](#module-01-introduction-tooling-and-editor-setup)
 * [Module 02: Thinking and Understanding React Components](#module-02-thinking-and-understanding-react-components)
-* [Module 03: Creating our First Components]()
-* [Module 04: Writing HTML with JSX]()
-* [Module 05: Loading CSS into our React Application]()
-* [Module 06: Creating our application layout with components]()
-* [Module 07: Passing Dynamic data with props]()
-* [Module 08: Stateless Functional Components]()
-* [Module 09: Routing with React Router]()
-* [Module 10: Helper and Utility Functions]()
-* [Module 11: Working with React Events]()
-* [Module 12: Handling Event]()
-* [Module 13: Understanding State]()
-* [Module 14: Loading data into state onClick]()
-* [Module 15: Displaying State with JSX]()
-* [Module 16: Updating Order State]()
-* [Module 17: Displaying Order State with JSX]()
-* [Module 18: Persisting our State with Firebase]()
-* [Module 19: Persisting Order State with localstorage]()
-* [Module 20: Bi-directional Data Flow and Live State Editing]()
-* [Module 21: Removing Items from State]()
-* [Module 22: Animating React Components]()
-* [Module 23: Component Validation with PropTypes]()
-* [Module 24: Authentication]()
-* [Module 25: Building React for Production]()
-* [Module 26: Deploying to Now]()
-* [Module 27: Deploying to Netlify]()
-* [Module 28: Deploying to an Apache Server]()
-* [Module 29: Ejecting from create-react-app]()
+* [Module 03: Creating our First Components](#module-03-creating-our-first-components)
+* [Module 04: Writing HTML with JSX](#module-04-writing-html-with-jsx)
+* [Module 05: Loading CSS into our React Application](#module-05-loading-css-into-our-react-application)
+* [Module 06: Creating our application layout with components](#module-06-creating-our-application-layout-with-components)
+* [Module 07: Passing Dynamic data with props](#module-07-passing-dynamic-data-with-props)
+* [Module 08: Stateless Functional Components](#module-08-stateless-functional-components)
+* [Module 09: Routing with React Router](#module-09-routing-with-react-router)
+* [Module 10: Helper and Utility Functions](#module-10-helper-and-utility-functions)
+* [Module 11: Working with React Events](#module-11-working-with-react-events)
+* [Module 12: Handling Event](#module-12-handling-event)
+* [Module 13: Understanding State](#module-13-understanding-state)
+* [Module 14: Loading data into state onClick](#module-14-loading-data-into-state-onclick)
+* [Module 15: Displaying State with JSX](#module-15-displaying-state-with-jsx)
+* [Module 16: Updating Order State](#module-16-updating-order-state)
+* [Module 17: Displaying Order State with JSX](#module-17-displaying-order-state-with-jsx)
+* [Module 18: Persisting our State with Firebase](#module-18-persisting-our-state-with-firebase)
+* [Module 19: Persisting Order State with localstorage](#module-19-persisting-order-state-with-localstorage)
+* [Module 20: Bi-directional Data Flow and Live State Editing](#module-20-bi-directional-data-flow-and-live-state-editing)
+* [Module 21: Removing Items from State](#module-21-removing-items-from-state)
+* [Module 22: Animating React Components](#module-22-animating-react-components)
+* [Module 23: Component Validation with PropTypes](#module-23-component-validation-with-proptypes)
+* [Module 24: Authentication](#module-24-authentication)
+* [Module 25: Building React for Production](#module-25-building-react-for-production)
+* [Module 26: Deploying to Now](#module-26-deploying-to-now)
+* [Module 27: Deploying to Netlify](#module-27-deploying-to-netlify)
+* [Module 28: Deploying to an Apache Server](#module-28-deploying-to-an-apache-server)
+* [Module 29: Ejecting from create-react-app](#module-29-ejecting-from-create-react-app)
+
 ---
 
 ## Module 01: Introduction, Tooling and Editor Setup
@@ -50,6 +51,9 @@ https://courses.wesbos.com/ | https://reactforbeginners.com/
 * `<div id="main">` is the mounting point for React App
 * `import { render } from 'react-dom';` to render the code as DOM/HTML
 * An example of a simple component, rendered to a div (`<div id="#main">`)
+* `./components/StorePicker.js`
+
+
 ```jsx
 class StorePicker extends React.Component {
   render() {
@@ -63,6 +67,8 @@ render(<StorePicker/>,document.querySelector('#main'));
 * Each file in the `components` folder
 * The following two notes is to import the component (index.js) and export the compoonent (export default StorePicker)
 * `./index.js`
+
+
 ```jsx
 import React from 'react';
 import { render } from 'react-dom';
@@ -73,6 +79,8 @@ render(<StorePicker/>,document.querySelector('#main'));
 ```
 
 * `./components/StorePicker.js`
+
+
 ```jsx
 import React from 'react';
 
@@ -88,40 +96,45 @@ export default StorePicker
 ## Module 04: Writing HTML with JSX
 * JSX - write HTML inside JavaScript
 * Better way
+
 ```jsx
-  return (
-    All the HTML code you need
-  )
+return (
+  All the HTML code you need
+)
 ```
 * cannot use `class` because it is a reserved word/name in JavaScript - use `className`
 * Can only return 1 parent element. This is okay:
+
 ```jsx
-  return (
-    <form>
-    </form>
-  )
+return (
+  <form>
+  </form>
+)
 ```
 This is not:
+
 ```jsx
-  return (
+return (
+  <form>
+  </form>
+  <p>
+  </p>
+)
+```
+* Now you can use Fragment, e.g.
+
+```jsx
+return (
+  <React.Fragment>
     <form>
     </form>
     <p>
-    </o>
-  )
-```
-* Now you can use Fragment, e.g.
-```jsx
-  return (
-    <React.Fragment>
-      <form>
-      </form>
-      <p>
-      </p>
-    </React.Fragment>
-  )
+    </p>
+  </React.Fragment>
+)
 ```
 or
+
 ```jsx
   return (
     <>
@@ -142,6 +155,7 @@ or
 
 ## Module 06: Creating our application layout with components
 * Modified App component + Created 3 new components
+
 ```jsx
 import React from 'react';
 import Header from './Header';
@@ -168,6 +182,7 @@ export default App;
 
 ## Module 07: Passing Dynamic data with props
 * Pass data to component via `props`, with is like an attribute for a component
+
 ```jsx
 in `App.js`
 <Header tagline="Fresh Seafood Market"/>
@@ -183,6 +198,7 @@ in `Header.js`
 ## Module 08: Stateless Functional Components
 * Used for "simple" components that don't really do anything else/have no other methods expect render stuff
 * Instead of this React/Smart Component
+
 ```jsx
 class Header extends React.Component {
   render () {
@@ -193,6 +209,7 @@ class Header extends React.Component {
 }
 ```
 You can use Stateless/Dumb/Pure/Simple Component:
+
 ```jsx
 const Header = props = > {
     return (
@@ -213,6 +230,7 @@ const Header = ({tagline,age}) = > ( /* implicit return with destructuring */
 ## Module 09: Routing with React Router
 * React Router is not part of React
 * `index.js`
+
 ```jsx
 import React from 'react';
 import { render } from 'react-dom';
@@ -257,6 +275,7 @@ import { getFunName } from '../helpers';
 * `render` is bound to the component, so refering `this` references the component
 * In other functions, `this` does not reference the component
 * handleClick on button code:
+
 ```jsx
 import React from 'react';
 import { getFunName} from "../helpers";
@@ -270,7 +289,7 @@ class StorePicker extends React.Component {
       <form>
         <button onclick={this.handleClick}>Click</button> {/* don't use this.handleClick() or it will run on mount */}
         <input
-          tyupe="text"
+          type="text"
           placeholder="Store Name"
           defaultValue={getFunName()}
         />
@@ -283,23 +302,26 @@ class StorePicker extends React.Component {
 export default StorePicker
 ```
 * submit form code and get text from input with `ref` to access an item, you don't wanna touch DOM. here are two deprecated ways:
+
 ```jsx
-        <input
-          tyupe="text"
-          placeholder="Store Name"
-          defaultValue={getFunName()}
-          ref={myInput} {/*this is deprecated, don't use that - FYI only*/
-        />
+<input
+  type="text"
+  placeholder="Store Name"
+  defaultValue={getFunName()}
+  ref={myInput} {/*this is deprecated, don't use that - FYI only*/
+/>
 ```
+
 ```jsx
-        <input
-          tyupe="text"
-          placeholder="Store Name"
-          defaultValue={getFunName()}
-          ref={(myInput) => this.myInput = myInput} {/*this is deprecated, don't use that - FYI only*/
-        />
+<input
+  type="text"
+  placeholder="Store Name"
+  defaultValue={getFunName()}
+  ref={(myInput) => this.myInput = myInput} {/*this is deprecated, don't use that - FYI only*/
+/>
 ```
 * This is an old way, for reference only and bad if there are a lot of methods
+
 ```jsx
 import React from 'react';
 import { getFunName} from "../helpers";
@@ -319,7 +341,7 @@ class StorePicker extends React.Component {
     return (
       <form onSubmit={this.goToStore}>
         <input
-          tyupe="text"
+          type="text"
           placeholder="Store Name"
           defaultValue={getFunName()}
           ref={this.myInput}
@@ -333,6 +355,7 @@ class StorePicker extends React.Component {
 export default StorePicker
 ```
 * This is the proper way
+
 ```jsx
 import React from 'react';
 import { getFunName} from "../helpers";
@@ -365,6 +388,7 @@ export default StorePicker
 
 ## Module 12: Handling Event
 * Change URL of page without window.location
+
 ```jsx
 ...
   goToStore = event => {
@@ -386,6 +410,7 @@ export default StorePicker
 * Sometimes state needs to be shared among components (e.g. App w/ Order, Inventory) - so then we put State on App Component and pass it down
 * Don't forget that if you need to access the function that changes state (e.g. AddFish), you have to attach it to components and reference them as props in the component
 `App.js`
+
 ```jsx
 class App extends React.Component {
   state = { //set initial state
@@ -410,11 +435,13 @@ export default App;
 ```
 
 `Inventory.js`
+
 ```jsx
         <AddFishForm addFish={this.props.addFish} />
 ```
 
 `AddFishForm.js`
+
 ```jsx
 class addFishForm extends React.Component {
   nameRef = React.createRef();
@@ -444,12 +471,14 @@ export default addFishForm;
 
 ## Module 14: Loading data into state onClick
 * On click of a button in `Inventory.js`
+
 ```jsx
 <button onClick={this.props.loadSampleFishes}>Load Sample Fishes</button>
 ```
 
 We load in a fishes object from `sample-fishes.js`
 In `App.js`
+
 ```jsx
 import sampleFishes from '../sample-fishes'; //just an object with a lot of fishes
 
@@ -480,6 +509,7 @@ class App extends React.Component {
 * No loops or if or conditional in JSX - if you want it, you use regular JavaScript
 * `Object.keys(object)` will map over object
 * loop over object (`this.state.fishes`)
+
 ```jsx
 import sampleFishes from '../sample-fishes'; //just an object with a lot of fishes
 
@@ -515,6 +545,7 @@ class App extends React.Component {
 }
 ```
 `Fish.js` as Simple/Pure/Dumb/Stateless Component
+
 ```jsx
 import React from 'react';
 
@@ -536,6 +567,7 @@ export default Fish;
 * if you need to pass a key, use `index`. `key` is for the component, `index` is for you.
 
 `App.js`
+
 ```jsx
 import sampleFishes from '../sample-fishes'; //just an object with a lot of fishes
 
@@ -570,6 +602,7 @@ class App extends React.Component {
 }
 
 ```
+
 ```jsx
 import React from 'react';
 
@@ -596,6 +629,7 @@ export default Fish;
 
 ## Module 17: Displaying Order State with JSX
 * Not good practice to push state down, better to just pass down what you need e.g
+
 ```jsx
   <Order {...this.state}>
 ```
@@ -609,17 +643,18 @@ Reduce takes in data and takes in a tally
 * `componentWillMount` - when component is mounted, you can do ajax request/connect to rebase/sync component state with firebase state
 * Use firebase and these functions to maintain state across Firebase
 * In the App.js
+
 ```jsx
-  componentDidMount () {
-    const { params } = this.props.match
-    this.ref = base.syncState(`${params.storeId}/fishes`, {
-      context: this,
-      state: 'fishes'
-    });
-  }
-  componentWillUnmount () {
-    base.removeBinding(this.ref);
-  }
+componentDidMount () {
+  const { params } = this.props.match
+  this.ref = base.syncState(`${params.storeId}/fishes`, {
+    context: this,
+    state: 'fishes'
+  });
+}
+componentWillUnmount () {
+  base.removeBinding(this.ref);
+}
 ```
 
 ## Module 19: Persisting Order State with localstorage
@@ -627,25 +662,26 @@ Reduce takes in data and takes in a tally
 * Hook into `componentDidUpdate` - invoked before props or state changes
 * information stored in Local Storage
 ``` jsx
-  componentDidUpdate () {
-    localStorage.setItem(this.props.match.params.stordId,JSON.stringify(this.state.order);
-  }
+componentDidUpdate () {
+  localStorage.setItem(this.props.match.params.stordId,JSON.stringify(this.state.order);
+}
 ```
 * `JSON.stringify` to convert `object` to `string`
 * information to load from Local Storage
+
 ```jsx
-  componentDidMount () {
-    const { params } = this.props.match;
-    /* new */
-    const localStorageRef = localStorage.getItem(params.storeId);
-    if (localStorageRef) {
-      this.setState({ order: JSON.parse(localStorageRef) });
-    } /* new end */
-    this.ref = base.syncState(`${params.storeId}/fishes`, {
-      context: this,
-      state: 'fishes'
-    });
-  }
+componentDidMount () {
+  const { params } = this.props.match;
+  /* new */
+  const localStorageRef = localStorage.getItem(params.storeId);
+  if (localStorageRef) {
+    this.setState({ order: JSON.parse(localStorageRef) });
+  } /* new end */
+  this.ref = base.syncState(`${params.storeId}/fishes`, {
+    context: this,
+    state: 'fishes'
+  });
+}
 ```
 * `JSON.parse` to convert `string` to `object`
 
@@ -657,6 +693,7 @@ Reduce takes in data and takes in a tally
 
 ## Module 22: Animating React Components
 * Using library for animation
+
 ```jsx
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -668,6 +705,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 ## Module 23: Component Validation with PropTypes
 * React Prop Validation via PropTypes (or TypeScript)
 * React Component
+
 ```jsx
 import PropTypes from "prop-types";
 
@@ -683,6 +721,7 @@ class Fish extends React.Component {
   ...
 ```
 * Simple Component
+
 ```jsx
 import PropTypes from "prop-types";
 
