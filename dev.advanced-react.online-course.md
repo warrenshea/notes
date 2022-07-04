@@ -1,4 +1,4 @@
-# Warren Shea's Notes for Advanced React (Online Course)
+  # Warren Shea's Notes for Advanced React (Online Course)
 https://courses.wesbos.com/ | https://advancedreact.com/
 **Version**: 20210702 | **Status**:  In Progress
 
@@ -105,28 +105,193 @@ https://courses.wesbos.com/ | https://advancedreact.com/
 ---
 
 ## Module 01.01 Tooling and Starter Files Setup
+* Node, React Dev Tools, Apollo Client Developer Tools, MongoDB Compass, VSCode, Terminal
 
 ## Module 01.02 The Tech Stack Explained
+* Frontend: React, NextJS, Apollo Client, Styled Components
+* Backend: Keystone.js, Node, MongoDB
 
 ## Module 02.01 An intro to Next
+* React is Library, takes data and puts it into templates, and renders it into a page
+* NextJS is a Framework - routing, linking, lazy loading, images, ssr (server side rendering), static/pre-rendering
+* /pages/index.js is our index.html
+```jsx
+export default function Homepage() {
+  return <div></div>
+}
+```
+* `npm run dev`
+* React Router is config based routing, NextJS is file system based routing
+* Can do server rendering or static rendering
 
 ## Module 02.02 Creating a Page Layout Component
+* a file in pages/ folder is just in the body tag
+* components/Page.js
+* can Auto Import component with VSCode
+```jsx
+import PropTypes from 'prop-types';
+export default function Page({children,cool}) {
+  return (
+    <div>
+      {cool}
+      {children}
+    </div>
+  )
+}
+
+Page.propTypes = {
+  children: PropTypes.any,
+  cool: PropTypes.string,
+}
+
+import Page from '../components/Page';
+
+export default function IndexPage() {
+  return (
+    <Page cool="test">
+      <p>1</p>
+      <p>2</p>
+    </Page>
+  )
+}
+```
+
+```html
+
+<div>
+  test
+  <p>1</p>
+  <p>2</p>
+</div>
+
+```
+
+* Anything to control higher than the page is in your pages\_app.js file
+* pages\_document.js
+```jsx
+import Document, { Html, Head, NextScript, Main} from 'next/document';
+
+export default class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="en-CA">
+        <Head></Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
+}
+```
 
 ## Module 02.03 Creating our Header and Nav Components
+* Creating a header/nav component
+* NextJS uses HTML push.state instead of anchor, you so can use <Link>, `import Link from 'next/link'`
 
 ## Module 03.01 An Intro to Styled Components and CSS
+* `import styled from 'styled-components'`
+* Example of styled components
+
+```jsx
+const Logo = styled.h1`
+  background: red;
+  a { color: white; }
+`;
+```
+* replace '<h1>' with '<Logo>'
 
 ## Module 03.02 Global Styles, Typography and Layout Styles
+* `import { createGlobalStyle } from 'styled-components'`
+* Example:
+```jsx
+const GlobalStyles = createGlobalStyle`
+  html {
+    box-sizing: border-box;
+    /*stuff*/
+  }
+  *,*::before,*::after {
+    box-sizing:inherit;
+  }
+`;
+
+export default function Page({children,cool}) {
+  return (
+    <div>
+      <GlobalStyles />
+      <Header />
+      <InnerStyles>
+        {children}
+      </InnerStyles>
+    </div>
+  )
+}
+```
 
 ## Module 03.03 Visualizing Route Changes
+* Line across the top for progress (nprogress)
+* Example for main `<Page>`
+```jsx
+import 'Nprogress' from nprogress;
+import 'nprogress/nprogress.css'; //Can use your own CSS instead
+import Router from 'next/router';
 
+Router.events.on('routeChangeStart', () > NProgress.start());
+Router.events.on('routeChangeComplete', () > NProgress.done());
+Router.events.on('routeChangeError', () > NProgress.done());
+```
 ## Module 03.04 Fixing Styled Components Flicker on Server Render
+* pages\_document.js
+```jsx
+import Document, { Html, Head, NextScript, Main} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
+
+export default class MyDocument extends Document {
+  static getInitialProps({ renderPage }) {
+    const sheet = new ServerStyleSheet();
+    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
+    const styleTags = sheet.getStyleElement();
+    return { ...page, styleTags };
+  }
+  render() {
+    return (
+      <Html lang="en-CA">
+        <Head></Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
+}
+```
 
 ## Module 04.01 Setting up MongoDB
+* Keystone runs ontop of MongoDB/Postgres
+* Mongo Atlas for cloud version
+* Rename sample.env to .env
 
 ## Module 04.02 An Intro to GraphQL
+* GraphQL - specification for requesting/pushing data to server
+* Keystone, Apollo build a layer ontop of GraphQL
+* In Keystone, can see API Explorer
+*
+```graphql
+query {
+  allProducts {
+    name
+    description
+    price
+  }
+}
+```
 
 ## Module 04.03 Setting up Keystone and Typescript
+*
+*
+
 
 ## Module 04.04 Creating our first User data type
 
