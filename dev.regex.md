@@ -33,7 +33,8 @@ Results: `<svg></svg>`
 ## RegReplace
 * This is a useful sublime extension for running multiple regex expressions on a single file through a keybind
 * RegReplace rules (for Mac),
-/Users/<user>/Library/Application Support/Sublime Text/Packages/User/reg_replace_rules.sublime-settings
+
+`/Users/<user>/Library/Application Support/Sublime Text/Packages/User/reg_replace_rules.sublime-settings`
 ```json
 {
     "replacements": {
@@ -51,14 +52,16 @@ Results: `<svg></svg>`
 }
 ```
 where
-```json
+```
 "[\\n\\s]*" = any newline or space
 "(string1|string2)" = looking for "string1" or "string2"
 "[\\n\\s]*\"(property1|property2)\":[\\n\\s]*{[\\n\\w\"\\:\\,. ]*}," = replace entire json of "property1 = { stuff: stuff, },"
 
 ```
+
 * RegReplace keybind (for Mac),
-/Users/<user>/Library/Application Support/Sublime Text/Packages/User/Defeault (OSX).sublime-keymap
+
+`/Users/<user>/Library/Application Support/Sublime Text/Packages/User/Default (OSX).sublime-keymap`
 ```json
 [
     {
