@@ -1,6 +1,6 @@
   # Warren Shea's Notes for Advanced React (Online Course)
 https://courses.wesbos.com/ | https://advancedreact.com/
-**Version**: 20210702 | **Status**:  In Progress
+**Version**: 20220729 | **Status**: Paused at Module 7 - will continue as needed
 
 ---
 ## Table of Contents
