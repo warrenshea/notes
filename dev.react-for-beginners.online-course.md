@@ -1,6 +1,6 @@
 # Warren Shea's Notes for React for Beginners - 2015v1 & 2018v2 (Online Course)
 https://courses.wesbos.com/ | https://reactforbeginners.com/
-**Version**: 20210626 | **Status**:  Completed / Revisted from 2018v1
+**Version**: 20220729 | **Status**:  Completed
 
 ---
 ## Table of Contents
