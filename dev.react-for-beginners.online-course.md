@@ -552,7 +552,7 @@ import React from 'react';
 const Fish = ({ key, details }) => {
   const { image, name, price, desc, status } = details;
   return (
-    <li className="menu-fish" key={key}>
+    <li className="menu-fish">
       <img src={image} alt={name} />
       <h3>{name}</h3>
       <span className="price">{formatPrice(price)}</span>
