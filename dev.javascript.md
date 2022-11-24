@@ -1,21 +1,43 @@
-# Warren Shea's Notes for JavaScript
-v20220706
+# Warren Shea's Notes for JavaScript (and TypeScript)
+v20221114
+
+## Notable JavaScript Experts
+* [TypeScript, React, NextJS, ES6 by Wes Bos](https://wesbos.com/courses){:target="_blank"}
+* [Design Patterns by Addy Osmani](https://www.patterns.dev/posts/classic-design-patterns/){:target="_blank"}
 
 ## Truthy/Falsy
-!! converts Truthy/Falsy to boolean "true" or "false"
-Falsys: Empty string: "", 0, null, undefined, NaN
-Truthys: Object, Array, not empty string, number other than 0, Date
+In a conditional statement, these values are not true or false (boolean) but are accepted as conditions:
+
+* Truthys: `Object`, `Array`, non empty string, number other than 0, Date
+* Falsys: `""`, `0`, `null`, `undefined`, `NaN`
+
+`!!` ("bang bang") converts Truthy/Falsy to boolean "true" or "false"
 
 ## Better console.log
-* console.log(error,loading,success,data);
-* console.log(`Error:${error},Loading:${loading},Success:${success},Data:${data}`);
-* console.log({error,loading,success,data});
+* Original `console.log(error,loading,success,data);`
+* Variant 1: `console.log(`Error:${error},Loading:${loading},Success:${success},Data:${data}`);`
+* Variant 2: `console.log({error,loading,success,data});`
 
 ## event.prevent
-event.preventDefault();
-event.preventStopPropagation();
+* `event.preventDefault();`
+* `event.preventStopPropagation();`
 
-## React stuff
+___
+
+## TypeScript
+
+`if (typeof padding === "number") {`
+* Type Narrowing: the _process_ of refining types to more specific types
+* Type Guards: this code is a special form of code called _type guard_
+
+* Implicit Types do not need to be declared. Examples can be private or local variables
+* Explicit Types should be declared: function inputs, outputs, anything exported or public
+
+* TC39 - Types //as Comments ECMAScript Proposal for TypeScript inside JavaScript
+
+___
+
+## React
 * Ternerary `{ num === 7 ? <img> : null }`
 * Another way
 ```
@@ -57,12 +79,11 @@ useEffect = () => {
   //do something only when number or year is changed
 }, [number ,year];
 ```
+___
 
 ## NextJS
 
-
-
-
+___
 
 ## IIFE - Immediate-invoked Function Expressions
 To execute functions immediately, as soon as they are created
@@ -81,6 +102,10 @@ Don't pollute the global object, simple way to isolate variables declarations
   /* */
 })()
 ```
+
+___
+
+## Questions to look into at some point
 
 ## Difference between .call and .apply
 ## Explain function.prototype.bind
@@ -146,7 +171,9 @@ associate some information with an object i don’t own. like a memoization cach
 
 https://justjavascript.com/
 
-## Vanilla JS IE11 Friendly AJAX Request
+___
+
+## OLD STUFF: Vanilla JS IE11 Friendly AJAX Request
 ```javascript
 Vanilla JS IE11 Friendly AJAX Requestfunction jsonp(uri) {
   return new Promise(function(resolve, reject) {
