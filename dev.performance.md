@@ -1,5 +1,5 @@
 # Warren Shea's Notes for Performance
-**Version**: 20221114
+**Version**: 20221211
 
 ## Notable Performance Experts
 * LCP - Harry Roberts
@@ -14,7 +14,7 @@
 * [Webpack Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer)
 
 ## Preload Scanner
-Invented in IE8, some resources are downloaded asynchronously/parallel. Resources in this scanner will always perform better than those that are not.
+Invented in IE8, some resources are downloaded asynchronously/parallel. Resources in this scanner will always perform better than those that are not.<br>
 `<img>` is an example of a resource in that scanner.
 
 * `rel=preload` - this resource hint re-introduces item to preload scanner. But use it sparingly. This usually goes in the `<head>`
