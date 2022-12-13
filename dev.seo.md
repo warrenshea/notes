@@ -7,7 +7,7 @@ v20221211
 * Canonical URLs should exactly match their intended URL - don't use canonical urls that 301/302 redirect]
 * A SEO Friendly show-for-sr class:
 ```html
-<span class="show-for-seo" sronly="dagger"></span>
+<span class="show-for-sr-seo" sronly="dagger"></span>
 ```
 ```css
 show-for-sr-seo:before {
