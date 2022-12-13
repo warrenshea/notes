@@ -1,5 +1,10 @@
-# Warren Shea's Notes for CSS
-v20220321
+# Warren Shea's Notes for CSS (and SASS)
+v20221213
+
+## Flexbox
+
+## CSS Grid
+fr = flexible responsive track sizing
 
 ## Hex w/ Alpha Transparency
 #XXXXXX30 = color #XXXXXX w/ 30% alpha transparency
@@ -21,13 +26,13 @@ Sometimes qualified selectors make a classname more semantic, but a better alter
 ```
 
 ## Specificity
-Inline styles - Example: <h1 style="color: pink;"><br>
+Inline styles - Example: `<h1 style="color: pink;">`<br>
 IDs - Example: #navbar<br>
-Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]<br>
-Elements and pseudo-elements - Example: h1, :before
+Classes, pseudo-classes, attribute selectors - Example: `.test`, `:hover`, `[href]`<br>
+Elements and pseudo-elements - Example: `h1`, `:before`
 
 ### How to Calculate Specificity?
-Start at 0, add 100 for each ID value, add 10 for each class value (or pseudo-class or attribute selector), add 1 for each element selector or pseudo-element.<br>
+Start at 0, add 100 for each ID value, add 10 for each class value (or pseudo-class or attribute selector), add 1 for each element selector or pseudo-element.<br><br>
 There is one exception to this rule: if you use the !important rule, it will even override inline styles!
 
 ## Useful Chrome Extensions
