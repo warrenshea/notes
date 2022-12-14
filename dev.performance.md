@@ -13,6 +13,18 @@
 * [Lighthouse Treemap](https://googlechrome.github.io/lighthouse/treemap/)
 * [Webpack Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer)
 
+## Core Web Vitals
+
+### LCP - Largest Contentful Paint
+* quantify how fast the page feels visually
+* measures how long it takes for the largest piece of content to appear on the screen
+
+### FID - First Input Delay
+* how long for the site to react to first interaction
+
+### CLS - Cumulative Layout Shift
+* measure visual stability of page (does stuff move around while loading)
+
 ## Preload Scanner
 Invented in IE8, some resources are downloaded asynchronously/parallel. Resources in this scanner will always perform better than those that are not.<br>
 `<img>` is an example of a resource in that scanner.
