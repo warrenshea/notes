@@ -1,4 +1,8 @@
-# Warren Shea's Notes for Management
+# Warren Shea's Management / Team Lead Notes
+
+In my current place of employ, I have a channel for other team leads, new managers, and upcoming managers. Here, I will post some of the messages I've sent. These are subject to change as I also learn and grow. This "advice" is merely my advice, and should not be viewed as a truth. I only share to provide my perspective, to help you decide/grow.
+
+
 
 [Why Entrepreneurs Should Ask, “Can You Imagine?”](https://medium.com/@BrianScudamore/why-entrepreneurs-should-ask-can-you-imagine-c1e99c7d960f)
 * I learned never to kill someone’s spirit if they come to you with a big idea. Instead, ask questions to find out their level of faith and commitment to their vision. Empowering your employees to drive towards goals that align with the company’s broader vision will contribute to your flywheel momentum.
