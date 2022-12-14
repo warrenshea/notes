@@ -22,6 +22,24 @@ In a conditional statement, these values are not true or false (boolean) but are
 * `event.preventDefault();`
 * `event.preventStopPropagation();`
 
+## JAMstack - Javascript, APIs, Markup
+* Javascript: Vue, React, Angular, Ember
+* APIs: Contetnful, GraphQL, IMGIX
+* Markup: Gatsby, Markdown, YAML, HTML
+
+## Headless
+* Wordpress, Drupal, Shopify are now also Headless (previously not Headless)
+* Head is the what is seen (website, mobile, shop, social media, wearable)
+* Body is the data, the backend
+
+## The Main Thread
+* Parses HTML, Builds the DOM, Parses CSS, Executes JavaScript, Responds to User Events
+* try to leave main thread for UI updates + User Interaction
+
+## Web Workers
+* Make it possible to run a script operation in a background thread separate from the main execution thread of a web app
+* Cannot make changes to the DOM directly
+* Service worker is specialized version of web worker
 ___
 
 ## TypeScript
@@ -38,7 +56,7 @@ ___
 ___
 
 ## React
-* Ternerary `{ num === 7 ? <img> : null }`
+* Ternary `{ num === 7 ? <img> : null }`
 * Another way
 ```
 { num === 7 &&
@@ -84,7 +102,6 @@ ___
 ## NextJS
 
 ___
-
 ## IIFE - Immediate-invoked Function Expressions
 To execute functions immediately, as soon as they are created
 Don't pollute the global object, simple way to isolate variables declarations
@@ -107,24 +124,23 @@ ___
 
 ## Questions to look into at some point
 
-## Difference between .call and .apply
-## Explain function.prototype.bind
-## When would you use document.write()?
-## What's the difference between feature detection, feature inference, and using the UA string?
-## Explain how JSONP works and why it's not really AJAX
-## Explain event bubbling
-## Explain the difference between and "attribute" and a "property"
-## Difference between document load event and document ready event?
-## Explain the same-origin policy with regards to Javascript.
-## Why is it called a Ternary expression, what does the word "Ternary" indicate?
-## what is "use strict";? what are the advantages and disadvantages to using it?
-## Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
-## Explain what a single page app is and how to make one SEO-friendly.
-## What is the extent of your experience with Promises and/or their polyfills? What are the pros and cons of using Promises instead of callbacks?
-## What are some of the advantages/disadvantages of writing Javascript code in a language that compiles to Javascript?
-## What is the purpose of a code style linting tool?
+### Difference between .call and .apply
+### Explain function.prototype.bind
+### When would you use document.write()?
+### What's the difference between feature detection, feature inference, and using the UA string?
+### Explain how JSONP works and why it's not really AJAX
+### Explain event bubbling
+### Difference between document load event and document ready event?
+### Explain the same-origin policy with regards to Javascript.
+### Why is it called a Ternary expression, what does the word "Ternary" indicate?
+### what is "use strict";? what are the advantages and disadvantages to using it?
+### Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
+### Explain what a single page app is and how to make one SEO-friendly.
+### What is the extent of your experience with Promises and/or their polyfills? What are the pros and cons of using Promises instead of callbacks?
+### What are some of the advantages/disadvantages of writing Javascript code in a language that compiles to Javascript?
+### What is the purpose of a code style linting tool?
 
-## Explain hoisting
+### Explain hoisting
 before executing your code in the order you wrote it, javascript “pulls up” two types of declarations:
 
 function bla() {}
@@ -133,31 +149,31 @@ var bla
 to the top of the containing function (or file if you’re at top level). this lets yiu call a function declared this way even if it’s defined below.
 - Dan Abramov
 
-## What is "this"
+### What is "this"
 it’s like a hidden argument to your function. calls with dot, like obj.fn(), pass the part before the dot (obj) as this. calls without a dot, like fn(), don’t pass any this. if you didn’t pass any this, it’s set to a default (undefined in strict mode, window in loose mode).
 - Dan Abramov
 
-## What are closures
+### What are closures
 functions can read or write variables “outside” of them. this works not only with top level variables, but with local variables too (from nested functions). that’s called closures.
 - Dan Abramov
 
-## What are generators
+### What are generators
 generators let your function return multiple values. not necessarily immediately — the caller decides when to ask for the next one. useful to describe operations where you can “ask for more”, like processing a long list or deciding each next step based on user input
 - Dan Abramov
 
-## What is currying
+### What is currying
 imagine functions only take one argument. how would we pass many? one way is to pass an object: ({ a, b, c }) => … but we could also turn our function into a matryoshka of many functions where each takes one arg: (a) => (b) => (c) => … that’s currying. not very useful in js.
 - Dan Abramov
 
-## What is bind()
+### What is bind()
 "this" is a hidden argument to your function. "bind" wraps a function with the "this" you provide so that you don’t need to remember to pass the correct "this" every time
 - Dan Abramov
 
-## What are monads?
+### What are monads?
 it’s an abstraction but a very generic one so hard to describe. i’d describe it as “wrapper for a value which lets you apply operations on that value, producing more such wrappers”. promise then(), if we skip minor pedantic distinctions, are an example of that.
 - Dan Abramov
 
-## What is an event loop?
+### What is an event loop?
 event loop is a set of rules for how the runtime (browser / Node) decides what code to run when it has finished running the current code. for example “okay we’ve exited all functions, so now, let’s run expired timeouts”. that includes code after “await” if the thing has resolved
 - Dan Abramov
 
@@ -165,7 +181,7 @@ event loop is a set of rules for how the runtime (browser / Node) decides what c
 if you want people to extend your classes (to fill in some functionality) then it seems like it’s easier to do this with actual classes.
 - Dan Abramov
 
-## Use cases for WeakMap/WeakSet
+### Use cases for WeakMap/WeakSet
 associate some information with an object i don’t own. like a memoization cache. weakmap is good for this because it doesn’t hold onto it, so i’m not causing a memory leak. the tradeoff is i can’t iterate over the list of objects for which i hold information.
 - Dan Abramov
 
