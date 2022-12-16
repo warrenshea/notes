@@ -7,18 +7,18 @@ v20221114
 ## React
 * Ternary `{ num === 7 ? <img> : null }`
 * Another way
-```
+```javascript
 { num === 7 &&
     <img>
 }
 ```
 ### Hooks
-* useState: `const [piece of state, function of piece of state] = useState(initialValue)`
+* useState: `const [piece of state, function of piece of state] = useState(initialValue);`
 ```javascript
-[count,setCount] = useState(count)
+const [count,setCount] = useState(count);
 onClick={() => setCount(count + 1)};
-
-[calculator,setCalculator] = useState({ count }) //if you wanted calculator.count to update
+//
+const [calculator,setCalculator] = useState({ count }); //if you wanted calculator.count to update
 onClick={() => setCalculator({...calculator,count:calculator.count + 1})};
 ```
 * useToggle: (from Udemy 248)
