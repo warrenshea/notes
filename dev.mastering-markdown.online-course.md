@@ -1,5 +1,5 @@
 # Warren Shea's Notes for Mastering Markdown (Online Course)
-https://courses.wesbos.com/ | https://masteringmarkdown.com/ \
+[https://courses.wesbos.com/](https://courses.wesbos.com/){:target="_blank"} | [https://masteringmarkdown.com/](https://masteringmarkdown.com/){:target="_blank"} \
 **Version**: 20171219 | **Status**: Completed
 
 ---

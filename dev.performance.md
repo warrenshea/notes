@@ -26,7 +26,7 @@
 * measure visual stability of page (does stuff move around while loading)
 
 ## Preload Scanner
-Invented in IE8, some resources are downloaded asynchronously/parallel. Resources in this scanner will always perform better than those that are not.<br>
+Invented in IE8, some resources are downloaded asynchronously/parallel. Resources in this scanner will always perform better than those that are not. \
 `<img>` is an example of a resource in that scanner.
 
 * `rel=preload` - this resource hint re-introduces item to preload scanner. But use it sparingly. This usually goes in the `<head>`
@@ -57,6 +57,6 @@ VS
 let el = document.getElementById('testElement');
 ```
 
-document.querySelector x 5,467,960 ops/sec ±0.57% (66 runs sampled)<br>
+document.querySelector x 5,467,960 ops/sec ±0.57% (66 runs sampled) \
 document.getElementById x 39,677,211 ops/sec ±0.25% (69 runs sampled)
 

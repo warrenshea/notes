@@ -9,6 +9,6 @@ v20221213
 * Some DOM properties don’t have corresponding attributes; for example, textContent.
 
 ## Web Components
-custom elements -> define components<br>
-shadow dom -> encapsulate styles<br>
+custom elements -> define components \
+shadow dom -> encapsulate styles \
 slots and templates
