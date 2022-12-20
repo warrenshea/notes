@@ -48,7 +48,8 @@ ___
 * `align-self` determines how the item is aligned within the container. It has the same properties as align-items.
 
 ### Resources
-* [https://flexbox.io/](https://flexbox.io/){:target="_blank"}
+* [CSS Tricks - https://css-tricks.com/snippets/css/a-guide-to-flexbox/](https://css-tricks.com/snippets/css/a-guide-to-flexbox/){:target="_blank"}
+* [Wes Bos - https://flexbox.io/](https://flexbox.io/){:target="_blank"}
 * [https://flexboxfroggy.com/](https://flexboxfroggy.com/){:target="_blank"}
 * [https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/){:target="_blank"}
 
@@ -57,7 +58,10 @@ ___
 ## CSS Grid
 
 ### Resources
-* [https://cssgrid.io/](https://cssgrid.io/){:target="_blank"}
+
+* [CSS Tricks - https://css-tricks.com/snippets/css/complete-guide-grid/](https://css-tricks.com/snippets/css/complete-guide-grid/){:target="_blank"}
+* [Wes Bos - https://cssgrid.io/](https://cssgrid.io/){:target="_blank"}
+* [https://cssgridgarden.com/](https://cssgridgarden.com/){:target="_blank"}
 
 ___
 
