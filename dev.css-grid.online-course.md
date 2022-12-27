@@ -1,6 +1,6 @@
 # Warren Shea's Notes for CSS Grid (Online Course)
 [https://courses.wesbos.com/](https://courses.wesbos.com/){:target="_blank"} | [https://cssgrid.io/](https://cssgrid.io/){:target="_blank"} \
-**Version**: 20221219 | **Status**: Completed
+**Version**: 20221226 | **Status**: Completed
 
 ---
 ## Table of Contents
@@ -133,6 +133,7 @@ grid-row: content-top / content-bottom
 
 ## Module 23: Bootstrappy Grid with CSS Variables
 * 12 column grid system with CSS Grid
+* `grid-template-columns: repeat(12, minmax(0, 1fr))` & `width:100%` on the item
 
 ## Module 24: Responsive Website
 
