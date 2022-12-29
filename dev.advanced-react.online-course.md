@@ -375,7 +375,7 @@ db: {
 * you can run `npm run seed-data` via `package.json`
 ```json
 "scripts": {
-  "seed-data": "keystronje-next --seed-data",
+  "seed-data": "keystone-next --seed-data",
 }
 ```
 
