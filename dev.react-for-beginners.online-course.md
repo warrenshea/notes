@@ -1,5 +1,5 @@
 # Warren Shea's Notes for React for Beginners - 2015v1 & 2018v2 (Online Course)
-https://courses.wesbos.com/ | https://reactforbeginners.com/
+[https://courses.wesbos.com/](https://courses.wesbos.com/){:target="_blank"} | [https://reactforbeginners.com/](https://reactforbeginners.com/){:target="_blank"} | [https://github.com/wesbos/React-For-Beginners-Starter-Files](https://github.com/wesbos/React-For-Beginners-Starter-Files){:target="_blank"} \
 **Version**: 20220729 | **Status**:  Completed
 
 ---

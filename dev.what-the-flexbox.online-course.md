@@ -1,5 +1,5 @@
 # Warren Shea's Notes for What The Flexbox? (Online Course)
-[https://courses.wesbos.com/](https://courses.wesbos.com/){:target="_blank"} | [https://flexbox.io/](https://flexbox.io/){:target="_blank"} \
+[https://courses.wesbos.com/](https://courses.wesbos.com/){:target="_blank"} | [https://flexbox.io/](https://flexbox.io/){:target="_blank"} | [https://github.com/wesbos/What-The-Flexbox](https://github.com/wesbos/What-The-Flexbox){:target="_blank"} \
 **Version**: 20221218 | **Status**: Completed
 
 ---

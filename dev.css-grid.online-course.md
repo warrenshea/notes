@@ -1,5 +1,5 @@
 # Warren Shea's Notes for CSS Grid (Online Course)
-[https://courses.wesbos.com/](https://courses.wesbos.com/){:target="_blank"} | [https://cssgrid.io/](https://cssgrid.io/){:target="_blank"} \
+[https://courses.wesbos.com/](https://courses.wesbos.com/){:target="_blank"} | [https://cssgrid.io/](https://cssgrid.io/){:target="_blank"} | [https://github.com/wesbos/css-grid](https://github.com/wesbos/css-grid){:target="_blank"} \
 **Version**: 20221226 | **Status**: Completed
 
 ---

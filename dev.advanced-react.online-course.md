@@ -1,5 +1,5 @@
 # Warren Shea's Notes for Advanced React (Online Course)
-[https://courses.wesbos.com/](https://courses.wesbos.com/){:target="_blank"} | [https://advancedreact.com/](https://advancedreact.com/){:target="_blank"} \
+[https://courses.wesbos.com/](https://courses.wesbos.com/){:target="_blank"} | [https://advancedreact.com/](https://advancedreact.com/){:target="_blank"} | [https://github.com/wesbos/Advanced-React](https://github.com/wesbos/Advanced-React){:target="_blank"} \
 **Version**: 20220729 | **Status**: Paused at Module 7 - will continue as needed
 
 ---
