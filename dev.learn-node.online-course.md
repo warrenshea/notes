@@ -1,6 +1,6 @@
 # Warren Shea's Notes for Learn Node (Online Course)
 [https://courses.wesbos.com/](https://courses.wesbos.com/){:target="_blank"} | [https://learnnode.com/](https://learnnode.com/){:target="_blank"} | [https://github.com/wesbos/Learn-Node](https://github.com/wesbos/Learn-Node){:target="_blank"} \
-**Version**: 20221227 | **Status**: In Progress
+**Version**: 20230101| **Status**: Completed
 
 ---
 ## Table of Contents
@@ -294,14 +294,55 @@ exports.getStores = async (req, res) => {
 ```
 
 ## Module 04.14 Creating an Editing Flow for Stores
+* Example:
+```javascript
+//controllers/storeController.js
+exports.editStore = async (req, res) => {
+  // 1. Find the store given the ID
+  const store = await Store.findOne({ _id: req.params.id });
+  // 2. confirm they are the owner of the store
+  // TODO
+  // 3. Render out the edit form so the user can update their store
+  res.render('editStore', { title: `Edit ${store.name}`, store });
+};
+
+exports.updateStore = async (req, res) => {
+  // find and update the store
+  const store = await Store.findOneAndUpdate({ _id: req.params.id }, req.body, {
+    new: true, // return the new store instead of the old one
+    runValidators: true
+  }).exec();
+  req.flash('success', `Successfully updated <strong>${store.name}</strong>. <a href="/stores/${store.slug}">View Store →</a>`);
+  res.redirect(`/stores/${store._id}/edit`);
+  // Redirect them the store and tell them it worked
+};
+```
+
 ## Module 05.15 Saving Lat and Lng for each store
+* Adding a Lat, Long for the database
+
 ## Module 05.16 Geocoding Data with Google Maps
+* Use Google Maps API for Geolocation
+
 ## Module 05.17 Quick Data Visualization Tip
+* Seeing the point in MongoDB
+
 ## Module 06.18 Uploading and Resizing Images with Middleware
+* change form action to `enctype="multipart/form-data"`
+* use package called `multer` for file upload middleware/upload request
+
 ## Module 06.19 Routing and Templating Single Stores
+* rendering the store/page
+
 ## Module 07.20 Using Pre-Save hooks to make Unique Slugs
+* deals with duplicate slugs
+
 ## Module 07.21 Custom MongoDB Aggregations
+* Handle tags for store
+
 ## Module 07.22 Multiple Query Promises with Async:Await
+* `await Promise.all([array_of_promises]);`
+
 ## Module 08.23 Creating User Accounts
 ## Module 08.24 Saving Registered Users to the Database
 ## Module 08.25 Virtual Fields, Login:Logout middleware and Protecting Routes
@@ -310,18 +351,117 @@ exports.getStores = async (req, res) => {
 ## Module 09.28 Sending email with Nodejs
 ## Module 09.29 Locking down our application with User Permissions
 ## Module 10.30 Loading Sample Data
-## Module 10.31 JSON endpoints and creating MongoDB Indexes
-## Module 10.32 Creating an Ajax Search Interface
-## Module 11.33 Creating a Geospatial Ajax Endpoint
-## Module 11.34 Plotting Stores on a Custom Google Map
-## Module 12.35 Pushing User Data to our API
-## Module 12.36 Displaying our Hearted Stores
-## Module 13.37 Adding a Reviews Data Model
-## Module 13.38 Advanced Relationship Population - Displaying Our Reviews
-## Module 13.39 Advanced Aggregation
-## Module 14.40 Implementing Pagination
-## Module 15.41 Deployment Setup
-## Module 15.42 Deploying to Now
-## Module 15.43 Deploying to Heroku
-## Module 15.44 Deploying to Digital Ocean Linux
 
+## Module 10.31 JSON endpoints and creating MongoDB Indexes
+* Indexes make queries ahead of time and make queries faster
+* Indexing will occur in Schema
+* Create routes for API
+* Example code with score and sorted:
+```javascript
+exports.searchStores = async (req, res) => {
+  const stores = await Store
+  // first find stores that match
+  .find({
+    $text: {
+      $search: req.query.q
+    }
+  }, {
+    score: { $meta: 'textScore' }
+  })
+  // the sort them
+  .sort({
+    score: { $meta: 'textScore' }
+  })
+  // limit to only 5 results
+  .limit(5);
+  res.json(stores);
+};
+```
+
+## Module 10.32 Creating an Ajax Search Interface
+* HTML/CSS for the dropdown
+* sanitize input via `dompurify`. `dompurify.sanitize()` stuff
+
+## Module 11.33 Creating a Geospatial Ajax Endpoint
+* Creating an API based on range/distance from a point
+* Example:
+```javascript
+exports.mapStores = async (req, res) => {
+  const coordinates = [req.query.lng, req.query.lat].map(parseFloat);
+  const q = {
+    location: {
+      $near: {
+        $geometry: {
+          type: 'Point',
+          coordinates
+        },
+        $maxDistance: 10000 // 10km
+      }
+    }
+  };
+
+  const stores = await Store.find(q).select('slug name description location photo').limit(10);
+  res.json(stores);
+};
+```
+
+## Module 11.34 Plotting Stores on a Custom Google Map
+* Example for making a map
+
+## Module 12.35 Pushing User Data to our API
+* Adding "hearts" per store, per user
+
+## Module 12.36 Displaying our Hearted Stores
+* Display hearted stores: Query User and it's hearts, or Stores where id is in user's hearts
+
+## Module 13.37 Adding a Reviews Data Model
+* Adding "Reviews" section
+
+## Module 13.38 Advanced Relationship Population - Displaying Our Reviews
+* Display reviews
+* `storeSchema.virtual` - kinda like a SQL join
+* virtual fields don't go in JSON unless it's explicit
+
+## Module 13.39 Advanced Aggregation
+* Get Top 10 stores
+* .aggregate is a function like .find
+* Example:
+```javascript
+//models/Store.js
+storeSchema.statics.getTopStores = function() {
+  return this.aggregate([
+    // Lookup Stores and populate their reviews
+    { $lookup: { from: 'reviews', localField: '_id', foreignField: 'store', as: 'reviews' }},
+    // filter for only items that have 2 or more reviews
+    { $match: { 'reviews.1': { $exists: true } } },
+    // Add the average reviews field
+    { $project: {
+      photo: '$$ROOT.photo',
+      name: '$$ROOT.name',
+      reviews: '$$ROOT.reviews',
+      slug: '$$ROOT.slug',
+      averageRating: { $avg: '$reviews.rating' }
+    } },
+    // sort it by our new field, highest reviews first
+    { $sort: { averageRating: -1 }},
+    // limit to at most 10
+    { $limit: 10 }
+  ]);
+}
+```
+
+## Module 14.40 Implementing Pagination
+
+## Module 15.41 Deployment Setup
+* Postmark for emails
+
+## Module 15.42 Deploying to Now
+* add "now" to packages.json
+
+## Module 15.43 Deploying to Heroku
+* environment variables go into dashboard
+
+## Module 15.44 Deploying to Digital Ocean Linux
+* `forever` package if something drops
+* `forever start start.js`
+* `forever restart 0`
