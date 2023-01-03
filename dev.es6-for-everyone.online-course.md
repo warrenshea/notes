@@ -1864,7 +1864,7 @@ but this only imports, we need to export
       }
     }
   //OR
-    //HIGH ORDER FUNCTION WAY
+    //HIGH ORDER FUNCTION WAY - takes in a function, does a little something, and returns a function
     async function go() {
       console.log(`Starting for ${name} ${last}!`);
       const res = await breathe(1000);
