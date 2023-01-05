@@ -4,15 +4,15 @@
 
 ---
 ## Table of Contents
-### Module 1: Welcome and Course Methodologies
-### Module 2: Browser, Editor and Terminal Setup
-### Module 3: Running and Loading JS
-### Module 4: Variables and Statements
-### Module 5: Code Quality Tooling with Prettier and ESLint
-### Module 6: Types - Introduction
-### Module 7: Types - Strings
-### Module 8: Types - Numbers
-### Module 9: Types - Objects
+### Module 01: Welcome and Course Methodologies
+### Module 02: Browser, Editor and Terminal Setup
+### Module 03: Running and Loading JS
+### Module 04: Variables and Statements
+### Module 05: Code Quality Tooling with Prettier and ESLint
+### Module 06: Types - Introduction
+### Module 07: Types - Strings
+### Module 08: Types - Numbers
+### Module 09: Types - Objects
 ### Module 10: Types - null and undefined
 ### Module 11: Types - Booleans and Equality
 ### Module 12: Functions - Built in
