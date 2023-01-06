@@ -744,6 +744,34 @@ document.addEventListener("visibilitychange", () => {
 * [SvelteKit - https://kit.svelte.dev/](https://kit.svelte.dev/){:target="_blank"}
 * [Docusaurus - https://docusaurus.io/](https://docusaurus.io/){:target="_blank"}
 
+### Testing
+* [Jest](https://jestjs.io/){:target="_blank"}
+* [Mocha](https://mochajs.org/){:target="_blank"}
+* [Storybook](https://storybook.js.org/docs/react/writing-tests/introduction){:target="_blank"}
+* [Cypress](https://www.cypress.io/){:target="_blank"}
+* [AVA](https://github.com/avajs/ava){:target="_blank"}
+* [Jasmine](https://jasmine.github.io/){:target="_blank"}
+* [Puppeteer](https://pptr.dev/){:target="_blank"}
+* [Testing Library](https://testing-library.com/){:target="_blank"}
+* [Playwright](https://playwright.dev/){:target="_blank"}
+* [WebdriverIO](https://webdriver.io/){:target="_blank"}
+* [Vitest](https://vitest.dev/){:target="_blank"}
+* [Selenium](https://www.selenium.dev/){:target="_blank"}
+* [TestCafe](https://testcafe.io/){:target="_blank"}
+
+### Mobile & Desktop
+* [Electron](https://www.electronjs.org/){:target="_blank"}
+* [React Native](https://reactnative.dev/){:target="_blank"}
+* [Native Apps](){:target="_blank"}
+* [Cordova](https://cordova.apache.org/){:target="_blank"}
+* [Ionic](https://ionicframework.com/){:target="_blank"}
+* [Capacitor](https://capacitorjs.com/){:target="_blank"}
+* [NW.JS](https://nwjs.io/){:target="_blank"}
+* [Expo](https://expo.dev/){:target="_blank"}
+* [Quasar](https://quasar.dev/){:target="_blank"}
+* [Tauri](https://tauri.app/){:target="_blank"}
+* [NativeScript](https://nativescript.org/){:target="_blank"}
+
 ___
 
 ## OLD STUFF: Vanilla JS IE11 Friendly AJAX Request
