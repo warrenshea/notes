@@ -797,6 +797,24 @@ document.addEventListener("visibilitychange", () => {
 * [pnpm](https://pnpm.io/){:target="_blank"}
 * [Nx](https://nx.dev/){:target="_blank"}
 
+### Other Tools
+* [Immer](https://immerjs.github.io/immer/){:target="_blank"}
+* [Lodash](https://lodash.com/){:target="_blank"}
+* [Underscore.js](https://underscorejs.org/){:target="_blank"}
+* [Ramda](https://ramdajs.com/){:target="_blank"}
+* [jQuery](https://jquery.com/){:target="_blank"}
+* [RxJS](https://rxjs.dev/){:target="_blank"}
+* [stdlib](https://stdlib.io/){:target="_blank"}
+* [Zod](https://zod.dev/){:target="_blank"}
+* [Partytown](https://partytown.builder.io/){:target="_blank"}
+* [Mitosis](https://mitosis.builder.io/){:target="_blank"}
+
+### Date Management
+* [Moment](https://momentjs.com/docs/){:target="_blank"}
+* [Day.js](https://day.js.org/){:target="_blank"}
+* [date-fns](https://date-fns.org/){:target="_blank"}
+* [Luxon](https://moment.github.io/luxon/){:target="_blank"}
+
 ___
 
 ## OLD STUFF: Vanilla JS IE11 Friendly AJAX Request
