@@ -772,6 +772,31 @@ document.addEventListener("visibilitychange", () => {
 * [Tauri](https://tauri.app/){:target="_blank"}
 * [NativeScript](https://nativescript.org/){:target="_blank"}
 
+### Build Tools
+* [webpack](https://webpack.js.org/){:target="_blank"}
+* [Parcel](https://parceljs.org/){:target="_blank"}
+* [Gulp](https://gulpjs.com/){:target="_blank"}
+* [Rollup](https://rollupjs.org/guide/en/){:target="_blank"}
+* [Browserify](https://browserify.org/){:target="_blank"}
+* [tsc CLI](https://www.typescriptlang.org/){:target="_blank"}
+* [Rome](https://rome.tools/){:target="_blank"}
+* [Snowpack](https://www.snowpack.dev/){:target="_blank"}
+* [SWC](https://swc.rs/){:target="_blank"}
+* [esbuild](https://esbuild.github.io/){:target="_blank"}
+* [Vite](https://vitejs.dev/){:target="_blank"}
+* [WMR](https://wmr.dev/){:target="_blank"}
+* [Turbopack](https://turbo.build/pack){:target="_blank"}
+
+### Monorepo Tools
+* [Rush](https://rushjs.io/){:target="_blank"}
+* [Turborepo](https://turbo.build/repo){:target="_blank"}
+* [Yarn Workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/){:target="_blank"}
+* [Yalc](https://github.com/wclr/yalc){:target="_blank"}
+* [Lerna](https://lerna.js.org/){:target="_blank"}
+* [npm Workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces){:target="_blank"}
+* [pnpm](https://pnpm.io/){:target="_blank"}
+* [Nx](https://nx.dev/){:target="_blank"}
+
 ___
 
 ## OLD STUFF: Vanilla JS IE11 Friendly AJAX Request
