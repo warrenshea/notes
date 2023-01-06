@@ -815,6 +815,135 @@ document.addEventListener("visibilitychange", () => {
 * [date-fns](https://date-fns.org/){:target="_blank"}
 * [Luxon](https://moment.github.io/luxon/){:target="_blank"}
 
+### Data Visualization
+* [D3](https://d3js.org/){:target="_blank"}
+* [Mermaid](https://mermaid.js.org/){:target="_blank"}
+* [Nivo](https://nivo.rocks/){:target="_blank"}
+* [Recharts](https://recharts.org/){:target="_blank"}
+* [Visx](https://airbnb.io/visx/){:target="_blank"}
+* [Victory](https://formidable.com/open-source/victory/){:target="_blank"}
+* [ECharts](https://echarts.apache.org/en/index.html){:target="_blank"}
+* [Chart.js](https://www.chartjs.org/){:target="_blank"}
+* [Highcharts](https://www.highcharts.com/){:target="_blank"}
+* [Plotly](https://plotly.com/){:target="_blank"}
+
+### Graphics & Animations
+* [Three.js](https://threejs.org/){:target="_blank"}
+* [Theatre.js](https://www.theatrejs.com/){:target="_blank"}
+* [Anime.js](https://animejs.com/){:target="_blank"}
+* [React-Spring](https://www.react-spring.dev/){:target="_blank"}
+* [Lottie](https://lottiefiles.com/){:target="_blank"}
+* [GreenSock](https://greensock.com/){:target="_blank"}
+* [Popmotion](https://popmotion.io/){:target="_blank"}
+* [Framer Motion](https://www.framer.com/motion/){:target="_blank"}
+* [motion_one](https://motion.dev/){:target="_blank"}
+
+### Data Fetching
+* [tRPC](https://trpc.io/){:target="_blank"}
+* [Apollo Client](https://www.apollographql.com/docs/react/){:target="_blank"}
+* [Axios](https://axios-http.com/){:target="_blank"}
+* [TanStack Query (React Query)](https://tanstack.com/query/v4){:target="_blank"}
+* [swr](https://swr.vercel.app/){:target="_blank"}
+* [Relay](https://relay.dev/){:target="_blank"}
+
+### Back-end Frameworks
+* [Express](https://expressjs.com/){:target="_blank"}
+* [Nest](https://nestjs.com/){:target="_blank"}
+* [Strapi](https://strapi.io/){:target="_blank"}
+* [Fastify](https://www.fastify.io/){:target="_blank"}
+* [Meteor](https://www.meteor.com/){:target="_blank"}
+* [Hapi](https://hapi.dev/){:target="_blank"}
+* [Koa](https://koajs.com/){:target="_blank"}
+* [Adonis](https://adonisjs.com/){:target="_blank"}
+* [Keystone](https://keystonejs.com/){:target="_blank"}
+* [Redwood](https://redwoodjs.com/){:target="_blank"}
+
+### Utilities
+* [Babel](https://babeljs.io/){:target="_blank"}
+* [nvm](https://github.com/nvm-sh/nvm){:target="_blank"}
+* [n](https://github.com/tj/n){:target="_blank"}
+* [zx](https://github.com/google/zx){:target="_blank"}
+* [Volta](https://volta.sh/){:target="_blank"}
+* [Verdaccio](https://verdaccio.org/){:target="_blank"}
+
+### JavaScript Runtimes
+* Browser
+* [Node.js](https://nodejs.org/){:target="_blank"}
+* [Deno](https://deno.land/){:target="_blank"}
+* [ChakraCore](https://github.com/chakra-core/ChakraCore){:target="_blank"}
+* [Hermes](https://hermesengine.dev/){:target="_blank"}
+* Service Workers
+* [Bun](https://bun.sh/){:target="_blank"}
+
+### JavaScript Edge/Serverless Runtimes
+* [AWS Lambda](https://aws.amazon.com/lambda/){:target="_blank"}
+* [Cloudflare Workers](https://workers.cloudflare.com/){:target="_blank"}
+* [Netlify Edge Functions](https://www.netlify.com/products/edge/){:target="_blank"}
+* [Fastly Edge Compute](https://www.fastly.com/products/edge-compute){:target="_blank"}
+* [Google Cloud Functions](https://cloud.google.com/functions){:target="_blank"}
+* [Akamai EdgeWorkers](https://www.akamai.com/solutions/edge){:target="_blank"}
+* [Next.js Edge Runtime](https://nextjs.org/docs/api-reference/edge-runtime){:target="_blank"}
+* [Fly.io](https://fly.io/){:target="_blank"}
+* [Digital Ocean Functions](https://docs.digitalocean.com/products/functions/){:target="_blank"}
+
+### JavaScript Flavors
+* [TypeScript](https://www.typescriptlang.org/){:target="_blank"}
+* [Reason](https://reasonml.github.io/){:target="_blank"}
+* [Flow](https://flow.org/){:target="_blank"}
+* [Elm](https://elm-lang.org/){:target="_blank"}
+* [ClojureScript](https://clojurescript.org/reference/javascript-api){:target="_blank"}
+* [PureScript](https://www.purescript.org/){:target="_blank"}
+* [CoffeeScript](https://coffeescript.org/){:target="_blank"}
+* [ReScript](https://rescript-lang.org/){:target="_blank"}
+* [Imba](https://imba.io/){:target="_blank"}
+
+### Non-JavaScript Languages
+* [PHP](https://www.php.net/){:target="_blank"}
+* [Ruby](https://www.ruby-lang.org/en/){:target="_blank"}
+* [Python](https://www.python.org/){:target="_blank"}
+* [Go](https://go.dev/){:target="_blank"}
+* [Rust](https://www.rust-lang.org/){:target="_blank"}
+* [Java](https://www.java.com/){:target="_blank"}
+* [C/C++](https://isocpp.org/){:target="_blank"}
+* [Objective-C](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html){:target="_blank"}
+* [Scala](https://www.scala-lang.org/){:target="_blank"}
+* [Swift](https://www.swift.com/){:target="_blank"}
+
+### Which sites/courses/etc. do you consult?
+* [Stack Overflow](https://stackoverflow.com/){:target="_blank"}
+* [Udemy](https://www.udemy.com/){:target="_blank"}
+* [W3Schools](https://www.w3schools.com/){:target="_blank"}
+* [MDN](https://developer.mozilla.org/en-US/){:target="_blank"}
+* [freeCodeCamp](https://www.freecodecamp.org/){:target="_blank"}
+* [Codecademy](https://www.codecademy.com/){:target="_blank"}
+* [Web.dev](https://web.dev/){:target="_blank"}
+* [JavaScript.info](https://javascript.info/){:target="_blank"}
+* [Scrimba](https://scrimba.com/){:target="_blank"}
+* [Frontend Masters](https://frontendmasters.com/){:target="_blank"}
+
+### Video Creators
+* [Fireship](https://www.youtube.com/@Fireship/){:target="_blank"}
+* [Kevin Powell](https://www.youtube.com/@KevinPowell){:target="_blank"}
+* [Fun Fun Function](https://www.youtube.com/@funfunfunction){:target="_blank"}
+* [Theo - ping․gg](https://www.youtube.com/@t3dotgg){:target="_blank"}
+* [Tina Huang](https://www.youtube.com/@TinaHuang1){:target="_blank"}
+* [Jason Goodison](https://www.youtube.com/@JasonGoodison){:target="_blank"}
+* [Programming with Mosh](https://www.youtube.com/@programmingwithmosh){:target="_blank"}
+* [Kent C. Dodds](https://www.youtube.com/@KentCDodds-vids){:target="_blank"}
+* [Brad Traversy](https://www.youtube.com/@TraversyMedia){:target="_blank"}
+* [Clever Programmer](https://www.youtube.com/@CleverProgrammer){:target="_blank"}
+
+### Podcasts
+* [Syntax](https://syntax.fm/){:target="_blank"}
+* [JS Party](https://changelog.com/jsparty){:target="_blank"}
+* [The Changelog](https://changelog.com/podcast){:target="_blank"}
+* [HTTP 203](https://developers.google.com/web/shows/http203/podcast){:target="_blank"}
+* [Shop Talk Show](https://shoptalkshow.com/){:target="_blank"}
+* [Full Stack Radio](https://fullstackradio.com/){:target="_blank"}
+* [JavaScript Jabber](https://topenddevs.com/podcasts/javascript-jabber){:target="_blank"}
+* [Front End Happy Hour](https://www.frontendhappyhour.com/){:target="_blank"}
+* [React Podcast](https://reactpodcast.simplecast.com/){:target="_blank"}
+* [Ladybug Podcast](https://www.ladybug.dev/){:target="_blank"}
 ___
 
 ## OLD STUFF: Vanilla JS IE11 Friendly AJAX Request
