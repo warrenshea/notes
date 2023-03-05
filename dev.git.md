@@ -1,5 +1,5 @@
 # Warren Shea's Notes for Git
-v20210614
+v20230304
 
 ## My notes
 * `git add -A` stages all changes
