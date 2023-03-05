@@ -6,3 +6,9 @@ e.g. if Column A is a URL list, and Column B is a redirect file, and you want to
 ```
 =IF(ISERROR(MATCH(A1,$B$1:$B$250000,0)),"","Is a match")
 ```
+
+## Count the number of times B1 is in Column A
+
+```
+=COUNTIF($A$1:$A$10000,$B1)
+```
