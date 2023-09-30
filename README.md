@@ -1,1 +1,1 @@
-* Learn more about all the notes in at [warrenshea.github.io](warrenshea.github.io)
+* Learn more about all the notes ^
