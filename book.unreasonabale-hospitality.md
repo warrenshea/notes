@@ -4,8 +4,8 @@
 # Unreasonable Hospitality: The Remarkable Power of Giving People More Than They Expect by Will Guidara
 
 ## [0:04:39] Chapter 01: Welcome to the Hospitality Economy
-* What's the difference between service and hospitality?
-Service is black and white (doing job with competence/competency)
+* What's the difference between service and hospitality?  \
+Service is black and white (doing job with competence/competency) \
 Hospitality is color (you make people feel great about the job you're doing for them)
 * You need to be unreasonable to see a world that does not yet exist
 
