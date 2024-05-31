@@ -1,27 +1,27 @@
 # Warren Shea's Notes for Unreasonable Hospitality by Will Guidara (Book)
 **Version**: 20240125 | **Status**: Completed
 
-# Unreasonable Hospitality: The Remarkable Power of Giving People More Than They Expect by Will Guidara
+## Unreasonable Hospitality: The Remarkable Power of Giving People More Than They Expect by Will Guidara
 
-## [0:04:39] Chapter 01: Welcome to the Hospitality Economy
+### [0:04:39] Chapter 01: Welcome to the Hospitality Economy
 * What's the difference between service and hospitality?  \
 Service is black and white (doing job with competence/competency) \
 Hospitality is color (you make people feel great about the job you're doing for them)
 * You need to be unreasonable to see a world that does not yet exist
 * Unreasonable Hospitality is selfish - "it feels great to make others feel good"
 
-## [0:19:44] Chapter 02: Making Magic in a World That Could Use More of It
+### [0:19:44] Chapter 02: Making Magic in a World That Could Use More of It
 * "People will forget what you do. They'll forget what you said. But they'll never forget how you made them feel." - Maya Angelou
 <!-- * Story about Will's parents -->
 * Dinner at a famous chef's restaurant after mother's passing - "during a terrible dark time, the chef offered a ray of light in the form of a meal neither one of them would forget".
 
-## [0:42:02] Chapter 03: The Extraordinary Power of Intention
+### [0:42:02] Chapter 03: The Extraordinary Power of Intention
 * Intention means every decision matters. To do something with intentionality means to do it thoughtfully, with clear purpose, and an eye on the desired result.
 * Story about a restaurant who treated the people that worked there better than the guests and customers
 * Danny's big idea was hire great people, treat them well, and invest deeply into their personal and professional growth and THEY would take great care of the customers
 * It's easier to learn the right way to do this at the high end then it is to break bad habits. You can take it down a notch, but it's harder to go the other way
 
-## [0:50:00] Chapter 04: Lessons in Enlightened Hospitality
+### [0:50:00] Chapter 04: Lessons in Enlightened Hospitality
 * Two things happen when the best leaders enter a room, they straighten up and smile
 * Story about a champagne bottle in the freezer. Sommelier goes to their house, champagne tucked in the fridge with a tin of caviar, a box of chocolates and anniversary card.
 * They wanted to make all guest experiences seemless and delightful
@@ -31,7 +31,7 @@ Hospitality is color (you make people feel great about the job you're doing for 
 * If a person is difficult, it's easily to become dismissive - but maybe they need MORE love/help/hospitality because of that.
 * Build a management style where it's "cool to care"
 
-## [1:03:30] Chapter 05: Restaurant-Smart vs. Corporate-Smart
+### [1:03:30] Chapter 05: Restaurant-Smart vs. Corporate-Smart
 * Where do the highest paid people work? That says a lot about how the company is run.
 * In restaurant-smart companies, members of the team have more autonomy and creative latitude. They tend to feel a greater sense of ownership and give more to the job. They are nimble. They don't have a lot of corporate support, which make great businesses.
 * Corporate-smart companies have all the backend systems and controls like accounting, purchasing, HR, that are needed to make them great. But systems are controls and the more control there is, the less creative they can be.
@@ -40,11 +40,11 @@ Hospitality is color (you make people feel great about the job you're doing for 
 * It's not the manager's job to take care of people, it's everyone's job to take care of everyone.
 * Rule of 95/5. Managing 95 of your business down to the penny and spend the last 5% 'foolishly'.
 
-## [1:36:05] Chapter 06: Pursuing a True Partnership
+### [1:36:05] Chapter 06: Pursuing a True Partnership
 * Run toward what you want as opposed to away from what you don't want
 * Restaurant run equally by both sides of the wall - service and food
 
-## [1:50:10] Chapter 07: Setting Expectations
+### [1:50:10] Chapter 07: Setting Expectations
 * Every leader should have someone who feels comfortable telling you when you aren't acting like the best version of yourself
 * Best advice starting at a new organization: Don't cannonball, ease into the pool. Give yourself time to understand the organization/team/department, before you impact it.
 * Figure out if a person is terrible or their ideas just different from the person doing the complaining.
@@ -65,7 +65,7 @@ Praise with emotion, criticize without emotion
 * Employees who aren't succeeding fall into two camps - the ones who aren't trying, and the ones who are. The result is the same but you have to help them differently. You have to move heaven and earth to help the people trying.
 * You need to slow down to speed up.
 
-## [2:30:14] Chapter 08: Breaking Rules and Building a Team
+### [2:30:14] Chapter 08: Breaking Rules and Building a Team
 * If you ask "Why do we do it this way" and the answer is "that's the way we've always done it", that deserves to be looked at again
 * Hire the person, not the resume
 * Start everyone as a kitchen server, the lowest level job, even a general manager. This also helped with the weeding - if they complained, it wasn't a good fit.
@@ -75,7 +75,7 @@ Praise with emotion, criticize without emotion
 * Story about "Cool to care" Brian, who was unapologetically himself
 * When you find a group that cares about the same things you care about, you don't have to hide your passions, you can sing them from the rooftops
 
-## [2:53:03] Chapter 09: Working with Purpose, on Purpose
+### [2:53:03] Chapter 09: Working with Purpose, on Purpose
 * Don't try to be all things to all people. If your business involves making people happy, then you can't be good at it if you don't care what people think. The day you stop reading criticsm is the day you become complacent, and irrelevance won't be far behind.
 * As with most creative endeavors, there's no clear right or wrong. The choices you make are always subjective and a matter of opinion. What criticsm offers you is an invitation to have your perspective challenged or at least grow by truly considering it.
 * You grow when you engage with another perspective and decide, to decide again.
@@ -86,7 +86,7 @@ Praise with emotion, criticize without emotion
 * Serving other humans can feel demeaning unless you first stop and acknowledge the work and impact you can have when you're doing it
 * When you're really, really nice to people, they'll be really nice to others who will in turn, pay it forward
 
-## [3:13:58] Chapter 10: Creating a Culture of Collaboration
+### [3:13:58] Chapter 10: Creating a Culture of Collaboration
 * Choose worthy rivals, another 'company' that does one or more things better than you and sets you on a path of constant improvement
 * Tap into their passions, then give them their keys
 * Ownership Program
@@ -112,7 +112,7 @@ then tell them what you've told them
 * If you dismiss someone with an idea, you'll extinguish a flame that's difficult to rekindle
 * Great leaders create leaders
 
-## [3:50:08] Chapter 11: Pushing toward Excellence
+### [3:50:08] Chapter 11: Pushing toward Excellence
 * Excellence is the culmination of thousands of details executed perfectly
 * It may not be possible to do everything perfectly, but it may be possible to do many things perfectly.
 * If you break down everything and improve each thing by 1%, you'll get a significant increase when you put it all together
@@ -120,7 +120,7 @@ then tell them what you've told them
 * "Finish strong, the one-inch rule" - stay present and follow through all the way to that last inch
 * Story about person sending back steak due to 'improper' cook - "Being right is irrelevant" / "Their perception is our reality"
 
-## [4:15:38] Chapter 12: Relationships Are Simple. Simple Is Hard.
+### [4:15:38] Chapter 12: Relationships Are Simple. Simple Is Hard.
 * Don't go to bed angry - people usually want to be heard more than they want to be agreed with
 * Swap sides on argument helps you not get stuck on "your idea" and more on "what's right" for the organization
 * Concede the win if "That's important to me" - whoever cares more about the issue can have their way. This can't be abused.
@@ -140,20 +140,20 @@ Words of affirmation
 * Praise is affirmation but criticsm is investment.
 * You have to be able to graciously recieve criticsm too - if you are consistently defensive, push back, or justify your mistakes, people will stop coming to you with notes, you've made it too unpleasent for them, and they'll stop investing in you.
 
-## [4:48:41] Chapter 13: Leveraging Affirmation
+### [4:48:41] Chapter 13: Leveraging Affirmation
 * Story about praise coming directly from the sources, as opposed to passed through the manager
 * Share the spotlight. If starts are great and want to leave, it's up to the manager to create an environment where they want to stay
 * "Nothing in this world can take the place of Persistence. Talent will not ; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not; the world is full of educated derelicts. Persistence and Determination alone are omnipotent." Calvin Coolidge
 * Receiving praise feels good but the dopamine hit only lasts so long. Being intentional and using that praise to encourage, inspire, and uplift our team could shift us into a whole new gear.
 
-## [5:03:52] Chapter 14: Restoring Balance
+### [5:03:52] Chapter 14: Restoring Balance
 * I can only be authentic and inspirational and restorative if I buy back the time to restore myself, this is not a passive pursuit
 * Tend to yourself first, if you aren't tending to your own needs, you can't help those around you
 * DBC - Deep Breathing Club - if a kid got through 3 DBC events, they got a shirt - the number of meltdowns went down significantly
 * Story about asking for help - making eye contact and touching lapel
 * Being able to ask for help is a display of strength and confidence - it shows and understanding of your abilities and an awareness of what's happening around you
 
-## [5:19:21] Chapter 15: The Best Offense Is Offense
+### [5:19:21] Chapter 15: The Best Offense Is Offense
 * Story about Michelin guide - encouraged people to drive around france to increase tire sales
 * there's no more difficult moment to be the head of a business than when there's a massive disappointment
 * When the 2008 recession hit and business was impacted, they were fortunate to have Shake Shack, as people went to affordable experiences that felt special.
@@ -170,13 +170,13 @@ Words of affirmation
 * Rolling a dessert card, instead of someone looking at a menu and ordering
 * Story about practicing for their food critic, treating 1 table like the critic's table every night so they would be read when the critic DID come in
 
-## [5:55:45] Chapter 16: Earning Informality
+### [5:55:45] Chapter 16: Earning Informality
 * "When I started dating my wife, I called her father 'Mister Tosi'. I knew I had earned his trust when he asked me to call him Gino. Informality is something you earn.
 * Amped up the formality at first to earn their trust, and then once the trust was earned, we shifted expectations
 * The servers were less excellent than their proficient colleagues - but they were so focused with the interaction with their guests that the bonds they created was much stronger. The first group was attentive, the second paid attention.
 * Being present is caring so much about what you're doing, you stop caring about what you need to do next
 
-## [6:03:30] Chapter 17: Learning to Be Unreasonable
+### [6:03:30] Chapter 17: Learning to Be Unreasonable
 * Returning from being ranked 50th best restaurant in the world (prologue story)
 * After a setback, it's the leader's team to take their team through their own emotional reckoning, from disappointment, to motivation, and to chart the course ahead - everyone has to be aligned with what you're going to do next
 * If you don't have the courage to state a goal out loud, you'll never achieve it.
@@ -190,7 +190,7 @@ Words of affirmation
 * Chef's table in kitchen as guests stood while enjoying a single course - allowing that experience to be offered to lots of people
 * For paying the bill, they dropped off the bill with a bottle of free alcohol and said "help yourself". They solved the problem of the bill by giving more, not less.
 
-## [6:33:25] Chapter 18: Improvisational Hospitality
+### [6:33:25] Chapter 18: Improvisational Hospitality
 * Nothing more flattering than someone coming to the restaurant with luggage - it means they've chosen you to be your first or last memory of the city
 * Story about street hot dog and overhearing the guests hadn't eaten a NY hot dog. People said it was, not only the highlight of the meal, but the highlight of the trip. They'd be telling that story for the rest of their lives.
 * "Dreamweaver" role, painter
@@ -201,22 +201,22 @@ Words of affirmation
 * People confuse luxury and hospitality. Luxury means giving more, Hospitality means being thoughtful
 * Stories about real estate and car dealership 'legends'
 
-## [7:12:16] Chapter 19: Scaling a Culture
+### [7:12:16] Chapter 19: Scaling a Culture
 * When you're trying to level up, it's easy to psych yourself out by focusing on everything you don't know, but you've got to have faith in your ability to figure it out - growth happens outside of your comfort zone
 * Story about buying the restaurant.
 * I'm always surprised when people spend a fortune on a new project, then skimp on training the people on bringing that project to life. An example of Penny-wise, Pound-foolish
 * Marry someone better than you :)
 * Leaders say sorry.
 
-## [7:46:48] Chapter 20: Back to Basics
+### [7:46:48] Chapter 20: Back to Basics
 * Sometimes magic is just someone spending more time on something than anyone else might reasonable expect
 * Control and Trust are not friends
 
-## [8:20:45] Epilogue
+### [8:20:45] Epilogue
 * Story about getting to #1
 
-## [8:27:42] I Appreciate You
+### [8:27:42] I Appreciate You
 *
 
-## [8:32:42] Credits
+### [8:32:42] Credits
 * Are you the player or are you coach? It's very difficult to play both roles.
