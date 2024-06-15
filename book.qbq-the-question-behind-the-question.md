@@ -16,7 +16,7 @@ QBQ helps practice personal accountability by asking better questions of ourselv
 ### Chapter 2: Making Better Choices
 
 ### Chapter 3: The Question Behind the Question
-QBQs are questions we ask ourselves, not others \
+* QBQs are questions we ask ourselves, not others
 
 Guidelines for creating a QBQ
 
