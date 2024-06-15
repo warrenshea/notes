@@ -154,8 +154,9 @@ Inaction builds doubt
 ### Chapter 34: A great list of lousy questions
 
 ### Chapter 35: The spirit of the QBQ
-* The letter of the QBQ would be the guidelines:
-* all QBQs
+The letter of the QBQ would be the guidelines,
+
+All QBQs:
 
 1. Begin with "what" or "how" (not "why", "when", or "who").
 2. Contain an "I", not "we" or "you"
