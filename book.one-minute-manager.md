@@ -1,5 +1,5 @@
 # Warren Shea's Notes for The New One Minute Manager by Ken Blanchard, Spencer Johnson (Book)
-**Version**: 20231115 | **Status**: In Progress
+**Version**: 20231115 | **Status**: Completed March 2024
 
 ## The New One Minute Manager by Ken Blanchard and Spencer Johnson
 "The essence of knowledge is, having it, to use it" - Confucius
