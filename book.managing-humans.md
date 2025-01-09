@@ -1,4 +1,4 @@
-# Warren Shea's Notes for Managing Humans by Maichael Lopp (Book)
+# Warren Shea's Notes for Managing Humans by Michael Lopp (Book)
 **Version**: 201703 | **Status**: Complete
 
 # Managing Humans
