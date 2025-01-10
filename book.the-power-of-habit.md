@@ -17,7 +17,7 @@ Result: Crowd in open space. At dusk, the crowd got restless and hungry. With no
 
 ## Part 1: The Habits of Individuals
 
-## Chapter 1: The Habit Loop - How Habits Work
+### Chapter 1: The Habit Loop - How Habits Work
 
 *Audible 23:30 - 1:27:00 | Page 1-30*
 
@@ -38,7 +38,7 @@ Both good and bad habits cannot change - but you can override habits.
 
 Game of cards (face down), laid out in the same spots. Eugene had to guess which were the correct cards. He couldn't remember what the exercise was, but due to the habit loop (cue - card placements, and reward - "correct symbol"), he got close to 100% after time.
 
-## Chapter 2: The Craving Brain - How to Create New Habits
+### Chapter 2: The Craving Brain - How to Create New Habits
 
 *Audible 1:27:00 - 2:32:22 | Page 30-59*
 
@@ -64,7 +64,7 @@ Cinnabon - want the smell to travel, uninterrupted
 
 Exercise habits start on a whim - but the reward has to be positive and an individual has to crave the reward.
 
-## Chapter 3: The Golden Rule of Habit Changing - Why Transformation Occurs
+### Chapter 3: The Golden Rule of Habit Changing - Why Transformation Occurs
 
 *Audible 2:32:23 - 3:51:30 | Page 60-93*
 
@@ -75,7 +75,7 @@ Drunk guy + kids injured
 
 ## Part 2: The Habits of Successful Organizations
 
-## Chapter 4: Keystone Habits, the Ballad of Paul O'Neill
+### Chapter 4: Keystone Habits, the Ballad of Paul O'Neill
 
 *Audible 3:51:30 - 5:00:00 | Page 97-126*
 
@@ -87,7 +87,7 @@ Grit emerges from a culture that people create for themselves, and that culture 
 Westpoint - A hard school. Group of guys where, in the morning, they get together to ensure everyone is feeling strong. Go to them if you're feeling worried or down and they'll pump you back up. Cadets who are successful arrive with mental and physical discipline. To but succeed, they need a keystone habit that creates a culture (such as a daily gathering of like minded friends) to help find strength to overcome obstacles\
 Keystone habits creates cultures, that, in the face of a difficult situation/moment, we might otherwise forget
 
-## Chapter 5: Starbucks and the Habit of Success: When Willpower Becomes Automatic
+### Chapter 5: Starbucks and the Habit of Success: When Willpower Becomes Automatic
 
 *Audible 5:00:00 - 5:59:30 | Page 126-153*
 
@@ -116,7 +116,7 @@ Howard Schultz - Chairman and CEO of Starbucks\
 Mother asked questions: How are you going to study tonight? How do you know you're ready for your test? Trained to set goals.\
 Students' willpower muscle had been fatigued by brusk instructions (unkind instructions). Key difference was the sense of control they had
 
-## Chapter 6: The Power of a Crisis: How Leaders Create Habits Through Accident and Design
+### Chapter 6: The Power of a Crisis: How Leaders Create Habits Through Accident and Design
 
 *Audible 5:59:31 - 7:02:30 | Page 154-181*
 
@@ -133,7 +133,7 @@ Fire in Train station - all the departments aren't in charge of Fire Safety\
 Reform is only possible one crisis has occurred\
 Good leaders seize crisis to remake organizational habits
 
-## Chapter 7: How Target Knows What You Want Before You Do
+### Chapter 7: How Target Knows What You Want Before You Do
 
 *Audible 7:02:31 - 8:10:10 | Page 182-212*
 
@@ -147,7 +147,7 @@ Gym - wrap exercise with something familiar (the need for social interaction). I
 
 ## Part 3: The Habits of Societies
 
-## Chapter 8: Sattleback Church and the Montgomery Bus Boycott: How Movements Happen
+### Chapter 8: Sattleback Church and the Montgomery Bus Boycott: How Movements Happen
 
 *Audible 8:10:11 - 9:20:25 | Page 213-244*
 
@@ -157,7 +157,7 @@ Social Habits: 3 Part Process
 * it grows because of the habits of a community and the weak ties that holds neighborhoods and clans together
 * and it endures because a leader gives the participants new habits that create a fresh sense of identity and ownership
 
-## Chapter 9: The Neurology of Free Will: Are We Responsible for Our Habits
+### Chapter 9: The Neurology of Free Will: Are We Responsible for Our Habits
 
 *Audible 9:20:26 - 10:29:35  | Page 245-274*
 
